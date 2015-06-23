@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <title>a brand new styleguide: <%= title %></title>
+    <link rel="stylesheet" href="../assets/dyson_sphere/styleguide.css.scss">
+  </head>
+  <body>
+    <div class="row">
+      <div class="columns">
+        <h1>LaunchPass StyleGuide</h1>
+        <section class="content">
+          <ul>
+          <% @blocks.each do |b| %>
+            <li><a href="#<%= b[:name] %>"><%= b[:title] %></a></li>
+          <% end %>
+          </ul>
