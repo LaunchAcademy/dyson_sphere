@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = DysonSphere::VERSION
   s.authors     = ["Christina Koller"]
   s.email       = ["christina.koller@launchacademy.com"]
-  s.homepage    = ""
+  s.homepage    = "http://www.launchacademy.com/"
   s.summary     = "Styling and styleguide for Launch Academy apps"
   s.description = "This engine contains all the base styling for internal Launch Academy apps, along with a styleguide to guide development further design."
   s.license     = "MIT"
