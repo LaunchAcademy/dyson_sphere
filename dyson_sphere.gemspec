@@ -7,11 +7,11 @@ require "dyson_sphere/version"
 Gem::Specification.new do |s|
   s.name        = "dyson_sphere"
   s.version     = DysonSphere::VERSION
-  s.authors     = ["cmkoller"]
-  s.email       = ["cmkoller01@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of DysonSphere."
-  s.description = "TODO: Description of DysonSphere."
+  s.authors     = ["Christina Koller"]
+  s.email       = ["christina.koller@launchacademy.com"]
+  s.homepage    = ""
+  s.summary     = "Styling and styleguide for Launch Academy apps"
+  s.description = "This engine contains all the base styling for internal Launch Academy apps, along with a styleguide to guide development further design."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
