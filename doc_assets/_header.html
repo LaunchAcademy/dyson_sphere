@@ -5,12 +5,43 @@
     <link rel="stylesheet" href="../assets/dyson_sphere/styleguide.css.scss">
   </head>
   <body>
+
+    <div class="contain-to-grid full-top-bar">
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="#">DysonSphere Styleguide</a></h1>
+          </li>
+        </ul>
+
+        <section class="top-bar-section">
+          <ul class="right">
+            <li><a href="https://github.com/LaunchAcademy/dyson_sphere" target="_blank">Github</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+
+    <dl class="sub-nav mts">
+      <div class="row">
+        <% @categories.each do |category, file_name| %>
+          <dd class="<%= 'active' if category == title %>">
+            <a href="/styleguide/<%= file_name %>"><%= category %></a>
+          </dd>
+        <% end %>
+      </div>
+    </dl>
+
     <div class="row">
       <div class="columns">
-        <h1>LaunchPass StyleGuide</h1>
         <section class="content">
-          <ul>
-          <% @blocks.each do |b| %>
-            <li><a href="#<%= b[:name] %>"><%= b[:title] %></a></li>
+          <% if @blocks.length > 1 %>
+            <div class="small-3 columns">
+              <ul class="side-nav">
+              <% @blocks.each do |b| %>
+                <li><a href="#<%= b[:name] %>"><%= b[:title] %></a></li>
+              <% end %>
+              </ul>
+            </div>
           <% end %>
-          </ul>
+          <div class="columns <%= 'small-9' if blocks.length > 1 %>">

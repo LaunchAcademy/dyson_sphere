@@ -1,0 +1,33 @@
+/*doc
+---
+title: Buttons
+name: buttons
+category: Buttons
+---
+<p>Besides normal Foundation buttons, you can also specify green and pink buttons.</p>
+
+<div class="button">.button</div> <br>
+<div class="btn-green">.btn-green</div> <br>
+<div class="btn-pink">.btn-green</div> <br>
+
+<hr>
+
+*/
+
+.btn-green {
+  @extend .button;
+  background-color: $la-light-green;
+
+  &:hover, &:focus {
+    background-color: darken($la-light-green, 15%);
+  }
+}
+
+.btn-pink {
+  @extend .button;
+  background-color: $la-pink;
+
+  &:hover, &:focus {
+    background-color: darken($la-pink, 15%);
+  }
+}

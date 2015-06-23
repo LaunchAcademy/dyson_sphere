@@ -3,12 +3,12 @@
 <head>
   <title>DysonSphere</title>
   <%= stylesheet_link_tag    "dyson_sphere/application", media: "all" %>
-  <%= javascript_include_tag "dyson_sphere/application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <%= yield %>
 
+  <%= javascript_include_tag "dyson_sphere/application" %>
 </body>
 </html>

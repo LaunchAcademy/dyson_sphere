@@ -1,0 +1,32 @@
+/*doc
+---
+title: Border Classes
+name: border
+category: Layout and Formatting
+---
+
+<p>Add the classes <code>.bottom-border</code> or <code>.top-border</code> to add borders to individual elements.</p>
+
+<div class="la-panel bottom-border columns pvl">
+  <p>Example bottom-border div:</p>
+  <p><code>.bottom-border.la-panel.columns.pvl</code></p>
+  <p>Bottom borders are dotted.</p>
+</div>
+
+<div class="la-panel top-border columns pvl mbl">
+  <p>Example top-border div:</p>
+  <p><code>.top-border.la-panel.columns.pvl</code></p>
+  <p>Top borders are solid.</p>
+</div>
+
+<hr>
+
+*/
+
+.bottom-border {
+  border-bottom: 1px dotted $la-grey;
+}
+
+.top-border {
+  border-top: 1px solid $la-grey;
+}

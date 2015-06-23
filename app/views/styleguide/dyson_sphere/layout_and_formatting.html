@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+  <head>
+    <title>a brand new styleguide: Layout and Formatting</title>
+    <link rel="stylesheet" href="../assets/dyson_sphere/styleguide.css.scss">
+  </head>
+  <body>
+
+    <div class="contain-to-grid full-top-bar">
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="#">DysonSphere Styleguide</a></h1>
+          </li>
+        </ul>
+
+        <section class="top-bar-section">
+          <ul class="right">
+            <li><a href="https://github.com/LaunchAcademy/dyson_sphere" target="_blank">Github</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+
+    <dl class="sub-nav mts">
+      <div class="row">
+        
+          <dd class="active">
+            <a href="/styleguide/layout_and_formatting.html">Layout and Formatting</a>
+          </dd>
+        
+          <dd class="">
+            <a href="/styleguide/buttons.html">Buttons</a>
+          </dd>
+        
+          <dd class="">
+            <a href="/styleguide/index.html">Colors and Fonts</a>
+          </dd>
+        
+          <dd class="">
+            <a href="/styleguide/headers_and_hero_images.html">Headers and Hero Images</a>
+          </dd>
+        
+          <dd class="">
+            <a href="/styleguide/pricing_tables.html">Pricing Tables</a>
+          </dd>
+        
+      </div>
+    </dl>
+
+    <div class="row">
+      <div class="columns">
+        <section class="content">
+          
+            <div class="small-3 columns">
+              <ul class="side-nav">
+              
+                <li><a href="#border">Border Classes</a></li>
+              
+                <li><a href="#extended_grid_system">Extended Grid System</a></li>
+              
+                <li><a href="#panels">Panels</a></li>
+              
+                <li><a href="#spacing">Custom Spacing Classes</a></li>
+              
+              </ul>
+            </div>
+          
+          <div class="columns small-9">
+<h1 id="border" class="styleguide">Border Classes</h1>
+
+<p>Add the classes <code>.bottom-border</code> or <code>.top-border</code> to add borders to individual elements.</p>
+
+<div class="la-panel bottom-border columns pvl">
+  <p>Example bottom-border div:</p>
+  <p><code>.bottom-border.la-panel.columns.pvl</code></p>
+  <p>Bottom borders are dotted.</p>
+</div>
+
+<div class="la-panel top-border columns pvl mbl">
+  <p>Example top-border div:</p>
+  <p><code>.top-border.la-panel.columns.pvl</code></p>
+  <p>Top borders are solid.</p>
+</div>
+<p class="styleguide"><hr></p>
+<h1 id="extended_grid_system" class="styleguide">Extended Grid System</h1>
+
+<p>The Foundation grid system is pretty complete, but has a couple gaps. Here we keep additions we make to the Foundation grid system classes:</p>
+
+<p><code>.large-offset-1-and-half</code> can be used for offsetting columns by one-and-a-half columns width on a large screen. This is useful for centering three groups of three columns (like for pricing tables).</p>
+
+<h1 id="panels" class="styleguide">Panels</h1>
+
+<h3>White Panel</h3>
+
+<div class="la-panel columns mbl">
+  <h3>Example $la-panel</h3>
+  <code>div.la-panel.columns.mbl</code>
+  <p>Adding the class <code>la-panel</code> to a div will provide it a white background. This div also has the classes <code>columns</code> and <code>mbl</code> to provide padding and margin.
+</div>
+<p class="styleguide"><hr></p>
+<h1 id="spacing" class="styleguide">Custom Spacing Classes</h1>
+
+<p>To provide custom padding and margin to elements, add a class to the element by assembling one letter from each category below depending on your needs:</p>
+
+<p>1. <code>p, m</code> = padding, margin</p>
+
+<p>2. <code>a, t, r, b, l, h, v</code> = all, top, right, bottom, left, horizontal, vertical</p>
+
+<p>3. <code>s, m, l, n, a</code> = small(5px), medium(10px), large(20px), none(0), auto(auto)</p>
+
+<h4>Example:</h4>
+
+<p><code>.ptm</code> --> "padding top medium"</p>
+
+<p><code>.mvl</code> --> "margin vertical large"</p>
+
+<p><code>.pas</code> --> "padding all small"</p>
+<p class="styleguide"><hr></p>          </div>
+          <div class="row text-center">
+            <div class="columns">
+              <footer>
+                <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>
+              </footer>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
