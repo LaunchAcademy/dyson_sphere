@@ -28,6 +28,12 @@ Add the following to the **top** of `app/assets/stylesheets/application.scss`:
 @import "dyson_sphere/application";
 ```
 
+If you want your app to reference a local version of DysonSphere instead of the Github repo, comment out the above line in your Gemfile and instead put:
+
+```
+gem 'dyson_sphere',  path: "~/path/to/local/dyson_sphere"
+```
+
 ## Viewing the Styleguide
 
 Once you've set up DysonSphere in a local app, run `rails s` from that app's director and visit `http://localhost:3000/styleguide` to view the styleguide!
