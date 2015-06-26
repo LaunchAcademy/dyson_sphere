@@ -1,4 +1,5 @@
-@import "constants/colors";
+@import "dyson_sphere/constants/colors";
+@import "dyson_sphere/constants/fonts";
 
 // ======================
 // COLORS
@@ -31,3 +32,42 @@
 .la-red { background-color: $la-red; color: white; }
 
 .la-border-color { background-color: $la-border-color; }
+
+// ======================
+// FONTS
+// ======================
+
+.font-example {
+  padding: 30px;
+}
+
+.la-font-small { font-size: $la-font-small }
+.la-font-extra-small { font-size: $la-font-extra-small }
+
+// ======================
+// STYLEGUIDE LAYOUT
+// ======================
+
+.sub-nav {
+  background-color: $la-light-grey;
+  padding: 15px;
+  padding-left: 0;
+
+  dd a {
+    padding-left: 0;
+    color: #008CBA;
+  }
+
+  dd.active a,
+  dd.active a:hover {
+    background: none;
+    font-weight: bold;
+    color: black;
+    padding-left: 0;
+  }
+}
+
+.side-nav {
+  border: 1px solid $la-border-color;
+  margin-top: 10px;
+}

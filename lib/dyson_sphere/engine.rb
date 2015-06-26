@@ -1,6 +1,8 @@
 require "sass-rails"
 require "foundation-rails"
 require "font-awesome-sass"
+require "jquery-rails"
+require "font-awesome-sass"
 require "hologram"
 
 module DysonSphere

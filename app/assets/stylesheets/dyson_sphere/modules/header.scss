@@ -1,0 +1,57 @@
+/*doc
+---
+title: Headers
+name: headers
+category: Headers and Hero Images
+---
+
+```html_example
+<div class="contain-to-grid full-top-bar">
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="#">DysonSphere Styleguide</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon">
+        <a href="#">
+          <span>Menu</span>
+        </a>
+      </li>
+
+    </ul>
+
+    <section class="top-bar-section">
+      <ul class="left">
+        <li class="has-form">
+          <div class="row collapse search">
+
+          </div>
+        </li>
+        <li class="has-dropdown">
+          <a href="">Admin</a>
+          <ul class="dropdown">
+            <li><a href="#">Users</a></li>
+            <li><a href="#">Teams</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="right">
+        <li><a href="https://github.com/LaunchAcademy/dyson_sphere" target="_blank">Github</a></li>
+        <li class="has-dropdown">
+          <a href="">Account Details</a>
+          <ul class="dropdown">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Sign Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </nav>
+</div>
+```
+
+*/
+.full-top-bar {
+  border-bottom: 1px solid $la-border-color;
+}

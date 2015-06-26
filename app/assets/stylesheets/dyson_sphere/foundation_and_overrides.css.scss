@@ -56,8 +56,6 @@
 
 // Allows the use of rem-calc() or lower-bound() in your settings
 @import 'foundation/functions';
-@import "dyson_sphere/constants/colors";
-@import "dyson_sphere/constants/fonts";
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
@@ -126,7 +124,7 @@ $font-weight-bold: bold !default;
 // $info-color: #a0d3e8;
 
 // We use these to control various global styles
-// $body-bg: $white;
+$body-bg: $la-light-blue;
 $body-font-color: $la-dark-grey;
 $body-font-family: $body-font;
 // $body-font-color: $jet;
@@ -671,7 +669,7 @@ $button-bg-color: $la-blue;
 // $fieldset-margin: rem-calc(18 0);
 
 // We use these to style the legends when you use them
-// $legend-bg: $white;
+$legend-bg: none;
 // $legend-font-weight: $font-weight-bold;
 // $legend-padding: rem-calc(0 3);
 
@@ -996,14 +994,14 @@ $button-bg-color: $la-blue;
 // $callout-panel-bg: scale-color($primary-color, $lightness: 94%);
 
 // We use this % to control how much we darken things on hover
-// $panel-border-color: scale-color($panel-bg, $lightness: -11%);
+$panel-border-color: $la-border-color;
 
 // We use these to set default inner padding and bottom margin
 // $panel-margin-bottom: rem-calc(20);
 // $panel-padding: rem-calc(20);
 
 // We use these to set default font colors
-// $panel-font-color: $oil;
+$panel-font-color: $body-font-color;
 // $panel-font-color-alt: $white;
 
 // $panel-header-adjust: true;
