@@ -1,7 +1,7 @@
 /*doc
 ---
-title: Headers
-name: headers
+title: Header w/ Search Bar
+name: header_with_search_bar
 category: Headers and Hero Images
 ---
 
@@ -22,6 +22,16 @@ category: Headers and Hero Images
 
     <section class="top-bar-section">
       <ul class="left">
+        <li class="has-form">
+          <div class="row collapse search">
+            <form>
+              <input class="left" id="query" name="query" placeholder="Search" type="text" />
+              <button class="search-button" name="button" type="submit">
+                <i class='fa fa-search'></i>
+              </button>
+            </form>
+          </div>
+        </li>
         <li class="has-dropdown">
           <a href="">Admin</a>
           <ul class="dropdown">
@@ -47,11 +57,42 @@ category: Headers and Hero Images
 ```
 
 */
-.full-top-bar {
-  border-bottom: 1px solid $la-border-color;
-}
 
-.top-bar-section .right li .dropdown {
-  left: 0;
-  right: auto;
+.search {
+  position: relative;
+
+  input,
+  input:focus,
+  button {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid white;
+    padding-left: 0;
+    top: 10px;
+    color: white;
+    font-family: $header-font;
+  }
+
+  button {
+    position: absolute;
+    padding: .35rem;
+    padding-left: 0;
+  }
+
+  ::-webkit-input-placeholder {
+     color: white;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+     color: white;
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+     color: white;
+  }
+
+  :-ms-input-placeholder {
+     color: white;
+  }
 }

@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>a brand new styleguide: Layout and Formatting</title>
-    <link rel="stylesheet" href="../assets/dyson_sphere/styleguide.css.scss">
+    <link rel="stylesheet" href="../assets/dyson_sphere/styleguide.scss">
   </head>
   <body>
 
@@ -34,6 +34,10 @@
           </dd>
         
           <dd class="">
+            <a href="/styleguide/markdown_rendering.html">Markdown Rendering</a>
+          </dd>
+        
+          <dd class="">
             <a href="/styleguide/index.html">Colors and Fonts</a>
           </dd>
         
@@ -42,7 +46,7 @@
           </dd>
         
           <dd class="">
-            <a href="/styleguide/pricing_tables.html">Pricing Tables</a>
+            <a href="/styleguide/misc.html">Misc</a>
           </dd>
         
       </div>
@@ -55,9 +59,13 @@
             <div class="small-3 columns">
               <ul class="side-nav">
               
+                <li><a href="#block_lists">Block Lists</a></li>
+              
                 <li><a href="#border">Border Classes</a></li>
               
                 <li><a href="#extended_grid_system">Extended Grid System</a></li>
+              
+                <li><a href="#misc_helper_classes">Misc Helper Classes</a></li>
               
                 <li><a href="#panels">Panels</a></li>
               
@@ -67,6 +75,29 @@
             </div>
           
           <div class="columns small-9">
+<h1 id="block_lists" class="styleguide">Block Lists</h1>
+
+<p>Block lists resemble single-column tables.</p>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <ul class="block">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight panel">
+      <pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Item 1<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Item 2<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Item 3<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
 <h1 id="border" class="styleguide">Border Classes</h1>
 
 <p>Add the classes <code>.bottom-border</code> or <code>.top-border</code> to add borders to individual elements.</p>
@@ -77,10 +108,16 @@
   <p>Bottom borders are dotted.</p>
 </div>
 
-<div class="la-panel top-border columns pvl mbl">
+<div class="la-panel top-border columns pvl">
   <p>Example top-border div:</p>
   <p><code>.top-border.la-panel.columns.pvl</code></p>
   <p>Top borders are solid.</p>
+</div>
+
+<div class="la-panel border columns pvl mbl">
+  <p>Example all-around border div:</p>
+  <p><code>.border.la-panel.columns.pvl</code></p>
+  <p>All-around borders are solid and have a border-radius.</p>
 </div>
 <p class="styleguide"><hr></p>
 <h1 id="extended_grid_system" class="styleguide">Extended Grid System</h1>
@@ -89,16 +126,27 @@
 
 <p><code>.large-offset-1-and-half</code> can be used for offsetting columns by one-and-a-half columns width on a large screen. This is useful for centering three groups of three columns (like for pricing tables).</p>
 
+<h1 id="misc_helper_classes" class="styleguide">Misc Helper Classes</h1>
+
+<p>Adding the class <code>full-width</code> to something will make it <code>width: 100%;</code><p>
+
+<p>Adding the class <code>inline</code> to something will make it <code>display: inline;</code><p>
+
+
+
 <h1 id="panels" class="styleguide">Panels</h1>
 
 <h3>White Panel</h3>
-
 <div class="la-panel columns mbl">
   <h3>Example $la-panel</h3>
   <code>div.la-panel.columns.mbl</code>
   <p>Adding the class <code>la-panel</code> to a div will provide it a white background. This div also has the classes <code>columns</code> and <code>mbl</code> to provide padding and margin.
 </div>
-<p class="styleguide"><hr></p>
+
+<hr>
+
+
+
 <h1 id="spacing" class="styleguide">Custom Spacing Classes</h1>
 
 <p>To provide custom padding and margin to elements, add a class to the element by assembling one letter from each category below depending on your needs:</p>
