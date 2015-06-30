@@ -73,4 +73,14 @@ If you add new classes or variables to DysonSphere, please make sure to update t
 
 If you make a new scss file, just copy the format for comments from another page. The "category" field will dictate which page of the styleguide this chunk of HTML is placed on. If you use an existing category, it will be added to that page; if you make a new category, it will create a new page.
 
-For help with displaying variables in our static HTML, you can use `styleguide.scss` to define classes that will only be used in the styleguide. Copy the examples there and in `_colors.scss` or `_fonts.scss` to see how to consistently dispay new font/color variables.
+For help with displaying variables in our static HTML, you can use `styleguide.scss` to define classes that will only be used in the styleguide. Copy the examples there and in `_colors.scss` or `_fonts.scss` to see how to consistently dispay new font/color variables.\
+
+## Troubleshooting
+
+#### My new DysonSphere changes aren't showing up in the app I'm working on.
+
+If your new DysonSphere changes are not showing up in your parent application, run `rake assets:clobber` from your application's command line to remove all cached styles.
+
+#### When I try to visit `localhost:3000/styleguide`, I get an error: `undefined local variable or method `'root_path'`
+
+Restart your server and visit the page again. Not sure why this works, but it's fixed the problem so far!

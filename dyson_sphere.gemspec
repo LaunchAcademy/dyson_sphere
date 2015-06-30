@@ -23,7 +23,6 @@ Gem::Specification.new do |s|
   s.add_dependency "font-awesome-sass"
   s.add_dependency "hologram"
   s.add_dependency "jquery-rails"
-  s.add_dependency "font-awesome-sass"
 
   s.add_development_dependency "sqlite3"
 end
