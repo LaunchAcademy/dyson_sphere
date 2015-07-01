@@ -28,6 +28,8 @@ Add the following to the **top** of `app/assets/stylesheets/application.scss`:
 @import "dyson_sphere/application";
 ```
 
+Update the DysonSphere Readme to include your new LA app as one of the apps that pulls from DysonSphere.
+
 If you want your app to reference a local version of DysonSphere instead of the Github repo, comment out the above line in your Gemfile and instead put:
 
 ```
@@ -74,3 +76,12 @@ If you add new classes or variables to DysonSphere, please make sure to update t
 If you make a new scss file, just copy the format for comments from another page. The "category" field will dictate which page of the styleguide this chunk of HTML is placed on. If you use an existing category, it will be added to that page; if you make a new category, it will create a new page.
 
 For help with displaying variables in our static HTML, you can use `styleguide.scss` to define classes that will only be used in the styleguide. Copy the examples there and in `_colors.scss` or `_fonts.scss` to see how to consistently dispay new font/color variables.
+
+## Updating apps with new DysonSphere styling
+
+When you make changes to DysonSphere styling, you should make sure the changes look okay when integrated into all existing apps that use DysonSphere. Currently, those apps are:
+
+- EventHorizon
+- LaunchPass
+
+After completing and merging your DysonSphere changes, run `bundle update dyson_sphere` on all of the above apps.
