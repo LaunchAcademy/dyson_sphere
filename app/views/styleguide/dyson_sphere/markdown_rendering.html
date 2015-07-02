@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+  <head>
+    <title>a brand new styleguide: Markdown Rendering</title>
+    <link rel="stylesheet" href="../assets/dyson_sphere/styleguide.scss">
+  </head>
+  <body>
+
+    <div class="contain-to-grid full-top-bar">
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="#">DysonSphere Styleguide</a></h1>
+          </li>
+        </ul>
+
+        <section class="top-bar-section">
+          <ul class="right">
+            <li><a href="https://github.com/LaunchAcademy/dyson_sphere" target="_blank">Github</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+
+    <dl class="sub-nav mts">
+      <div class="row">
+        
+          <dd class="">
+            <a href="/styleguide/layout_and_formatting.html">Layout and Formatting</a>
+          </dd>
+        
+          <dd class="">
+            <a href="/styleguide/buttons.html">Buttons</a>
+          </dd>
+        
+          <dd class="active">
+            <a href="/styleguide/markdown_rendering.html">Markdown Rendering</a>
+          </dd>
+        
+          <dd class="">
+            <a href="/styleguide/index.html">Colors and Fonts</a>
+          </dd>
+        
+          <dd class="">
+            <a href="/styleguide/headers_and_hero_images.html">Headers and Hero Images</a>
+          </dd>
+        
+          <dd class="">
+            <a href="/styleguide/misc.html">Misc</a>
+          </dd>
+        
+      </div>
+    </dl>
+
+    <div class="row">
+      <div class="columns">
+        <section class="content">
+          
+            <div class="small-3 columns">
+              <ul class="side-nav">
+              
+                <li><a href="#code">Code</a></li>
+              
+                <li><a href="#highlighted_code">Highlighted Code</a></li>
+              
+                <li><a href="#text">Text</a></li>
+              
+              </ul>
+            </div>
+          
+          <div class="columns small-9">
+<h1 id="code" class="styleguide">Code</h1>
+<p class="styleguide"><code>Single</code>
+<code>code</code>
+<code>words</code>
+<pre class="highlight plaintext"><code>Cupcake ipsum dolor sit.&#x000A;Amet sweet roll lollipop candy wafer ice cream gingerbread biscuit. Gummies macaroon bonbon tart cotton candy dessert. Dessert sesame snaps toffee oat cake caramels cookie biscuit macaroon marshmallow. Marzipan croissant gingerbread sweet roll muffin danish.&#x000A;</code></pre></p>
+<h1 id="highlighted_code" class="styleguide">Highlighted Code</h1>
+
+<pre><code class="highlight ruby"><span class="nb">puts</span><span class="s2">"==============================================="</span>&#x000A;<span class="nb">puts</span><span class="s2">"Creating Restaurant Categories"</span>&#x000A;<span class="nb">puts</span><span class="s2">"==============================================="</span>&#x000A;&#x000A;<span class="mi">10</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>&#x000A;  <span class="no">RestaurantCategory</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span>&#x000A;    <span class="ss">category_id: </span><span class="no">Category</span><span class="p">.</span><span class="nf">all</span><span class="p">.</span><span class="nf">sample</span><span class="p">.</span><span class="nf">id</span>&#x000A;  <span class="p">)</span>&#x000A;<span class="k">end</span>&#x000A;&#x000A;</code></pre>
+
+<h1 id="text" class="styleguide">Text</h1>
+
+<h6>IMPORTANT: Wrap your markdown in a <code>div</code> with the id <code>#markdown-body</code> to apply these styles.</h6>
+
+<div id="markdown-body" class="la-panel pal">
+  <h1>Example h1</h1>
+  <h2>Example h2</h2>
+  <h3>Example h3</h3>
+  <h4>Example h4</h4>
+  <h5>Example h5</h5>
+  <h6>Example h6</h6>
+
+  <blockquote>Example blockquote. Cupcake ipsum dolor sit. Amet sweet roll lollipop candy wafer ice cream gingerbread biscuit.</blockquote>
+
+  <p>Example <code>hr</code>:</p>
+  <hr>
+
+</div>
+          </div>
+          <div class="row text-center">
+            <div class="columns">
+              <footer>
+                <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>
+              </footer>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

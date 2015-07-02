@@ -5,13 +5,20 @@
 @import "dyson_sphere/constants/fonts";
 @import "dyson_sphere/foundation_and_overrides";
 
+@import "dyson_sphere/modules/block_lists";
 @import "dyson_sphere/modules/borders";
 @import "dyson_sphere/modules/buttons";
+@import "dyson_sphere/modules/code";
 @import "dyson_sphere/modules/grid_system_extended";
 @import "dyson_sphere/modules/header";
+@import "dyson_sphere/modules/helper_classes";
 @import "dyson_sphere/modules/hero_images";
+@import "dyson_sphere/modules/markdown";
+@import "dyson_sphere/modules/pagination";
 @import "dyson_sphere/modules/panels";
 @import "dyson_sphere/modules/pricing_tables";
+@import "dyson_sphere/modules/search_bar";
 @import "dyson_sphere/modules/spacing";
+@import "dyson_sphere/modules/syntax";
 @import "dyson_sphere/modules/testimonials";
 @import "dyson_sphere/modules/typography";

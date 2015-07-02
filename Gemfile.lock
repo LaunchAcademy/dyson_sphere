@@ -6,7 +6,7 @@ PATH
       foundation-rails
       hologram
       jquery-rails
-      rails (~> 4.2.1)
+      rails
       sass-rails
 
 GEM

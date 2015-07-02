@@ -13,10 +13,16 @@ category: Layout and Formatting
   <p>Bottom borders are dotted.</p>
 </div>
 
-<div class="la-panel top-border columns pvl mbl">
+<div class="la-panel top-border columns pvl">
   <p>Example top-border div:</p>
   <p><code>.top-border.la-panel.columns.pvl</code></p>
   <p>Top borders are solid.</p>
+</div>
+
+<div class="la-panel border columns pvl mbl">
+  <p>Example all-around border div:</p>
+  <p><code>.border.la-panel.columns.pvl</code></p>
+  <p>All-around borders are solid and have a border-radius.</p>
 </div>
 
 <hr>

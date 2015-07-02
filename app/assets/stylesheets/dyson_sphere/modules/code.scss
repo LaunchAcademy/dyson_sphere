@@ -1,0 +1,37 @@
+/*doc
+---
+title: Code
+name: code
+category: Markdown Rendering
+---
+<code>Single</code>
+<code>code</code>
+<code>words</code>
+<pre class="highlight plaintext"><code>Cupcake ipsum dolor sit.&#x000A;Amet sweet roll lollipop candy wafer ice cream gingerbread biscuit. Gummies macaroon bonbon tart cotton candy dessert. Dessert sesame snaps toffee oat cake caramels cookie biscuit macaroon marshmallow. Marzipan croissant gingerbread sweet roll muffin danish.&#x000A;</code></pre>
+
+*/
+
+
+code {
+  border: 1px solid $la-border-color;
+  background-color: $la-light-grey;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+pre code {
+  padding: 0;
+  border: 0;
+}
+
+pre {
+  @extend code;
+  font-size: $la-font-code-size;
+  line-height: 1.45;
+  overflow: auto;
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+  border-radius: 3px;
+  word-wrap: break-word;
+  padding: 16px;
+}

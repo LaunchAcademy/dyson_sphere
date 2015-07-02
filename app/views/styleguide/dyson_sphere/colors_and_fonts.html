@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>a brand new styleguide: </title>
-    <link rel="stylesheet" href="../assets/dyson_sphere/styleguide.css.scss">
+    <link rel="stylesheet" href="../assets/dyson_sphere/styleguide.scss">
   </head>
   <body>
 
@@ -34,15 +34,15 @@
           </dd>
         
           <dd class="">
+            <a href="/styleguide/markdown_rendering.html">Markdown Rendering</a>
+          </dd>
+        
+          <dd class="">
             <a href="/styleguide/index.html">Colors and Fonts</a>
           </dd>
         
           <dd class="">
             <a href="/styleguide/headers_and_hero_images.html">Headers and Hero Images</a>
-          </dd>
-        
-          <dd class="">
-            <a href="/styleguide/pricing_tables.html">Pricing Tables</a>
           </dd>
         
           <dd class="">
@@ -61,7 +61,7 @@
               
                 <li><a href="#colors">Colors</a></li>
               
-                <li><a href="#Fonts">Fonts</a></li>
+                <li><a href="#fonts">Fonts</a></li>
               
                 <li><a href="#typography_helper_classes">Typography Helper Classes</a></li>
               
@@ -100,21 +100,19 @@
   <div class="circle la-border-color">$la-border-color</div>
 </div>
 <p class="styleguide"><hr></p>
-<h1 id="Fonts" class="styleguide">Fonts</h1>
+<h1 id="fonts" class="styleguide">Fonts</h1>
 
-<div class="panel">
-  <h1>Example Header Font</h1>
+<div class="la-panel pal">
+  <h1>Example $header-font</h1>
   <hr>
-  <h3>Example body font - size $la-font-small:</h3>
+  <h3>Example $body-font - size $la-font-small:</h3>
   <p class="la-font-small">Cupcake ipsum dolor sit. Amet sweet roll lollipop candy wafer ice cream gingerbread biscuit. Gummies macaroon bonbon tart cotton candy dessert. Dessert sesame snaps toffee oat cake caramels cookie biscuit macaroon marshmallow. Marzipan croissant gingerbread sweet roll muffin danish. Powder tootsie roll toffee. Carrot cake dessert dragée wafer cake brownie. Icing pastry oat cake.</p>
 
-  <h3>Example body font - size $la-font-extra-small:</h3>
+  <h3>Example $body-font - size $la-font-extra-small:</h3>
   <p class="la-font-extra-small">Cupcake ipsum dolor sit. Amet sweet roll lollipop candy wafer ice cream gingerbread biscuit. Gummies macaroon bonbon tart cotton candy dessert. Dessert sesame snaps toffee oat cake caramels cookie biscuit macaroon marshmallow. Marzipan croissant gingerbread sweet roll muffin danish. Powder tootsie roll toffee. Carrot cake dessert dragée wafer cake brownie. Icing pastry oat cake.</p>
 
-  <h3>Example code font</h3>
-  <p>
-    <code>sample code here</code>
-  </p>
+  <h3>Example $code-font - size $la-font-code-size:</h3>
+  <pre class="highlight plaintext"><code>Yay example code!!&#x000A;</code></pre>
 </div>
 <p class="styleguide"><hr></p>
 <h1 id="typography_helper_classes" class="styleguide">Typography Helper Classes</h1>
@@ -124,6 +122,7 @@
 
   <h4>For meta information - <code>.meta-info</code>:</h4>
   <hr>
+
   <span class="meta-info">Christina Koller - June 29, 2015 at 3:15pm</span>
   <div class="codeBlock mvl">
     <div class="highlight">

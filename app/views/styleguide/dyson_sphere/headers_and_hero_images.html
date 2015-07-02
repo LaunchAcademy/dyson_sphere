@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>a brand new styleguide: Headers and Hero Images</title>
-    <link rel="stylesheet" href="../assets/dyson_sphere/styleguide.css.scss">
+    <link rel="stylesheet" href="../assets/dyson_sphere/styleguide.scss">
   </head>
   <body>
 
@@ -34,15 +34,15 @@
           </dd>
         
           <dd class="">
+            <a href="/styleguide/markdown_rendering.html">Markdown Rendering</a>
+          </dd>
+        
+          <dd class="">
             <a href="/styleguide/index.html">Colors and Fonts</a>
           </dd>
         
           <dd class="active">
             <a href="/styleguide/headers_and_hero_images.html">Headers and Hero Images</a>
-          </dd>
-        
-          <dd class="">
-            <a href="/styleguide/pricing_tables.html">Pricing Tables</a>
           </dd>
         
           <dd class="">
@@ -59,6 +59,8 @@
             <div class="small-3 columns">
               <ul class="side-nav">
               
+                <li><a href="#header_with_search_bar">Header w/ Search Bar</a></li>
+              
                 <li><a href="#headers">Headers</a></li>
               
                 <li><a href="#hero_images">Hero Images</a></li>
@@ -67,7 +69,7 @@
             </div>
           
           <div class="columns small-9">
-<h1 id="headers" class="styleguide">Headers</h1>
+<h1 id="header_with_search_bar" class="styleguide">Header w/ Search Bar</h1>
 <div class="codeExample">
   <div class="exampleOutput clearfix">
     <div class="contain-to-grid full-top-bar">
@@ -88,7 +90,12 @@
       <ul class="left">
         <li class="has-form">
           <div class="row collapse search">
-
+            <form>
+              <input class="left" id="query" name="query" placeholder="Search" type="text" />
+              <button class="search-button" name="button" type="submit">
+                <i class='fa fa-search'></i>
+              </button>
+            </form>
           </div>
         </li>
         <li class="has-dropdown">
@@ -135,9 +142,101 @@
       <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"left"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"has-form"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row collapse search"</span><span class="nt">&gt;</span>
-
+            <span class="nt">&lt;form&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"left"</span> <span class="na">id=</span><span class="s">"query"</span> <span class="na">name=</span><span class="s">"query"</span> <span class="na">placeholder=</span><span class="s">"Search"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;</span>
+              <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"search-button"</span> <span class="na">name=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">'fa fa-search'</span><span class="nt">&gt;&lt;/i&gt;</span>
+              <span class="nt">&lt;/button&gt;</span>
+            <span class="nt">&lt;/form&gt;</span>
           <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"has-dropdown"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Admin<span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Users<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Teams<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"right"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/LaunchAcademy/dyson_sphere"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>Github<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"has-dropdown"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Account Details<span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Sign Out<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+          <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/section&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="headers" class="styleguide">Headers</h1>
+<div class="codeExample">
+  <div class="exampleOutput clearfix">
+    <div class="contain-to-grid full-top-bar">
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="#">DysonSphere Styleguide</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon">
+        <a href="#">
+          <span>Menu</span>
+        </a>
+      </li>
+
+    </ul>
+
+    <section class="top-bar-section">
+      <ul class="left">
+        <li class="has-dropdown">
+          <a href="">Admin</a>
+          <ul class="dropdown">
+            <li><a href="#">Users</a></li>
+            <li><a href="#">Teams</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="right">
+        <li><a href="https://github.com/LaunchAcademy/dyson_sphere" target="_blank">Github</a></li>
+        <li class="has-dropdown">
+          <a href="">Account Details</a>
+          <ul class="dropdown">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Sign Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </nav>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight panel">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"contain-to-grid full-top-bar"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"top-bar"</span> <span class="na">data-topbar</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"title-area"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h1&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>DysonSphere Styleguide<span class="nt">&lt;/a&gt;&lt;/h1&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"toggle-topbar menu-icon"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;span&gt;</span>Menu<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+
+    <span class="nt">&lt;/ul&gt;</span>
+
+    <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"top-bar-section"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"left"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"has-dropdown"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Admin<span class="nt">&lt;/a&gt;</span>
           <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
