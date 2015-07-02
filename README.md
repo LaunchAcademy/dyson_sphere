@@ -95,3 +95,7 @@ If your new DysonSphere changes are not showing up in your parent application, r
 #### When I try to visit `localhost:3000/styleguide`, I get an error: `undefined local variable or method `'root_path'`
 
 Restart your server and visit the page again. Not sure why this works, but it's fixed the problem so far!
+
+#### I'm getting the error `Invalid CSS after "...ules: $modules ": expected "}", was "!global;"`
+
+This is a problem when using certain versions of Sass in your parent app (`4.0.3` has caused this problem for me before). Update your Sass gem to a more recent version (on your parent app) and the problem should go away. ([Relevant Github issue](https://github.com/zurb/foundation/issues/5811))
