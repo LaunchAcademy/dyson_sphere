@@ -84,7 +84,7 @@ When you make changes to DysonSphere styling, you should make sure the changes l
 - EventHorizon
 - LaunchPass
 
-After completing and merging your DysonSphere changes, run `bundle update dyson_sphere` on all of the above apps.
+After completing and merging your DysonSphere changes, locally run `bundle update dyson_sphere` on all of the above apps and make a new commit to those apps with the update.
 
 ## Troubleshooting
 
