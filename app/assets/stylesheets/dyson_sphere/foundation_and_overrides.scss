@@ -296,7 +296,7 @@ $code-font-weight: normal;
 // $definition-list-margin-bottom: rem-calc(12);
 
 // We use these to style blockquotes
-// $blockquote-font-color: scale-color($header-font-color, $lightness: 35%);
+$blockquote-font-color: $la-med-dark-grey;
 // $blockquote-padding: rem-calc(9 20 0 19);
 // $blockquote-border: 1px solid $gainsboro;
 // $blockquote-cite-font-size: rem-calc(13);
@@ -1020,22 +1020,22 @@ $panel-font-color: $body-font-color;
 // $price-table-margin-bottom: rem-calc(20);
 
 // We use these to control the title styles
-// $price-title-bg: $oil;
-// $price-title-padding: rem-calc(15 20);
+$price-title-bg: $la-white;
+$price-title-padding: rem-calc(25 20);
 // $price-title-align: center;
-// $price-title-color: $smoke;
+$price-title-color: $la-blue;
 // $price-title-weight: $font-weight-normal;
-// $price-title-size: rem-calc(16);
-// $price-title-font-family: $body-font-family;
+$price-title-size: rem-calc(25);
+$price-title-font-family: $header-font;
 
 // We use these to control the price styles
-// $price-money-bg: $vapor;
+$price-money-bg: $la-white;
 // $price-money-padding: rem-calc(15 20);
 // $price-money-align: center;
-// $price-money-color: $oil;
-// $price-money-weight: $font-weight-normal;
-// $price-money-size: rem-calc(32);
-// $price-money-font-family: $body-font-family;
+$price-money-color: $la-black-grey;
+$price-money-weight: $font-weight-bold;
+$price-money-size: rem-calc(37);
+$price-money-font-family: $header-font;
 
 
 // We use these to control the description styles
@@ -1046,20 +1046,20 @@ $panel-font-color: $body-font-color;
 // $price-desc-font-size: rem-calc(12);
 // $price-desc-weight: $font-weight-normal;
 // $price-desc-line-height: 1.4;
-// $price-desc-bottom-border: dotted 1px $gainsboro;
+$price-desc-bottom-border: solid 1px $la-light-grey;
 
 // We use these to control the list item styles
-// $price-item-color: $oil;
+$price-item-color: $body-font-color;
 // $price-item-padding: rem-calc(15);
 // $price-item-align: center;
-// $price-item-font-size: rem-calc(14);
+$price-item-font-size: $la-font-extra-small;
 // $price-item-weight: $font-weight-normal;
-// $price-item-bottom-border: dotted 1px $gainsboro;
+$price-item-bottom-border: solid 1px $la-light-grey;
 
 // We use these to control the CTA area styles
 // $price-cta-bg: $white;
 // $price-cta-align: center;
-// $price-cta-padding: rem-calc(20 20 0);
+$price-cta-padding: rem-calc(10 0 10);
 
 // 23. Progress Bar
 // - - - - - - - - - - - - - - - - - - - - - - - - -

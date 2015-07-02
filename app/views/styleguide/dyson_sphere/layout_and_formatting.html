@@ -79,7 +79,7 @@
 
 <p>Block lists resemble single-column tables.</p>
 <div class="codeExample">
-  <div class="exampleOutput">
+  <div class="exampleOutput clearfix">
     <ul class="block">
   <li>Item 1</li>
   <li>Item 2</li>
@@ -138,15 +138,31 @@
 
 <h3>White Panel</h3>
 <div class="la-panel columns mbl">
-  <h3>Example $la-panel</h3>
+  <h3>Example <code>.la-panel</code></h3>
   <code>div.la-panel.columns.mbl</code>
-  <p>Adding the class <code>la-panel</code> to a div will provide it a white background. This div also has the classes <code>columns</code> and <code>mbl</code> to provide padding and margin.
+  <p>
+    Adding the class <code>la-panel</code> to a div will provide it a white
+    background. This div also has the classes <code>columns</code> and
+    <code>mbl</code> to provide padding and margin.
+  </p>
+<p class="styleguide"></div></p>
+<h3>Contrast Panel</h3>
+
+<div class="contrast-panel columns mbl pal">
+  <h3>Example <code>.contrast-panel</code></h3>
+  <p>
+    Adding the class <code>contrast-panel</code> to a div will provide it a blue
+    background, white text, and the "header" font for all text.
+  </p>
+  <h4>Recommended Use:</h4>
+  <pre>
+<code>.contrast-panel
+  .row
+    %h1 ...
+    %p ...</code>
+  </pre>
 </div>
-
-<hr>
-
-
-
+<p class="styleguide"><hr></p>
 <h1 id="spacing" class="styleguide">Custom Spacing Classes</h1>
 
 <p>To provide custom padding and margin to elements, add a class to the element by assembling one letter from each category below depending on your needs:</p>

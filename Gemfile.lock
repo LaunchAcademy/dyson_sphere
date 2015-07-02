@@ -1,8 +1,7 @@
 PATH
   remote: .
   specs:
-    dyson_sphere (0.0.1)
-      font-awesome-sass
+    dyson_sphere (0.0.2)
       font-awesome-sass
       foundation-rails
       hologram

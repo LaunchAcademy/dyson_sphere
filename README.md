@@ -85,3 +85,13 @@ When you make changes to DysonSphere styling, you should make sure the changes l
 - LaunchPass
 
 After completing and merging your DysonSphere changes, run `bundle update dyson_sphere` on all of the above apps.
+
+## Troubleshooting
+
+#### My new DysonSphere changes aren't showing up in the app I'm working on.
+
+If your new DysonSphere changes are not showing up in your parent application, run `rake assets:clobber` from your application's command line to remove all cached styles.
+
+#### When I try to visit `localhost:3000/styleguide`, I get an error: `undefined local variable or method `'root_path'`
+
+Restart your server and visit the page again. Not sure why this works, but it's fixed the problem so far!
