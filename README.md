@@ -33,7 +33,9 @@ Update the DysonSphere Readme to include your new LA app as one of the apps that
 If you want your app to reference a local version of DysonSphere instead of the Github repo, comment out the above line in your Gemfile and instead put:
 
 ```
-gem 'dyson_sphere',  path: "~/path/to/local/dyson_sphere"
+gem 'dyson_sphere',  
+  # git: 'https://github.com/LaunchAcademy/dyson_sphere'
+  path: "~/path/to/local/dyson_sphere"
 ```
 
 ## Viewing the Styleguide
@@ -42,30 +44,39 @@ Once you've set up DysonSphere in a local app, run `rails s` from that app's dir
 
 The styleguide contains useful information on color/font variables that are accessible, helper classes that are available, and code samples for creating commonly-used elements like white panels and headers.
 
-## Using the styleguide in your own development of LA apps
+## Styling apps that use DysonSphere
 
-When doing style work on existing LA apps that use DysonSphere, any styles that are app-specific should be written in the stylesheets for that specific app. Any styles that are applicable to common elements used between apps should be added to DysonSphere.
+When styling apps that use DysonSphere, chances are that you'll need simultaneously make changes to DysonSphere and your own app. Any styles that are app-specific should be written in the stylesheets for that specific app. Any styles that are applicable to common elements used between apps should be added to DysonSphere.
 
 As an example, these are some things you would want to put into DysonSphere:  
 - Updates to header styles
 - New/different font or color variables
 - Styling on all forms, or commonly used forms
+- New helper classes that should be usable between apps
 
 Here are some things you would want to put into your app:
 - Horizon "Lesson" styling
 - LaunchPass "Product Offer Rating" styling
 
+During your development, make sure to use the styleguide to find useful existing helper classes and constants.
+
 Once you have updated both DysonSphere and the other app with new styles, do the following:
 - Make sure the DysonSphere changes look okay on other apps
 - Update the Styleguide with any DysonSphere changes (see below)
-- Make a PR for both DysonSphere and the other app
-- Make sure the DysonSphere PR gets merged first!
+- Increment the DysonSphere version (at `lib/dyson_sphere/version.rb`)
+- Make a PR for DysonSphere
+- Get the DysonSphere PR merged
+- Change the DysonSphere gem path in your current app to reference the Github repo
+- Run `bundle update dyson_sphere` on all apps that use DysonSphere styles (**including** the one you're currently working on) so they all reference the most recent version of DysonSphere, and make commits for all apps
+- *Only then* should you make a PR with your most recent work on the current app!
 
 ## Updating the Styleguide
 
 The styleguide is maintained through comments in a particular format at the top of each scss file. The HTML provided there gets compiled into static pages when you run `hologram` on the command line from your DysonSphere directory.
 
-If you add new classes or variables to DysonSphere, please make sure to update the styleguide HTML on the page where you wrote the styles, then run `hologram`. If you want a page to show rendered HTML and then the code used to generate it, use this syntax:
+For any changes you make to a stylesheet, please make sure these are reflected in the styleguide. Follow the examples at the top of existing files to see how to format this. After making changes to the HTML at the top of a `scss` file, run `hologram` from the command line to compile these changes into the static HTML pages.
+
+If you want a styleguide page to show rendered HTML and then the code used to generate it, use this syntax:
 
 ```
 ```html_example
@@ -76,15 +87,6 @@ If you add new classes or variables to DysonSphere, please make sure to update t
 If you make a new scss file, just copy the format for comments from another page. The "category" field will dictate which page of the styleguide this chunk of HTML is placed on. If you use an existing category, it will be added to that page; if you make a new category, it will create a new page.
 
 For help with displaying variables in our static HTML, you can use `styleguide.scss` to define classes that will only be used in the styleguide. Copy the examples there and in `_colors.scss` or `_fonts.scss` to see how to consistently dispay new font/color variables.
-
-## Updating apps with new DysonSphere styling
-
-When you make changes to DysonSphere styling, you should make sure the changes look okay when integrated into all existing apps that use DysonSphere. Currently, those apps are:
-
-- EventHorizon
-- LaunchPass
-
-After completing and merging your DysonSphere changes, locally run `bundle update dyson_sphere` on all of the above apps and make a new commit to those apps with the update.
 
 ## Troubleshooting
 
