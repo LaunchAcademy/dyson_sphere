@@ -15,4 +15,7 @@
 //= require foundation
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function(){
+  Foundation.global.namespace = '';
+  $(document).foundation();
+});
