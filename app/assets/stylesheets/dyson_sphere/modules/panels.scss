@@ -21,7 +21,8 @@ category: Layout and Formatting
   <h3>Example <code>.contrast-panel</code></h3>
   <p>
     Adding the class <code>contrast-panel</code> to a div will provide it a blue
-    background, white text, and the "header" font for all text.
+    background, white text, and the "header" font for all text. <a href="#">Links
+    even look okay!</a>
   </p>
   <h4>Recommended Use:</h4>
   <pre>
@@ -31,8 +32,6 @@ category: Layout and Formatting
     %p ...</code>
   </pre>
 </div>
-
-<hr>
 
 */
 
@@ -48,5 +47,14 @@ category: Layout and Formatting
 
   h1, h2, h3, h4, h5, h6 {
     color: white;
+  }
+
+  a {
+    text-decoration: underline;
+    color: #B8EEFF;
+
+    &:hover {
+      color: #88E1FF;
+    }
   }
 }

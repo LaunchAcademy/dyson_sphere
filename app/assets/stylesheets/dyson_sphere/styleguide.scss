@@ -71,3 +71,13 @@
   border: 1px solid $la-border-color;
   margin-top: 10px;
 }
+
+.content {
+  h1 {
+    border-top: 4px double #999;
+    border-bottom: 1px solid #ddd;
+    padding-top: 35px;
+    margin-top: 35px;
+    margin-bottom: 25px;
+  }
+}
