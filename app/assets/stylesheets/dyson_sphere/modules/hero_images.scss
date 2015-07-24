@@ -42,3 +42,15 @@ category: Headers and Hero Images
   @extend .hero;
   background-image: image_url("dyson_sphere/hero_1.jpg");
 }
+
+.preferred-star {
+  height: 30px;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+.large-preferred-star {
+  height: 50px;
+  width: auto;
+  margin-bottom: 10px;
+}
