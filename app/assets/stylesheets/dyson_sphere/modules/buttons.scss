@@ -19,19 +19,19 @@ category: Buttons
 
 .btn-green {
   @extend .button;
-  background-color: $la-light-green;
+  background-color: $la-light-green !important;
 
   &:hover, &:focus {
-    background-color: #a1e33e;
+    background-color: #a1e33e !important;
   }
 }
 
 .btn-pink {
   @extend .button;
-  background-color: $la-pink;
+  background-color: $la-pink !important;
 
   &:hover, &:focus {
-    background-color: #eb66a3;
+    background-color: #eb66a3 !important;
   }
 }
 

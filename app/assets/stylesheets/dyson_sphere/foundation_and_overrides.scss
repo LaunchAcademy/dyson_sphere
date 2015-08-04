@@ -1406,11 +1406,11 @@ $topbar-bg-color: $la-blue;
 $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-$topbar-height: rem-calc(50);
+$topbar-height: rem-calc(90);
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
-$topbar-title-weight: $font-weight-bold;
+$topbar-title-weight: normal;
 $topbar-title-font-size: rem-calc(23);
 
 // Set the link colors and styles for top-level nav
