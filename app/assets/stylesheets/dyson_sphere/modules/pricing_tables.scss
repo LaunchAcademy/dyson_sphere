@@ -73,7 +73,7 @@ category: Misc
   .price::after {
     content: "/mo";
     color: $la-med-dark-grey;
-    font-size: $la-font-small;
+    font-size: $la-body-font-size;
   }
 
   .cta-button {
@@ -96,7 +96,7 @@ category: Misc
   box-shadow: 0  0 10px rgba(0,0,0,.2);
 
   .title {
-    background-color: $la-black-grey;
+    background-color: $la-navy;
     color: white;
   }
 

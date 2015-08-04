@@ -21,15 +21,16 @@
 .la-grey { background-color: $la-grey; }
 .la-med-dark-grey { background-color: $la-med-dark-grey; color: white; }
 .la-dark-grey { background-color: $la-dark-grey; color: white; }
-.la-black-grey { background-color: $la-black-grey; color: white; }
+.la-navy { background-color: $la-navy; color: white; }
 
 .la-blue { background-color: $la-blue; color: white; }
 .la-light-blue { background-color: $la-light-blue; }
 .la-pink { background-color: $la-pink; color: white; }
-.la-light-pink { background-color: $la-light-pink; }
-.la-light-green { background-color: $la-light-green; }
+.la-light-pink { background-color: $la-light-pink; color: white; }
+.la-light-green { background-color: $la-light-green; color: white; }
 .la-green { background-color: $la-green; color: white; }
 .la-red { background-color: $la-red; color: white; }
+.la-dark-yellow { background-color: #FFD800; }
 
 .la-border-color { background-color: $la-border-color; }
 
@@ -41,7 +42,7 @@
   padding: 30px;
 }
 
-.la-font-small { font-size: $la-font-small }
+.la-font-small { font-size: $la-body-font-size }
 .la-font-extra-small { font-size: $la-font-extra-small }
 
 // ======================
@@ -79,5 +80,11 @@
     padding-top: 35px;
     margin-top: 35px;
     margin-bottom: 25px;
+  }
+
+  h1.no-border {
+    border-top: 0px;
+    border-bottom: 0px;
+    padding-top: 0;
   }
 }
