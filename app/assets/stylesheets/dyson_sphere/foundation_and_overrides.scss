@@ -222,8 +222,8 @@ $header-font-color: $body-font-color;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
+$h1-font-size: rem-calc(48);
+$h2-font-size: rem-calc(36);
 // $h3-font-size: rem-calc(27);
 // $h4-font-size: rem-calc(23);
 // $h5-font-size: rem-calc(18);
@@ -251,7 +251,7 @@ $header-font-color: $body-font-color;
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: $font-weight-normal;
-// $paragraph-font-size: 1rem;
+$paragraph-font-size: rem-calc($la-body-font-size);
 // $paragraph-line-height: 1.6;
 $paragraph-margin-bottom: 15px;
 // $paragraph-aside-font-size: rem-calc(14);
@@ -271,8 +271,8 @@ $code-font-weight: normal;
 
 // We use these to style anchors
 // $anchor-text-decoration: none;
-// $anchor-text-decoration-hover: none;
-// $anchor-font-color: $primary-color;
+$anchor-text-decoration-hover: underline;
+$anchor-font-color: $la-blue;
 // $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 
 // We use these to style the <hr> element
@@ -455,7 +455,7 @@ $button-font-family: $header-font;
 // $button-font-color-alt: $oil;
 // $button-font-tny: rem-calc(11);
 // $button-font-sml: rem-calc(13);
-// $button-font-med: rem-calc(16);
+$button-font-med: rem-calc($la-body-font-size);
 // $button-font-lrg: rem-calc(20);
 // $button-font-weight: $font-weight-normal;
 // $button-font-align: center;
@@ -1032,7 +1032,7 @@ $price-title-font-family: $header-font;
 $price-money-bg: $la-white;
 // $price-money-padding: rem-calc(15 20);
 // $price-money-align: center;
-$price-money-color: $la-black-grey;
+$price-money-color: $la-navy;
 $price-money-weight: $font-weight-bold;
 $price-money-size: rem-calc(37);
 $price-money-font-family: $header-font;
@@ -1442,7 +1442,7 @@ $topbar-dropdown-link-bg: $topbar-dropdown-bg;
 $topbar-dropdown-link-bg-hover: lighten($topbar-bg, 25%);
 // $topbar-dropdown-link-weight: $font-weight-normal;
 // $topbar-dropdown-toggle-size: 5px;
-$topbar-dropdown-toggle-color: $la-black-grey;
+$topbar-dropdown-toggle-color: $la-navy;
 // $topbar-dropdown-toggle-alpha: .4;
 
 // $topbar-dropdown-label-color: $monsoon;

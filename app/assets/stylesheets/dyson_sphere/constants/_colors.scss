@@ -4,57 +4,62 @@ title: Colors
 name: colors
 category: Colors and Fonts
 ---
-<h3>Base Colors</h3>
+<h3>Primary Base Colors</h3>
 
 <div class="row">
   <div class="circle la-white">$la-white</div>
   <div class="circle la-light-grey">$la-light-grey</div>
-  <div class="circle la-grey">$la-grey</div>
-  <div class="circle la-med-dark-grey">$la-med-dark-grey</div>
-  <div class="circle la-dark-grey">$la-dark-grey</div>
-  <div class="circle la-black-grey">$la-black-grey</div>
+  <div class="circle la-navy">$la-navy</div>
 </div>
 
-<h3>Accent Colors</h3>
+<h3>Primary Accent Colors</h3>
 
 <div class="row">
   <div class="circle la-blue">$la-blue</div>
-  <div class="circle la-light-blue">$la-light-blue</div>
   <div class="circle la-pink">$la-pink</div>
-  <div class="circle la-light-pink">$la-light-pink</div>
   <div class="circle la-light-green">$la-light-green</div>
+</div>
+
+<h3>Misc Base Colors</h3>
+
+<div class="row">
+  <div class="circle la-grey">$la-grey</div>
+  <div class="circle la-med-dark-grey">$la-med-dark-grey</div>
+  <div class="circle la-dark-grey">$la-dark-grey</div>
+  <div class="circle la-border-color">$la-border-color</div>
+</div>
+
+<h3>Mics Accent Colors</h3>
+
+<div class="row">
+  <div class="circle la-light-blue">$la-light-blue</div>
+  <div class="circle la-light-pink">$la-light-pink</div>
   <div class="circle la-green">$la-green</div>
   <div class="circle la-red">$la-red</div>
   <div class="circle la-dark-yellow">$la-dark-yellow</div>
-</div>
-
-<h3>Misc Colors</h3>
-
-<div class="row">
-  <div class="circle la-border-color">$la-border-color</div>
 </div>
 
 */
 
 // Base Colors
 // ----------------
-$la-white: #FFF;
+$la-white: #ffffff;
 
-$la-light-grey: #F7F7F7;
+$la-light-grey: #f8f8f9;
 $la-grey: #CCCCCC;
 $la-med-dark-grey: #999;
 $la-dark-grey: #777;
-$la-black-grey: #333;
+$la-navy: #1c2224;
 
 // Accent Colors
 // ----------------
-$la-light-green: #86CC2E;
+$la-light-green: #84ce15;
 $la-green: #00aa00;
 
 $la-red: #D3080C;
 
 $la-light-pink: #FF7DD6;
-$la-pink: #EA237C;
+$la-pink: #ed1a7b;
 
 $la-light-blue: #E5F3F4;
 $la-blue: #37becc;
