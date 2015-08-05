@@ -14,6 +14,14 @@ category: Buttons
 
 <h3>Secondary Buttons:</h3>
 <div class="btn-border button">.btn-border</div> <br>
+<div class="btn-hollow-green">.btn-hollow-green</div> <br>
+
+<h3>Call to Actions:</h3>
+<p>You can add an arrow to your button by adding the class .cta</p>
+<div class="btn-green cta">.btn-green.cta</div> <br>
+
+<p>For CTAs on form submit buttons, wrap the submit button in a class of .button.cta (or something similar)
+and then don't put any further classes on the submit input element itself.</p>
 
 */
 
@@ -39,7 +47,7 @@ category: Buttons
   @extend .button;
   padding: 1.5rem 2.5rem;
 
-  &:after {
+  &:before {
     content: '';
     position: absolute;
     top: 10px;
@@ -49,4 +57,33 @@ category: Buttons
     border: 2px solid white;
     z-index: 1;
   }
+}
+
+.btn-hollow-green {
+  @extend .button;
+  background-color: transparent !important;
+  border: 3px solid $la-light-green;
+
+  &:hover, &:focus {
+    background-color: #a1e33e !important;
+  }
+}
+
+.cta input,
+.cta input:hover,
+.cta input:focus {
+  @extend .button;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cta:after {
+  font-family: FontAwesome;
+  content: "\f0da";
+  display: inline-block;
+  position: relative;
+  left: 4px;
+  top: 1px;
 }
