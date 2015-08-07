@@ -5,6 +5,8 @@ rescue LoadError
 end
 
 require 'rdoc/task'
+require 'jasmine'
+load 'jasmine/tasks/jasmine.rake'
 
 RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
@@ -15,13 +17,9 @@ RDoc::Task.new(:rdoc) do |rdoc|
 end
 
 APP_RAKEFILE = File.expand_path("../test/dummy/Rakefile", __FILE__)
+
 load 'rails/tasks/engine.rake'
-
-
 load 'rails/tasks/statistics.rake'
-
-
-
 Bundler::GemHelper.install_tasks
 
 require 'rake/testtask'
@@ -33,5 +31,4 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = false
 end
 
-
-task default: :test
+task default: ['test', 'jasmine:ci']
