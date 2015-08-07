@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require ./analytics
+//= require analytics
 //= require_tree ./analytics_models
 //= require_tree .
 
