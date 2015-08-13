@@ -2,7 +2,17 @@
 
 This engine contains all the base stylings for internal Launch Academy apps, as well as a styleguide to help guide future development.
 
-## Set Up
+### Table of Contents
+
+1. [General Set-Up](#set-up)
+2. [Styleguide](#styleguide)
+  a. [Viewing the Styleguide](#viewing-the-styleguide)
+  b. [Styling apps that use DysonSphere](#styling-apps-that-use-dysonsphere)
+  c. [Updating the Styleguide](#updatingtthe-styleguide)
+3. [Analytics](#analytics)
+4. [Troubleshooting](#troubleshooting)
+
+# Set Up
 
 Add the following to your Gemfile:
 
@@ -37,6 +47,8 @@ gem 'dyson_sphere',
   # git: 'https://github.com/LaunchAcademy/dyson_sphere'
   path: "~/path/to/local/dyson_sphere"
 ```
+
+# Styleguide
 
 ## Viewing the Styleguide
 
@@ -81,14 +93,31 @@ If you want a styleguide page to show rendered HTML and then the code used to ge
 ```
 ```html_example
   <your html here>
-``````
+*put three closing backticks here* (markdown is making my life difficult)
 ```
 
 If you make a new scss file, just copy the format for comments from another page. The "category" field will dictate which page of the styleguide this chunk of HTML is placed on. If you use an existing category, it will be added to that page; if you make a new category, it will create a new page.
 
 For help with displaying variables in our static HTML, you can use `styleguide.scss` to define classes that will only be used in the styleguide. Copy the examples there and in `_colors.scss` or `_fonts.scss` to see how to consistently dispay new font/color variables.
 
-## Troubleshooting
+# Analytics
+
+To set up analytics in your app that uses DysonSphere, add the following JS to your layout file:
+
+```javascript
+$(function(){
+  window.Analytics.setUser(#{serialized_user.to_json});
+  window.Analytics.init({
+    gaToken: '#{ENV["GOOGLE_ANALYTICS_TOKEN"]}',
+    mxToken: '#{ENV["MIXPANEL_TOKEN"]}',
+    intercomAppId: '#{ENV["INTERCOM_TOKEN"]}'
+  });
+});
+```
+
+Then make sure that you have the helper method `serialized_user` defined in your `ApplicationController` (see EventHorizon for an example), and make sure you have ENV values set for `GOOGLE_ANALYTICS_TOKEN`, `MIXPANEL_TOKEN`, and `INTERCOM_TOKEN`.
+
+# Troubleshooting
 
 #### My new DysonSphere changes aren't showing up in the app I'm working on.
 

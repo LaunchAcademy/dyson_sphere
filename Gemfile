@@ -3,6 +3,10 @@ source 'https://rubygems.org'
 # Declare your gem's dependencies in dyson_sphere.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.
+group :test, :development do
+  gem 'jasmine'
+end
+
 gemspec
 
 # Declare any dependencies that are still in development here instead of in
@@ -12,4 +16,3 @@ gemspec
 
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
-

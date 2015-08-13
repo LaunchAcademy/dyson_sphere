@@ -4,6 +4,7 @@ require "font-awesome-sass"
 require "jquery-rails"
 require "font-awesome-sass"
 require "hologram"
+require "underscore-rails"
 
 module DysonSphere
   class Engine < ::Rails::Engine
