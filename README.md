@@ -115,7 +115,32 @@ $(function(){
 });
 ```
 
-Then make sure that you have the helper method `serialized_user` defined in your `ApplicationController` (see EventHorizon for an example), and make sure you have ENV values set for `GOOGLE_ANALYTICS_TOKEN`, `MIXPANEL_TOKEN`, and `INTERCOM_TOKEN`.
+Then make sure that you have the helper method `serialized_user` defined in your `ApplicationController`. If you don't have users signing in as part of your app, you can just add the following code:
+
+```ruby
+helper_method :serialized_user
+
+def serialized_user
+  nil
+end
+```
+
+If you do have users and guests, like Horizon does, use the following code (copied from Horizon):
+
+```ruby
+helper_method :serialized_user
+
+def serialized_user
+  if !current_user.guest?
+    SmallUserSerializer.new(current_user,
+      root: false)
+  else
+    nil
+  end
+end
+```
+
+Last of all, make sure you have ENV values set for `GOOGLE_ANALYTICS_TOKEN`, `MIXPANEL_TOKEN`, and `INTERCOM_TOKEN`.
 
 # Troubleshooting
 
@@ -123,7 +148,7 @@ Then make sure that you have the helper method `serialized_user` defined in your
 
 If your new DysonSphere changes are not showing up in your parent application, run `rake assets:clobber` from your application's command line to remove all cached styles.
 
-#### When I try to visit `localhost:3000/styleguide`, I get an error: `undefined local variable or method `'root_path'`
+#### When I try to visit `localhost:3000/styleguide`, I get an error: `undefined local variable or method 'root_path'`
 
 Restart your server and visit the page again. Not sure why this works, but it's fixed the problem so far!
 
