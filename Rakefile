@@ -32,6 +32,8 @@ Rake::TestTask.new(:test) do |t|
   t.pattern = 'test/**/*_test.rb'
   t.verbose = false
 end
+require 'jasmine'
+load 'jasmine/tasks/jasmine.rake'
 
-
-task default: :test
+task precompile_jasmine: ['app:assets:clean', 'app:assets:clobber', 'app:assets:precompile']
+task default: [:test, :precompile_jasmine, 'app:jasmine:ci']
