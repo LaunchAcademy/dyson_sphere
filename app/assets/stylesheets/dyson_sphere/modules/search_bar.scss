@@ -58,6 +58,10 @@ category: Headers and Hero Images
 
 */
 
+.top-bar-section .has-form {
+  padding-top: 20px;
+}
+
 .search {
   position: relative;
 
@@ -76,7 +80,9 @@ category: Headers and Hero Images
 
   button {
     position: absolute;
-    padding: .35rem;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    // padding: .35rem;
     padding-left: 0;
   }
 
