@@ -66,3 +66,9 @@ category: Headers and Hero Images
     text-decoration: none;
   }
 }
+
+// Override dropdown menu line height to always be 4em
+.top-bar-section .dropdown
+li:not(.has-form) a:not(.button):not(.btn-green):not(.btn-pink):not(.btn-border):not(.btn-hollow-green) {
+  line-height: 4em;
+}
