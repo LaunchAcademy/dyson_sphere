@@ -1,0 +1,40 @@
+/*doc
+---
+title: Split Columns
+name: splitColumns
+category: Layout and Formatting
+---
+
+```html_example
+<div class="split-column">
+  <div class="columns medium-6">
+    <p>You can really have whatever your heart desires here for content.</p>
+  </div>
+  <div class="columns medium-6">
+    <p>Same goes for here! Anything you want!</p>
+  </div>
+</div>
+
+```
+*/
+
+.split-column {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.split-column > div:nth-child(2) {
+  border-top: 1px solid $la-border-color;
+  padding-top: 3em;
+  margin-top: 3em;
+}
+
+// Medium screens and up
+@media #{$large-up} {
+  .split-column > div:nth-child(2) {
+    border-left: 1px solid $la-border-color;
+    border-top: 0px;
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
