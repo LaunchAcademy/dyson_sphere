@@ -1,0 +1,292 @@
+/*doc
+---
+title: Footer
+name: footer
+category: Footer
+---
+
+<p>Here's the code for making the classic Launch footer.</p>
+
+<p>Note: The icky-looking visual bugs you see here (the photos
+not existing and looking weird, the content being pressed up right
+against the edges, etc.) won't actually be present when you use this
+as an actual footer in your site.</p>
+
+<p>To keep your footer at the bottom of the page no matter what,
+add a div with the class of `container` right inside your `body` tag,
+and wrap all the rest of your content EXCEPT the footer inside this div.</p>
+
+```html_example
+<footer>
+  <div class="row">
+    <div class="address large-3 columns">
+      <h5>About Launch Academy</h5>
+      <p>33 Harrison Ave #501</p>
+      <p>Boston, MA 02111</p>
+      <br/>
+      <p>
+        T:
+        <span class="blue-text">857.600.2250</span>
+      </p>
+      <p>
+        E:
+        <span class="blue-text">hello@launchacademy.com</span>
+      </p>
+    </div>
+    <div class="team large-9 columns">
+      <div class="columns">
+        <h5 class="pbm">About The Team</h5>
+      </div>
+      <div class="large-4 profile columns">
+        <div class="photo">
+          <img src="" alt="dan-photo">
+        </div>
+        <div class="text">
+          <h6 class="name">Dan Pickett</h6>
+          <p class="role">Co-Founder</p>
+          <p class="bio">Founder & Principle at LaunchWare Co-Organizer of Boston Ruby Group Formally Dir. of Engineering @ Gazelle Coding professionally since 2002.</p>
+        </div>
+      </div>
+      <div class="large-4 profile columns">
+        <div class="photo">
+          <img src="" alt="evan-photo">
+        </div>
+        <div class="text">
+          <h6 class="name">Evan Charles</h6>
+          <p class="role">Co-Founder</p>
+          <p class="bio">Former Private Equite & Two Successfuly Exits edTech Hacker, snowboarder, golfer, decennial marathoner, beach aficionado</p>
+        </div>
+      </div>
+      <div class="large-4 profile columns">
+        <div class="photo">
+          <img src="" alt="whitney-photo">
+        </div>
+        <div class="text">
+          <h6 class="name">Whitney Wilkinson</h6>
+          <p class="role">Operations Manager</p>
+          <p class="bio">Former Sr. Assoc. Director @ Northeastern Professional friendrauser and dog enthusiast. Avid recreational dancer</p>
+        </div>
+      </div>
+      <div class="columns view-more">
+        <div class="cta">
+          <a href="#">View More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row sub-footer">
+    <div class="columns">
+      <ul>
+        <li>
+          <a href="#">Blog</a>
+        </li>
+        <li>
+          <a href="#">Careers</a>
+        </li>
+        <li>
+          <a href="#">Codecabulary</a>
+        </li>
+        <li>
+          <a href="#">Contact Us</a>
+        </li>
+        <li>
+          <a href="#">FAQ</a>
+        </li>
+        <li>
+          <a href="#">Privacy</a>
+        </li>
+        <li class="social-media">
+          <a href="https://www.facebook.com/TheLaunchAcademy">
+            <i class="fa fa-facebook-square"></i>
+          </a>
+        </li>
+        <li class="social-media">
+          <a href="https://twitter.com/LaunchAcademy_">
+            <i class="fa fa-twitter-square"></i>
+          </a>
+        </li>
+      </ul>
+      <div class="copyright">
+        © Copyright 2015 Launch Academy.
+        <a href="#">Terms and Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+```
+
+*/
+
+// General Settings
+// ----------------
+
+footer {
+  text-align: center;
+  background: $la-navy;
+  padding-top: 3em;
+  color: $la-dark-grey;
+
+  h5 {
+    color: $la-light-grey;
+    font-weight: bold;
+    font-size: $la-body-font-size;
+  }
+
+  p {
+    color: $la-dark-grey;
+  }
+}
+
+// On large screens
+@media only screen and (min-width: 64.063em) {
+  footer {
+    text-align: left;
+  }
+}
+
+// Main Footer Content
+// -------------------
+footer {
+  .address {
+    margin-bottom: 4em;
+  }
+
+  .profile {
+    margin-top: 2em;
+
+    img {
+      border-radius: 100px;
+      border: 2px solid $la-pink;
+      margin-bottom: 20px;
+      width: 100%;
+      max-width: 60px;
+    }
+
+    .text {
+      .name {
+        font-family: $body-font;
+        color: white;
+        text-transform: uppercase;
+        font-size: $la-body-font-size;
+        margin: 0;
+      }
+
+      .role {
+        color: white;
+        margin: 0;
+        font-style: italic;
+      }
+    }
+  }
+
+  .view-more {
+    text-align: center;
+    border: 1px solid #555;
+    font-size: $la-font-extra-small;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    .cta:after {
+      color: $la-blue;
+    }
+  }
+  // On large screens
+  @media #{$large-up} {
+    .profile {
+      margin-top: 0;
+
+      .photo {
+        display: inline-block;
+        width: 60px;
+        padding-right: 10px;
+        vertical-align: top;
+      }
+
+      .text {
+        display: inline-block;
+        width: calc(100% - 65px);
+      }
+    }
+  }
+}
+
+
+// Sub Footer Content
+// ------------------
+
+.sub-footer {
+  border-top: 1px solid #333;
+  margin-top: 1em;
+  padding-top: 1em;
+  font-size: $la-font-extra-small;
+
+  ul {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  li {
+    padding: 1.5em;
+    list-style: none;
+  }
+
+  .social-media {
+    display: inline-block;
+    padding-top: 5.5em;
+  }
+
+  li a {
+    color: $la-light-grey;
+    text-transform: uppercase;
+  }
+
+  .copyright {
+      color: #5e676a;
+      padding-right: 0;
+      text-transform: uppercase;
+      margin: 4em 0;
+
+      a {
+        text-transform: none;
+        text-decoration: underline;
+      }
+  }
+
+  // On large screens
+  @media #{$large-up} {
+    ul {
+      float: left;
+    }
+
+    li, .social-media {
+      padding: 0;
+      padding-right: 1.5em;
+      display: inline;
+    }
+
+    .copyright {
+      float: right;
+      margin: 0;
+    }
+  }
+}
+
+
+
+// Getting the footer to stay at the bottom
+// ----------------------------------------
+
+$footer-height: 445px;
+
+.container {
+  min-height: calc(100% - #{$footer-height});
+}
+
+@media #{$large-up} {
+  footer {
+    height: $footer-height;
+  }
+}
