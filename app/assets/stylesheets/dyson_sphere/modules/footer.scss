@@ -12,6 +12,10 @@ not existing and looking weird, the content being pressed up right
 against the edges, etc.) won't actually be present when you use this
 as an actual footer in your site.</p>
 
+<p>To keep your footer at the bottom of the page no matter what,
+add a div with the class of `container` right inside your `body` tag,
+and wrap all the rest of your content EXCEPT the footer inside this div.</p>
+
 ```html_example
 <footer>
   <div class="row">
@@ -190,7 +194,7 @@ footer {
     }
   }
   // On large screens
-  @media only screen and (min-width: 64.063em) {
+  @media #{$large-up} {
     .profile {
       margin-top: 0;
 
@@ -221,6 +225,7 @@ footer {
 
   ul {
     margin-left: 0;
+    margin-bottom: 0;
   }
 
   li {
@@ -249,12 +254,9 @@ footer {
         text-decoration: underline;
       }
   }
-}
 
-
-// On large screens
-@media only screen and (min-width: 64.063em) {
-  .sub-footer  {
+  // On large screens
+  @media #{$large-up} {
     ul {
       float: left;
     }
@@ -269,5 +271,22 @@ footer {
       float: right;
       margin: 0;
     }
+  }
+}
+
+
+
+// Getting the footer to stay at the bottom
+// ----------------------------------------
+
+$footer-height: 445px;
+
+.container {
+  min-height: calc(100% - #{$footer-height});
+}
+
+@media #{$large-up} {
+  footer {
+    height: $footer-height;
   }
 }
