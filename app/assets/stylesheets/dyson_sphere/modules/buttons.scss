@@ -20,8 +20,12 @@ category: Buttons
 <p>You can add an arrow to your button by adding the class .cta</p>
 <div class="btn-green cta">.btn-green.cta</div> <br>
 
-<p>For CTAs on form submit buttons, wrap the submit button in a class of .button.cta (or something similar)
-and then don't put any further classes on the submit input element itself.</p>
+<h3>Form Submit Buttons</h3>
+<p>For CTAs on form submit buttons, use &lt;button&gt;&lt;/button&gt; elements rather than default &lt;input type="submit"&gt;</p>
+<h5>Using Rails form_for</h5>
+<p>= f.button "button text", id: "some_id", class: "button cta"</p>
+<h5>Using Simple_Form</h5>
+<p>= f.button :button, "button text", id: "if you want an id", class: "button cta"</p>
 
 */
 
