@@ -13,5 +13,11 @@ module DysonSphere
     initializer "dyson_sphere.assets.precompile" do |app|
       app.config.assets.precompile += %w( dyson_sphere/styleguide.css )
     end
+
+    initializer "jasmine hack" do
+      if defined?(Jasmine)
+        require DysonSphere::Engine.root.join('lib/ext/jasmine-rails')
+      end
+    end
   end
 end

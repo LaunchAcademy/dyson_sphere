@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.
 group :test, :development do
-  gem 'jasmine'
+  gem 'jasmine-rails'
 end
 
 gemspec
