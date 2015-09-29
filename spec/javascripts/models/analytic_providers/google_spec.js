@@ -50,6 +50,15 @@ describe("google analytics provider", function(){
     expect(spy).toHaveBeenCalledWith('require', 'displayfeatures');
   });
 
+  describe("for multiple domains", function(){
+    it("invokes ga 'create' with a allowLinker when relevant", function(){
+      var spy = sinon.spy(window, 'ga');
+      Analytics.setOtherDomains(['launchacademy.com']);
+      this.provider.init();
+      expect(spy.args[0][3].allowLinker).toEqual(true);
+    });
+  });
+
   describe("tracking a page view", function(){
     it('sends a page view invocation', function(){
       var spy = sinon.spy(window, 'ga');
@@ -71,7 +80,7 @@ describe("google analytics provider", function(){
       this.spy = sinon.spy(window, 'ga');
       this.provider.init();
       this.provider.eventFired(event);
-      this.eventSendOptions = this.spy.getCall(2).args[1];
+      this.eventSendOptions = this.spy.getCall(4).args[1];
     });
 
     it('sends a hit type of event', function(){

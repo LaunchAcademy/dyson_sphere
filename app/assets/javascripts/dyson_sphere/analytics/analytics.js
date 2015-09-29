@@ -48,5 +48,10 @@ window.Analytics = {
   fireEvent: function(eventJson){
     var event = new Analytics.Models.Analytics.Event(eventJson);
     event.fire();
+  },
+  setOtherDomains: function(domains){
+    if(domains){
+      Analytics.otherDomains = domains;
+    }
   }
 }

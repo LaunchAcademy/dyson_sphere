@@ -13,7 +13,15 @@ Analytics.Models.AnalyticProviders.Google = function(options){
     if(Analytics.user){
       opts.userId = Analytics.user.id;
     }
-    ga('create', this.token, opts);
+    if(Analytics.otherDomains) {
+      opts.allowLinker = true
+
+      ga('create', this.token, 'auto', opts);
+      ga('require', 'linker');
+      ga('linker:autoLink', Analytics.otherDomains );
+    } else {
+      ga('create', this.token, opts);
+    }
     ga('require', 'displayfeatures');
   };
 

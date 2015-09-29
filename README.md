@@ -140,6 +140,15 @@ def serialized_user
 end
 ```
 
+If you wish to set cross domain tracking for google anlaytics add the following
+call to your layout file JS (before calling `window.Analytics.init`):
+
+```javascript
+$(function(){
+  window.Analytics.setOtherDomains(<your domains here, separate strings in an array>);
+});
+```
+
 Last of all, make sure you have ENV values set for `GOOGLE_ANALYTICS_TOKEN`, `MIXPANEL_TOKEN`, and `INTERCOM_TOKEN`.
 
 # Troubleshooting
