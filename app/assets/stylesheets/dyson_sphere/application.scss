@@ -25,3 +25,8 @@
 @import "dyson_sphere/modules/syntax";
 @import "dyson_sphere/modules/testimonials";
 @import "dyson_sphere/modules/typography";
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased !important;
+}

@@ -142,6 +142,3 @@ DEPENDENCIES
   dyson_sphere!
   jasmine-rails
   sqlite3
-
-BUNDLED WITH
-   1.10.6
