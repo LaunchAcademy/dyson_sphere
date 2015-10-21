@@ -1,85 +1,9 @@
-<!doctype html>
-<html>
-  <head>
-    <title>a brand new styleguide: Fancy Form Fields</title>
-  </head>
-  <body>
-
-    <div class="contain-to-grid full-top-bar">
-      <nav class="top-bar" data-topbar>
-        <ul class="title-area">
-          <li class="name">
-            <h1><a href="#">DysonSphere Styleguide</a></h1>
-          </li>
-        </ul>
-
-        <section class="top-bar-section">
-          <ul class="right">
-            <li><a href="https://github.com/LaunchAcademy/dyson_sphere" target="_blank">Github</a></li>
-          </ul>
-        </section>
-      </nav>
-    </div>
-
-    <dl class="sub-nav mts">
-      <div class="row">
-        
-          <dd class="">
-            <a href="/styleguide/layout_and_formatting.html">Layout and Formatting</a>
-          </dd>
-        
-          <dd class="">
-            <a href="/styleguide/buttons.html">Buttons</a>
-          </dd>
-        
-          <dd class="">
-            <a href="/styleguide/markdown_rendering.html">Markdown Rendering</a>
-          </dd>
-        
-          <dd class="">
-            <a href="/styleguide/index.html">Colors and Fonts</a>
-          </dd>
-        
-          <dd class="active">
-            <a href="/styleguide/fancy_form_fields.html">Fancy Form Fields</a>
-          </dd>
-        
-          <dd class="">
-            <a href="/styleguide/headers_and_hero_images.html">Headers and Hero Images</a>
-          </dd>
-        
-          <dd class="">
-            <a href="/styleguide/footer.html">Footer</a>
-          </dd>
-        
-          <dd class="">
-            <a href="/styleguide/misc.html">Misc</a>
-          </dd>
-        
-          <dd class="">
-            <a href="/styleguide/slick_carousel.html">Slick Carousel</a>
-          </dd>
-        
-      </div>
-    </dl>
-
-    <div class="row">
-      <div class="columns">
-        <section class="content">
-          
-            <div class="small-3 columns">
-              <ul class="side-nav">
-              
-                <li><a href="#fancy-checkboxes">Fancy Checkboxes</a></li>
-              
-                <li><a href="#fancy-email-boxes">Fancy Email Boxes</a></li>
-              
-              </ul>
-            </div>
-          
-          <div class="columns small-9">
-<h1 id="fancy-checkboxes" class="styleguide">Fancy Checkboxes</h1>
-
+/*doc
+---
+title: Fancy Checkboxes
+name: fancy-checkboxes
+category: Fancy Form Fields
+---
 <p><code>fancy-checkbox</code> refers to an checkbox OR radio button that looks like the example below:
 
 <hr>
@@ -187,7 +111,6 @@
     <label for="payment_ambassador">Select</label>
   </div>
 </div>
-
 <div class='medium-6 columns'>
   <div class='fancy-discount-checkbox'>
     <input name="payment[diversity_scholarship]" type="hidden" value="0" /><input type="checkbox" value="1" name="payment[diversity_scholarship]" id="payment_diversity_scholarship" />
@@ -196,7 +119,8 @@
     <label for="payment_diversity_scholarship">Select</label>
   </div>
 </div>
-<p class="styleguide"><br><br><br><br></p>
+<br><br><br><br>
+
 <p>Note how in the above example, I use the class name <code>fancy-discount-checkbox</code> instead of <code>fancy-checkbox</code>. This is because I needed to customize several of the colors, so instead of using the default settings, I created my own class that includes the <code>fancy-checkbox</code> mixin with some new arguments passed in. You can see an example of that code below.
 
 <h3>Background Customization</h3>
@@ -227,61 +151,126 @@
   )
 }</pre></div>
 
+*/
+
+@mixin fancy-checkbox(
+  $checkbox-size: 60px,
+  $check-color: $la-light-green,
+  $box-bg-color: transparent,
+  $box-border-color: #ddd,
+  $background-color: $la-light-grey,
+  $hover-check-color: $la-light-green,
+  $checked-box-bg-color: transparent,
+  $checked-box-border-color: $box-border-color,
+  $checked-label-color: auto,
+  $checked-background-color: $la-blue
+) {
+  display: block;
+  vertical-align: middle;
+  cursor: pointer;
+  width: 100%;
+  padding-top: 13px;
+  position: relative;
+
+  .background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -7px;
+    height: calc(#{$checkbox-size} * 2 - 10px);
+    background-color: $background-color;
+  }
+
+  .box,
+  input,
+  label {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .box {
+    width: $checkbox-size;
+    height: $checkbox-size;
+    border: 1px solid $box-border-color;
+    background-color: $box-bg-color;
+    vertical-align: top;
+    margin-right: 15px;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .box:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 18px;
+    background: transparent;
+    top: calc(50% - 12px);
+    left: calc(50% - 12px);
+
+    border: 8px solid $hover-check-color;
+    border-top: none;
+    border-right: none;
+
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  &:hover .box:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+  }
 
 
-<h1 id="fancy-email-boxes" class="styleguide">Fancy Email Boxes</h1>
-<p><code>fancy-email-box</code> refers to an email box that looks like the example below:
-<div class="row">
-  <div class='large-8 columns fancy-email-box'>
-    <form>
-      <fieldset>
-        <div class='row collapse'>
-          <div class='medium-7 columns text-center'>
-            <input placeholder='enter your email address...' type='text'>
-          </div>
-          <div class='medium-5 columns button-container'>
-            <div class='btn-green cta'>
-              <input type='submit' value='Send me one'>
-            </div>
-          </div>
-        </div>
-      </fieldset>
-    </form>
-  </div>
-</div>
+  input[type="checkbox"]:checked,
+  input[type="radio"]:checked {
+    & ~ .box:after {
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+      filter: alpha(opacity=100);
+      border-color: $check-color;
+      opacity: 1;
+    }
 
-<div class="row">
-  <p>The following haml was used to create this email box: </p>
+    & ~ .background {
+      background-color: $checked-background-color;
+    }
 
-  <div class="highlight highlight-text-haml"><pre><span class="pl-ent">.large-8.columns.fancy-email-box</span>
-    %<span class="pl-ent">form</span><span class="pl-ent">.fancy-email-box</span>
-      %<span class="pl-ent">fieldset</span>
-        <span class="pl-ent">.row.collapse</span>
-          <span class="pl-ent">.medium-7.columns.text-center</span>
-            %<span class="pl-ent">input</span>(type="text" placeholder="enter your email address...")
-          <span class="pl-ent">.medium-5.columns.button-container</span>
-            %<span class="pl-ent">button</span>(type="submit" class="tiny btn-pink cta")
-              Subscribe</pre></div>
-</div>
+    & ~ .box {
+      background-color: transparent;
+      border-color: $checked-box-border-color;
+    }
 
-<h2>Customization</h2>
-<p class="styleguide">By default, something with the class of <code>.fancy-email-box</code> will have the same border color, background color, placeholder color, and text color as the example shown above. (The button color can be customized based on the class you put on the button - it&#39;s shown as <code>btn-green</code>, but could alternatively have any other button class.)</p><p class="styleguide">You can customize the border color, background color, placeholder color, and text color of this form field by using the <code>fancy-email-box</code> mixin instead of the built-in <code>fancy-email-box</code> class. To do so, replace the <code>fancy-email-box</code> class name from the HTML shown above with a custom class name of your own. Then, write your own scss for that new class that says <code>@include fancy-email-box</code>, with the relevant arguments passed to the mixin.</p>
-<h3>Mixin Arguments</h3>
-<p class="styleguide">The <code>fancy-email-box</code> takes four optional arguments:</p>
-<ul>
-  <li><code>$border-color</code></li>
-  <li><code>$background-color</code></li>
-  <li><code>$text-color</code></li>
-  <li><code>$placeholder-color</code></li>
-</ul>
-<p class="styleguide">Each of these values has a default value (as shown in the aboce example of the rendered form), but those default values can be overwritten by passing in new arguments. New arguments are passed in a way that resembles key-value pairs:</p>
-<div class="highlight highlight-source-scss"><pre><span class="pl-e">.my-custom-class</span> {
-  <span class="pl-k">@include</span> <span class="pl-c1">fancy-email-box</span>(<span class="pl-smi">$border-color</span><span class="pl-v">:</span> <span class="pl-c1">red</span>, <span class="pl-smi">$background-color</span><span class="pl-v">:</span> <span class="pl-id">pink</span>, <span class="pl-smi">$text-color</span><span class="pl-v">:</span> <span class="pl-c1">white</span>, <span class="pl-smi">$placeholder-color</span><span class="pl-v">:</span> <span class="pl-c1">white</span>);
-}</pre></div>
-<p class="styleguide">Any number of these optional arguments can be included - you can overwrite all of them, just a couple of them, or none at all! If you don&#39;t plan on overwriting one of the default values, just leave it out of the arguments list.</p>          </div>
-          <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>
-        </section>
-      </div>
-    </div>
-  </body>
-</html>
+    & ~ label {
+      color: $checked-label-color;
+    }
+  }
+}
+
+.fancy-checkbox {
+  @include fancy-checkbox;
+}

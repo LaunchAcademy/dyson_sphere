@@ -6,7 +6,7 @@ category: Fancy Form Fields
 ---
 <p><code>fancy-email-box</code> refers to an email box that looks like the example below:
 <div class="row">
-  <div class='large-6 columns fancy-email-box'>
+  <div class='large-8 columns fancy-email-box'>
     <form>
       <fieldset>
         <div class='row collapse'>
@@ -26,7 +26,7 @@ category: Fancy Form Fields
 <div class="row">
   <p>The following haml was used to create this email box: </p>
 
-  <div class="highlight highlight-text-haml"><pre><span class="pl-ent">.large-6.columns.fancy-email-box</span>
+  <div class="highlight highlight-text-haml"><pre><span class="pl-ent">.large-8.columns.fancy-email-box</span>
     %<span class="pl-ent">form</span><span class="pl-ent">.fancy-email-box</span>
       %<span class="pl-ent">fieldset</span>
         <span class="pl-ent">.row.collapse</span>
@@ -41,7 +41,7 @@ category: Fancy Form Fields
 
 By default, something with the class of <code>.fancy-email-box</code> will have the same border color, background color, placeholder color, and text color as the example shown above. (The button color can be customized based on the class you put on the button - it's shown as <code>btn-green</code>, but could alternatively have any other button class.)
 
-You can customize the border color, background color, placeholder color, and text color of this form field by using the <code>fancy-email-box</code> mixing instead of the built-in <code>fancy-email-box</code> class. To do so, replace the <code>fancy-email-box</code> class name from the HTML shown above with a custom class name of your own. Then, write your own scss for that new class that does <code>@include fancy-email-box</code>, with the relevant arguments passed to the mixin.
+You can customize the border color, background color, placeholder color, and text color of this form field by using the <code>fancy-email-box</code> mixin instead of the built-in <code>fancy-email-box</code> class. To do so, replace the <code>fancy-email-box</code> class name from the HTML shown above with a custom class name of your own. Then, write your own scss for that new class that says <code>@include fancy-email-box</code>, with the relevant arguments passed to the mixin.
 
 <h3>Mixin Arguments</h3>
 
