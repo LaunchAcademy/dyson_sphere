@@ -9,6 +9,8 @@ category: Layout and Formatting
 
 <p>Adding the class <code>inline</code> to something will make it <code>display: inline;</code><p>
 
+<p>Adding the class <code>bold</code> to something will make it <code>font-weight: bold;</code><p>
+
 */
 
 .full-width {
@@ -17,4 +19,8 @@ category: Layout and Formatting
 
 .inline {
   display: inline;
+}
+
+.bold {
+  font-weight: bold;
 }

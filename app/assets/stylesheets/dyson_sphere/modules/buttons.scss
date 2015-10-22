@@ -15,6 +15,7 @@ category: Buttons
 <h3>Secondary Buttons:</h3>
 <div class="btn-border button">.btn-border</div> <br>
 <div class="btn-hollow-green">.btn-hollow-green</div> <br>
+<div class="btn-hollow-white-green">.btn-hollow-white-green</div> <br>
 
 <h3>Call to Actions:</h3>
 <p>You can add an arrow to your button by adding the class .cta</p>
@@ -71,6 +72,12 @@ category: Buttons
   &:hover, &:focus {
     background-color: #a1e33e !important;
   }
+}
+
+.btn-hollow-white-green {
+  @extend .btn-hollow-green;
+  border-width: 1px;
+  border-color: $la-white;
 }
 
 .cta input,

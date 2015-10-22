@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require foundation
 //= require underscore
+//= require slick
 //= require_tree ./analytics
 //= require_tree ./analytic_utils
 //= require_tree ./analytic_providers

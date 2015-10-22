@@ -25,6 +25,8 @@ Gem::Specification.new do |s|
   s.add_dependency "hologram"
   s.add_dependency "jquery-rails"
   s.add_dependency "underscore-rails"
+  s.add_dependency "slick_rails", "1.3.15"
+
 
   s.add_development_dependency "sqlite3"
 end
