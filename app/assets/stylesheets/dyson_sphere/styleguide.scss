@@ -1,5 +1,6 @@
 @import "dyson_sphere/constants/colors";
 @import "dyson_sphere/constants/fonts";
+@import "dyson_sphere/modules/fancy_checkboxes";
 
 // ======================
 // COLORS
@@ -44,6 +45,27 @@
 
 .la-font-small { font-size: $la-body-font-size }
 .la-font-extra-small { font-size: $la-font-extra-small }
+
+// ======================
+// FANCY CHECKBOX EXAMPLE
+// ======================
+
+.fancy-discount-checkbox {
+  text-align: center;
+
+  label {
+    font-size: 32px;
+  }
+
+  @include fancy-checkbox(
+    $checkbox-size: 40px,
+    $check-color: white,
+    $box-bg-color: transparentize(white, .3),
+    $hover-check-color: $la-blue,
+    $checked-box-border-color: transparent,
+    $checked-label-color: white
+  )
+}
 
 // ======================
 // STYLEGUIDE LAYOUT
