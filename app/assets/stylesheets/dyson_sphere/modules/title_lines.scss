@@ -21,7 +21,7 @@ category: Misc
       content: '';
       display: table-cell;
       position: relative;
-      top: 0.6em;
+      transform: translateY(50%);
       width: 45%;
     }
     &:before { right: 1.5%; }
