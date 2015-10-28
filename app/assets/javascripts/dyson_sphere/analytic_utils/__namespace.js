@@ -1,1 +1,1 @@
-Analytics.Models.Analytics = {};
+// Analytics.Models.Analytics = {};
