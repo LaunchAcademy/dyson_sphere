@@ -152,6 +152,25 @@ footer {
     margin-bottom: 4em;
   }
 
+  .view-more {
+    text-align: center;
+    border: 1px solid #555;
+    font-size: $la-font-extra-small;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    .cta:after {
+      color: $la-blue;
+    }
+  }
+}
+
+// Team Bios
+// ----------------------------------------
+
+.team {
   .profile {
     margin-top: 2em;
 
@@ -170,6 +189,7 @@ footer {
         text-transform: uppercase;
         font-size: $la-body-font-size;
         margin: 0;
+        font-weight: bold;
       }
 
       .role {
@@ -180,19 +200,6 @@ footer {
     }
   }
 
-  .view-more {
-    text-align: center;
-    border: 1px solid #555;
-    font-size: $la-font-extra-small;
-    padding-top: .5em;
-    padding-bottom: .5em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-
-    .cta:after {
-      color: $la-blue;
-    }
-  }
   // On large screens
   @media #{$large-up} {
     .profile {
@@ -212,7 +219,6 @@ footer {
     }
   }
 }
-
 
 // Sub Footer Content
 // ------------------
@@ -273,8 +279,6 @@ footer {
     }
   }
 }
-
-
 
 // Getting the footer to stay at the bottom
 // ----------------------------------------
