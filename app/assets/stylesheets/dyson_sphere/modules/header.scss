@@ -61,9 +61,22 @@ category: Headers and Hero Images
     height: calc(#{$topbar-height} - 35px);
   }
 
+  @media #{$small-only} {
+    .logo {
+    height: calc(#{$topbar-height} - 50px);
+    }
+  }
+
   h1, h1 a {
     display: inline;
     text-decoration: none;
+  }
+
+  @media #{$small-only} {
+    h1 a {
+      padding: 0;
+      font-size: 1.2rem;
+    }
   }
 }
 
