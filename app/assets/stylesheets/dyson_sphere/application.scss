@@ -22,6 +22,14 @@
 @import "dyson_sphere/modules/markdown_rendering/markdown";
 @import "dyson_sphere/modules/markdown_rendering/syntax";
 
+@import "dyson_sphere/modules/page_sections/page_section";
+@import "dyson_sphere/modules/page_sections/blue";
+@import "dyson_sphere/modules/page_sections/dark";
+@import "dyson_sphere/modules/page_sections/image";
+@import "dyson_sphere/modules/page_sections/light_blue";
+@import "dyson_sphere/modules/page_sections/light";
+@import "dyson_sphere/modules/page_sections/pink";
+@import "dyson_sphere/modules/page_sections/white";
 
 @import "dyson_sphere/modules/block_lists";
 @import "dyson_sphere/modules/borders";
