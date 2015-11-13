@@ -3,17 +3,17 @@
   <% code_example_title = lines.shift %>
   <% code_example = lines.join("\n") %>
 <% end %>
-<% code_example_id = rand(1000) %>
+<% $ds_code_example_id ||= 0 %>
 <div class="codeExample">
   <ul class="accordion" data-accordion>
     <li class="accordion-navigation">
-      <a href="#panel<%= code_example_id %>">
+      <a href="#panel<%= $ds_code_example_id %>">
         <%= code_example_title %>
         <div class="right">
           <i class="fa fa-code"></i>
         </div>
       </a>
-      <div id="panel<%= code_example_id %>" class="content">
+      <div id="panel<%= $ds_code_example_id %>" class="content">
         <pre><%= code_example %></pre>
       </div>
     </li>
@@ -22,3 +22,4 @@
   </div>
   </ul>
 </div>
+<% $ds_code_example_id += 1 %>

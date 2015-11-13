@@ -94,13 +94,13 @@
 <div class="codeExample">
   <ul class="accordion" data-accordion>
     <li class="accordion-navigation">
-      <a href="#panel948">
+      <a href="#panel0">
         fancy-form
         <div class="right">
           <i class="fa fa-code"></i>
         </div>
       </a>
-      <div id="panel948" class="content">
+      <div id="panel0" class="content">
         <pre><span class="nt">%form</span><span class="nc">.fancy-form</span>
   <span class="nc">.small-12.columns</span>
     <span class="nt">%input</span><span class="p">(</span> <span class="na">placeholder=</span><span class="s">"Name"</span> <span class="na">type=</span><span class="s">"text"</span> )
@@ -136,6 +136,7 @@
   </ul>
 </div>
 
+
 <h2>Customization</h2>
 
 <p>Like so many other things listed on this page, there's a Sass mixin for these forms that you can use instead of the helper class if you'd like to customize things! The mixin allows you to customize text color, and "focus-text-color" (this refers to the color the text becomes when you click on the box.) You can pass the following arguments to the Sass mixin:</p>
@@ -166,13 +167,13 @@
 <div class="codeExample">
   <ul class="accordion" data-accordion>
     <li class="accordion-navigation">
-      <a href="#panel939">
+      <a href="#panel1">
         fancy-checkbox
         <div class="right">
           <i class="fa fa-code"></i>
         </div>
       </a>
-      <div id="panel939" class="content">
+      <div id="panel1" class="content">
         <pre><span class="nc">.columns.medium-6.medium-centered</span>
   <span class="nc">.row</span>
     <span class="nc">.fancy-checkbox</span>
@@ -206,6 +207,7 @@
   </div>
   </ul>
 </div>
+
 
 <p>(As you can see, there isn't any special styling applied to the labels - you can do that yourself in your own css!)</p>
 
@@ -261,13 +263,13 @@
 <div class="codeExample">
   <ul class="accordion" data-accordion>
     <li class="accordion-navigation">
-      <a href="#panel631">
+      <a href="#panel2">
         checkboxes with backgrounds
         <div class="right">
           <i class="fa fa-code"></i>
         </div>
       </a>
-      <div id="panel631" class="content">
+      <div id="panel2" class="content">
         <pre><span class="nc">.medium-6.columns</span>
   <span class="nc">.fancy-discount-checkbox</span>
     <span class="nt">%input</span><span class="p">{</span> <span class="ss">type: </span><span class="s2">"checkbox"</span> <span class="p">}</span>
@@ -302,6 +304,7 @@
   </div>
   </ul>
 </div>
+
 
 <p>Note how in the above example, I use the class name <code>fancy-discount-checkbox</code> instead of <code>fancy-checkbox</code>. This is because I needed to customize several of the colors, so instead of using the default settings, I created my own class that includes the <code>fancy-checkbox</code> mixin with some new arguments passed in. You can see an example of that code below.
 
@@ -345,13 +348,13 @@
 <div class="codeExample">
   <ul class="accordion" data-accordion>
     <li class="accordion-navigation">
-      <a href="#panel605">
+      <a href="#panel3">
         fancy-email-box
         <div class="right">
           <i class="fa fa-code"></i>
         </div>
       </a>
-      <div id="panel605" class="content">
+      <div id="panel3" class="content">
         <pre><span class="nc">.fancy-email-box.large-8.columns</span>
   <span class="nt">%form</span>
     <span class="nt">%fieldset</span>
@@ -380,6 +383,7 @@
   </div>
   </ul>
 </div>
+
 
 <h2>Customization</h2>
 <p class="styleguide">By default, something with the class of <code>.fancy-email-box</code> will have the same border color, background color, placeholder color, and text color as the example shown above. (The button color can be customized based on the class you put on the button - it&#39;s shown as <code>btn-green</code>, but could alternatively have any other button class.)</p><p class="styleguide">You can customize the border color, background color, placeholder color, and text color of this form field by using the <code>fancy-email-box</code> mixin instead of the built-in <code>fancy-email-box</code> class. To do so, replace the <code>fancy-email-box</code> class name from the HTML shown above with a custom class name of your own. Then, write your own scss for that new class that says <code>@include fancy-email-box</code>, with the relevant arguments passed to the mixin.</p>
