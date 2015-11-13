@@ -71,22 +71,37 @@
 // STYLEGUIDE LAYOUT
 // ======================
 
-.sub-nav {
+body {
   background-color: $la-light-grey;
-  padding: 15px;
+}
+
+.sub-nav {
+  background-color: $la-navy;
   padding-left: 0;
 
+  dd {
+    padding: 15px 0;
+    margin: 0;
+
+    &.active {
+      background-color: lighten($la-navy, 10%);
+    }
+  }
   dd a {
-    padding-left: 0;
-    color: #008CBA;
+    padding-left: 0 .5em;
+    color: $la-blue;
+
+    &:hover {
+      color: $la-white;
+    }
   }
 
   dd.active a,
   dd.active a:hover {
     background: none;
     font-weight: bold;
-    color: black;
-    padding-left: 0;
+    color: $la-light-blue;
+    padding: 0 10px;
   }
 }
 
@@ -96,12 +111,13 @@
 }
 
 .content {
-  h1 {
+  h1.styleguide {
     border-top: 4px double #999;
     border-bottom: 1px solid #ddd;
     padding-top: 35px;
     margin-top: 35px;
     margin-bottom: 25px;
+    color: $la-blue;
   }
 
   h1.no-border {
@@ -109,4 +125,32 @@
     border-bottom: 0px;
     padding-top: 0;
   }
+}
+
+.codeExample {
+  margin-bottom: 50px;
+
+  .accordion {
+    margin-top: 25px;
+  }
+
+  .accordion-navigation > a,
+  .accordion-navigation.active > a {
+    padding: .5em 1em;
+    background: $la-pink;
+    color: $la-white;
+
+    &:hover,
+    &:focus {
+      background: darken($la-pink, 5%);
+      color: $la-white;
+      text-decoration: none;
+    }
+  }
+}
+
+.exampleOutput {
+  border: 1px solid #ccc;
+  padding: 20px;
+  background: white;
 }

@@ -5,25 +5,23 @@ name: border
 category: Layout and Formatting
 ---
 
-<p>Add the classes <code>.bottom-border</code> or <code>.top-border</code> to add borders to individual elements.</p>
+```haml_example
+bottom-border
+.bottom-border
+  %p Bottom borders are dotted.
+```
 
-<div class="la-panel bottom-border columns pvl">
-  <p>Example bottom-border div:</p>
-  <p><code>.bottom-border.la-panel.columns.pvl</code></p>
-  <p>Bottom borders are dotted.</p>
-</div>
+```haml_example
+top-border
+.top-border
+  %p Top borders are solid.
+```
 
-<div class="la-panel top-border columns pvl">
-  <p>Example top-border div:</p>
-  <p><code>.top-border.la-panel.columns.pvl</code></p>
-  <p>Top borders are solid.</p>
-</div>
-
-<div class="la-panel border columns pvl mbl">
-  <p>Example all-around border div:</p>
-  <p><code>.border.la-panel.columns.pvl</code></p>
-  <p>All-around borders are solid and have a border-radius.</p>
-</div>
+```haml_example
+all-around border
+.border
+  %p All-around borders are solid.
+```
 
 */
 

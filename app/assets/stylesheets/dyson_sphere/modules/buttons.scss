@@ -8,25 +8,36 @@ category: Buttons
 
 <h3>Primary Buttons:</h3>
 
-<div class="button">.button</div> <br>
-<div class="btn-green">.btn-green</div> <br>
-<div class="btn-pink">.btn-green</div> <br>
+```haml_example
+primary buttons
+.button Normal button
+.btn-green Green button
+.btn-pink Pink button
+```
 
 <h3>Secondary Buttons:</h3>
-<div class="btn-border button">.btn-border</div> <br>
-<div class="btn-hollow-green">.btn-hollow-green</div> <br>
-<div class="btn-hollow-white-green">.btn-hollow-white-green</div> <br>
+
+```haml_example
+secondary buttons
+.btn-border Button with border
+.btn-hollow-green Green hollow button
+.btn-hollow-white-green White/green hollow button
+```
 
 <h3>Call to Actions:</h3>
 <p>You can add an arrow to your button by adding the class .cta</p>
-<div class="btn-green cta">.btn-green.cta</div> <br>
+
+```haml_example
+call to actions
+.btn-green.cta Call to action
+```
 
 <h3>Form Submit Buttons</h3>
 <p>For CTAs on form submit buttons, use &lt;button&gt;&lt;/button&gt; elements rather than default &lt;input type="submit"&gt;</p>
 <h5>Using Rails form_for</h5>
-<p>= f.button "button text", id: "some_id", class: "button cta"</p>
+<pre>= f.button "button text", id: "some_id", class: "button cta"</pre>
 <h5>Using Simple_Form</h5>
-<p>= f.button :button, "button text", id: "if you want an id", class: "button cta"</p>
+<pre>= f.button :button, "button text", id: "if you want an id", class: "button cta"</pre>
 
 */
 
@@ -76,7 +87,6 @@ category: Buttons
 
 .btn-hollow-white-green {
   @extend .btn-hollow-green;
-  border-width: 1px;
   border-color: $la-white;
 }
 

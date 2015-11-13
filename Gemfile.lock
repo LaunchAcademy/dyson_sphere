@@ -4,6 +4,7 @@ PATH
     dyson_sphere (0.0.4)
       font-awesome-sass
       foundation-rails
+      haml
       hologram
       jquery-rails
       rails
@@ -60,6 +61,8 @@ GEM
       sass (>= 3.3.0, < 3.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    haml (4.0.7)
+      tilt
     hologram (1.4.0)
       redcarpet (>= 2.2, < 4.0)
       rouge (>= 1.5)

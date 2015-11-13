@@ -4,44 +4,28 @@ title: Fancy Checkboxes
 name: fancy-checkboxes
 category: Fancy Form Fields
 ---
-<p><code>fancy-checkbox</code> refers to an checkbox OR radio button that looks like the example below:
+<p><code>fancy-checkbox</code> refers to an checkbox OR radio button that looks like the example below:</p>
 
 <hr>
 
-<div class='row'>
-  <div class='fancy-checkbox'>
-    <input type="radio" value="5" checked="checked" name="student_application[cohort_id]" id="student_application_cohort_id_5" />
-    <div class='box'></div>
-    <label class="inline mlm" for="student_application_Winter 2015">Winter 2015</label>
-  </div>
-</div>
-<div class='row'>
-  <div class='fancy-checkbox'>
-    <input type="radio" value="6" name="student_application[cohort_id]" id="student_application_cohort_id_6" />
-    <div class='box'></div>
-    <label class="inline mlm" for="student_application_Spring 2016">Spring 2016</label>
-  </div>
-</div>
-
-<hr>
+```haml_example
+fancy-checkbox
+.columns.medium-6.medium-centered
+  .row
+    .fancy-checkbox
+      %input{ type: "radio" }
+      .box
+      %label.inline.mlm Winter 2015
+  .row
+    .fancy-checkbox
+      %input{ type: "radio" }
+      .box
+      %label.inline.mlm Spring 2015
+```
 
 <p>(As you can see, there isn't any special styling applied to the labels - you can do that yourself in your own css!)</p>
 
 <p>To set up fancy checkboxes, you will wrap a set of HTML elements inside a div with the class of <code>.fancy-checkbox</code>. This will allow users to click ANYWHERE in the area wrapped by <code>.fancy-checkbox</code> and have the checkbox become "selected". It's also very important that at a bare minimum, you put an empty div with the class of <code>.box</code> inside your <code>.fancy-checkbox</code> div. This is where the visual appearance of the checkbox will show up.</p>
-
-<p>To create the above example, the following haml was used:</p>
-
-<div class="highlight highlight-text-haml"><pre><span class="pl-ent">.row</span>
-  <span class="pl-ent">.fancy-checkbox</span>
-    =<span class="pl-sre"> f.radio_button :cohort_id, cohort1.id, checked: true</span>
-    <span class="pl-ent">.box</span>
-    =<span class="pl-sre"> f.label cohort1.name, class: ["inline", "mlm"]</span>
-<span class="pl-ent">.row</span>
-  <span class="pl-ent">.fancy-checkbox</span>
-    =<span class="pl-sre"> f.radio_button :cohort_id, cohort2.id</span>
-    <span class="pl-ent">.box</span>
-    =<span class="pl-sre"> f.label cohort2.name, class: ["inline", "mlm"]</span>
-</pre></div>
 
 <p>As an additional note, as mentioned above, you can use radio buttons OR actual checkboxes as your HTML input element! Either one works!</p>
 
@@ -55,12 +39,12 @@ category: Fancy Form Fields
 
 <p>Mixin arguments are passed in as key-value pairs. Here's an example:</p>
 
-<div class="highlight highlight-source-scss"><pre><span class="pl-e">.my-custom-class</span> {
-  <span class="pl-k">@include</span> <span class="pl-c1">fancy-checkbox</span>(<span class="pl-v"></span>
-    <span class="pl-smi">$checkbox-size</span><span class="pl-v">:</span><span class="pl-c1"> 45</span><span class="pl-k">px</span>,<span class="pl-v"></span>
-    <span class="pl-smi">$check-color</span><span class="pl-v">:</span> <span class="pl-c1">#f00</span><span class="pl-v"></span>
-  )
-}</pre></div>
+<pre>.my-custom-class {
+  @include fancy-checkbox(
+    $checkbox-size: 45px,
+    $check-color: #f00
+  );
+}</pre>
 
 <p>You can pass as many or as few as of the permissible arguments as you'd like. (Available arguments are listed below.) Any value you don't specify will just be set to the default (listed below).
 
@@ -85,41 +69,21 @@ category: Fancy Form Fields
 
 <p><em>NOTE: This has only been used with checkboxes that are sized at 40px! I can't promise it'll look right with larger checkboxes - we'll cross that bridge when we get there!</em></p>
 
-<p>Here's some example haml for a set of checkboxes with backgrounds:</p>
-
-<div class="highlight highlight-text-haml"><pre><span class="pl-ent">.medium-6.columns</span>
-  <span class="pl-ent">.fancy-discount-checkbox</span>
-    =<span class="pl-sre"> f.check_box :ambassador, checked: @ambassador</span>
-    <span class="pl-ent">.background</span>
-    <span class="pl-ent">.box</span>
-    =<span class="pl-sre"> f.label :ambassador, "Select"</span>
-
-<span class="pl-ent">.medium-6.columns</span>
-  <span class="pl-ent">.fancy-discount-checkbox</span>
-    =<span class="pl-sre"> f.check_box :diversity_scholarship, checked: @diversity</span>
-    <span class="pl-ent">.background</span>
-    <span class="pl-ent">.box</span>
-    =<span class="pl-sre"> f.label :diversity_scholarship, "Select"</span></pre></div>
-
-<p>And here's what that looks like on the page:</p>
-
-<div class='medium-6 columns'>
-  <div class='fancy-discount-checkbox'>
-    <input name="payment[ambassador]" type="hidden" value="0" /><input type="checkbox" value="1" name="payment[ambassador]" id="payment_ambassador" />
-    <div class='background'></div>
-    <div class='box'></div>
-    <label for="payment_ambassador">Select</label>
-  </div>
-</div>
-<div class='medium-6 columns'>
-  <div class='fancy-discount-checkbox'>
-    <input name="payment[diversity_scholarship]" type="hidden" value="0" /><input type="checkbox" value="1" name="payment[diversity_scholarship]" id="payment_diversity_scholarship" />
-    <div class='background'></div>
-    <div class='box'></div>
-    <label for="payment_diversity_scholarship">Select</label>
-  </div>
-</div>
-<br><br><br><br>
+```haml_example
+checkboxes with backgrounds
+.medium-6.columns
+  .fancy-discount-checkbox
+    %input{ type: "checkbox" }
+    .background
+    .box
+    %label Select
+.medium-6.columns
+  .fancy-discount-checkbox
+    %input{ type: "checkbox" }
+    .background
+    .box
+    %label Select
+```
 
 <p>Note how in the above example, I use the class name <code>fancy-discount-checkbox</code> instead of <code>fancy-checkbox</code>. This is because I needed to customize several of the colors, so instead of using the default settings, I created my own class that includes the <code>fancy-checkbox</code> mixin with some new arguments passed in. You can see an example of that code below.
 
@@ -134,22 +98,22 @@ category: Fancy Form Fields
 
 <p>Below is an example of the Sass used to style the above checkboxes. I used a custom class that <code>@include</code>s the mixin in order to customize a number of the variables from their defauls.</p>
 
-<div class="highlight highlight-source-scss"><pre><span class="pl-e">.fancy-discount-checkbox</span> {
-  <span class="pl-c1"><span class="pl-c1">text-align</span></span>: <span class="pl-c1">center</span>;
+<pre>.fancy-discount-checkbox {
+  text-align: center;
 
-  <span class="pl-ent">label</span> {
-    <span class="pl-c1"><span class="pl-c1">font-size</span></span>: <span class="pl-c1">32</span><span class="pl-k">px</span>;
+  label {
+    font-size: 32px;
   }
 
-  <span class="pl-k">@include</span> <span class="pl-c1">fancy-checkbox</span>(<span class="pl-v"></span>
-    <span class="pl-smi">$checkbox-size</span><span class="pl-v">:</span><span class="pl-c1"> 40</span><span class="pl-k">px</span>,<span class="pl-v"></span>
-    <span class="pl-smi">$check-color</span><span class="pl-v">:</span> <span class="pl-c1">white</span>,<span class="pl-v"></span>
-    <span class="pl-smi">$box-bg-color</span><span class="pl-v">:</span> <span class="pl-c1">transparentize</span>(<span class="pl-c1">white</span>,<span class="pl-c1"> .3</span>),<span class="pl-v"></span>
-    <span class="pl-smi">$hover-check-color</span><span class="pl-v">:</span> <span class="pl-smi">$la-blue</span>,<span class="pl-v"></span>
-    <span class="pl-smi">$checked-box-border-color</span><span class="pl-v">:</span> <span class="pl-c1">transparent</span>,<span class="pl-v"></span>
-    <span class="pl-smi">$checked-label-color</span><span class="pl-v">:</span> <span class="pl-c1">white</span><span class="pl-v"></span>
-  )
-}</pre></div>
+  @include fancy-checkbox(
+    $checkbox-size: 40px,
+    $check-color: white,
+    $box-bg-color: transparentize(white, .3),
+    $hover-check-color: $la-blue,
+    $checked-box-border-color: transparent,
+    $checked-label-color: white
+  );
+}</pre>
 
 */
 

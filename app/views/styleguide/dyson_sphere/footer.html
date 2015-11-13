@@ -21,11 +21,19 @@
       </nav>
     </div>
 
-    <dl class="sub-nav mts">
+    <dl class="sub-nav">
       <div class="row">
         
           <dd class="">
+            <a href="/styleguide/fancy_form_fields.html">Fancy Form Fields</a>
+          </dd>
+        
+          <dd class="">
             <a href="/styleguide/layout_and_formatting.html">Layout and Formatting</a>
+          </dd>
+        
+          <dd class="">
+            <a href="/styleguide/page_sections.html">Page Sections</a>
           </dd>
         
           <dd class="">
@@ -33,15 +41,7 @@
           </dd>
         
           <dd class="">
-            <a href="/styleguide/markdown_rendering.html">Markdown Rendering</a>
-          </dd>
-        
-          <dd class="">
             <a href="/styleguide/index.html">Colors and Fonts</a>
-          </dd>
-        
-          <dd class="">
-            <a href="/styleguide/fancy_form_fields.html">Fancy Form Fields</a>
           </dd>
         
           <dd class="">
@@ -80,207 +80,179 @@ as an actual footer in your site.</p>
 <p>To keep your footer at the bottom of the page no matter what,
 add a div with the class of `container` right inside your `body` tag,
 and wrap all the rest of your content EXCEPT the footer inside this div.</p>
+
+  
+  
+  
+
+
 <div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel450">
+        basic footer
+        <div class="right">
+          <i class="fa fa-code"></i>
+        </div>
+      </a>
+      <div id="panel450" class="content">
+        <pre><span class="nt">%footer</span>
+  <span class="nc">.row</span>
+    <span class="nc">.address.large-3.columns</span>
+      <span class="nt">%h5</span> About Launch Academy
+      <span class="nt">%p</span> 33 Harrison Ave #501
+      <span class="nt">%p</span> Boston, MA 02111
+      <span class="nt">%br</span>
+      <span class="nt">%p</span>
+        T:
+        <span class="nt">%a</span><span class="nc">.blue-text</span> 857.600.2250
+      <span class="nt">%p</span>
+        E:
+        <span class="nt">%a</span><span class="nc">.blue-text</span> hello@launchacademy.com
+    <span class="nc">.team.large-9.columns</span>
+      <span class="nt">%h5</span><span class="nc">.pbm</span> About The Team
+
+      <span class="nc">.large-4.profile.columns</span>
+        <span class="nc">.photo</span>
+          <span class="nt">%img</span><span class="p">(</span><span class="na">src=</span><span class="s">""</span> <span class="na">alt=</span><span class="s">"dan-photo"</span>)
+        <span class="nc">.text</span>
+          <span class="nt">%h6</span><span class="nc">.name</span> Dan Pickett
+          <span class="nt">%p</span><span class="nc">.role</span> Co-Founder
+          <span class="nt">%p</span><span class="nc">.bio</span> Founder <span class="err">&amp;</span> Principle at LaunchWare Co-Organizer of Boston Ruby Group Formally Dir. of Engineering @ Gazelle Coding professionally since 2002.
+      <span class="nc">.large-4.profile.columns</span>
+        <span class="nc">.photo</span>
+          <span class="nt">%img</span><span class="p">(</span><span class="na">src=</span><span class="s">""</span> <span class="na">alt=</span><span class="s">"dan-photo"</span>)
+        <span class="nc">.text</span>
+          <span class="nt">%h6</span><span class="nc">.name</span> Dan Pickett
+          <span class="nt">%p</span><span class="nc">.role</span> Co-Founder
+          <span class="nt">%p</span><span class="nc">.bio</span> Founder <span class="err">&amp;</span> Principle at LaunchWare Co-Organizer of Boston Ruby Group Formally Dir. of Engineering @ Gazelle Coding professionally since 2002.
+      <span class="nc">.large-4.profile.columns</span>
+        <span class="nc">.photo</span>
+          <span class="nt">%img</span><span class="p">(</span><span class="na">src=</span><span class="s">""</span> <span class="na">alt=</span><span class="s">"dan-photo"</span>)
+        <span class="nc">.text</span>
+          <span class="nt">%h6</span><span class="nc">.name</span> Dan Pickett
+          <span class="nt">%p</span><span class="nc">.role</span> Co-Founder
+          <span class="nt">%p</span><span class="nc">.bio</span> Founder <span class="err">&amp;</span> Principle at LaunchWare Co-Organizer of Boston Ruby Group Formally Dir. of Engineering @ Gazelle Coding professionally since 2002.
+      <span class="nc">.columns.view-more</span>
+        <span class="nt">%a</span><span class="nc">.cta</span> View More
+
+  <span class="nc">.row.sub-footer</span>
+    <span class="nc">.columns</span>
+      <span class="nt">%ul</span>
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Blog
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Careers
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Codedabulary
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Contact Us
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Privacy
+        <span class="nt">%li</span><span class="nc">.social-media</span>
+          <span class="nt">%a</span>
+            <span class="nt">%i</span><span class="nc">.fa.fa-facebook-square</span>
+        <span class="nt">%li</span><span class="nc">.social-media</span>
+          <span class="nt">%a</span>
+            <span class="nt">%i</span><span class="nc">.fa.fa-twitter-square</span>
+
+      <span class="nc">.copyright</span>
+        © Copyright 2015 Launch Academy.
+        <span class="nt">%a</span> Terms and Conditions</pre>
+      </div>
+    </li>
   <div class="exampleOutput clearfix">
     <footer>
-  <div class="row">
-    <div class="address large-3 columns">
+  <div class='row'>
+    <div class='address large-3 columns'>
       <h5>About Launch Academy</h5>
       <p>33 Harrison Ave #501</p>
       <p>Boston, MA 02111</p>
-      <br/>
+      <br>
       <p>
         T:
-        <span class="blue-text">857.600.2250</span>
+        <a class='blue-text'>857.600.2250</a>
       </p>
       <p>
         E:
-        <span class="blue-text">hello@launchacademy.com</span>
+        <a class='blue-text'>hello@launchacademy.com</a>
       </p>
     </div>
-    <div class="team large-9 columns">
-      <div class="columns">
-        <h5 class="pbm">About The Team</h5>
-      </div>
-      <div class="large-4 profile columns">
-        <div class="photo">
-          <img src="" alt="dan-photo">
+    <div class='team large-9 columns'>
+      <h5 class='pbm'>About The Team</h5>
+      <div class='large-4 profile columns'>
+        <div class='photo'>
+          <img alt='dan-photo' src=''>
         </div>
-        <div class="text">
-          <h6 class="name">Dan Pickett</h6>
-          <p class="role">Co-Founder</p>
-          <p class="bio">Founder & Principle at LaunchWare Co-Organizer of Boston Ruby Group Formally Dir. of Engineering @ Gazelle Coding professionally since 2002.</p>
+        <div class='text'>
+          <h6 class='name'>Dan Pickett</h6>
+          <p class='role'>Co-Founder</p>
+          <p class='bio'>Founder & Principle at LaunchWare Co-Organizer of Boston Ruby Group Formally Dir. of Engineering @ Gazelle Coding professionally since 2002.</p>
         </div>
       </div>
-      <div class="large-4 profile columns">
-        <div class="photo">
-          <img src="" alt="evan-photo">
+      <div class='large-4 profile columns'>
+        <div class='photo'>
+          <img alt='dan-photo' src=''>
         </div>
-        <div class="text">
-          <h6 class="name">Evan Charles</h6>
-          <p class="role">Co-Founder</p>
-          <p class="bio">Former Private Equite & Two Successfuly Exits edTech Hacker, snowboarder, golfer, decennial marathoner, beach aficionado</p>
-        </div>
-      </div>
-      <div class="large-4 profile columns">
-        <div class="photo">
-          <img src="" alt="whitney-photo">
-        </div>
-        <div class="text">
-          <h6 class="name">Whitney Wilkinson</h6>
-          <p class="role">Operations Manager</p>
-          <p class="bio">Former Sr. Assoc. Director @ Northeastern Professional friendrauser and dog enthusiast. Avid recreational dancer</p>
+        <div class='text'>
+          <h6 class='name'>Dan Pickett</h6>
+          <p class='role'>Co-Founder</p>
+          <p class='bio'>Founder & Principle at LaunchWare Co-Organizer of Boston Ruby Group Formally Dir. of Engineering @ Gazelle Coding professionally since 2002.</p>
         </div>
       </div>
-      <div class="columns view-more">
-        <div class="cta">
-          <a href="#">View More</a>
+      <div class='large-4 profile columns'>
+        <div class='photo'>
+          <img alt='dan-photo' src=''>
         </div>
+        <div class='text'>
+          <h6 class='name'>Dan Pickett</h6>
+          <p class='role'>Co-Founder</p>
+          <p class='bio'>Founder & Principle at LaunchWare Co-Organizer of Boston Ruby Group Formally Dir. of Engineering @ Gazelle Coding professionally since 2002.</p>
+        </div>
+      </div>
+      <div class='columns view-more'>
+        <a class='cta'>View More</a>
       </div>
     </div>
   </div>
-  <div class="row sub-footer">
-    <div class="columns">
+  <div class='row sub-footer'>
+    <div class='columns'>
       <ul>
         <li>
-          <a href="#">Blog</a>
+          <a>Blog</a>
         </li>
         <li>
-          <a href="#">Careers</a>
+          <a>Careers</a>
         </li>
         <li>
-          <a href="#">Codecabulary</a>
+          <a>Codedabulary</a>
         </li>
         <li>
-          <a href="#">Contact Us</a>
+          <a>Contact Us</a>
         </li>
         <li>
-          <a href="#">FAQ</a>
+          <a>Privacy</a>
         </li>
-        <li>
-          <a href="#">Privacy</a>
-        </li>
-        <li class="social-media">
-          <a href="https://www.facebook.com/TheLaunchAcademy">
-            <i class="fa fa-facebook-square"></i>
+        <li class='social-media'>
+          <a>
+            <i class='fa fa-facebook-square'></i>
           </a>
         </li>
-        <li class="social-media">
-          <a href="https://twitter.com/LaunchAcademy_">
-            <i class="fa fa-twitter-square"></i>
+        <li class='social-media'>
+          <a>
+            <i class='fa fa-twitter-square'></i>
           </a>
         </li>
       </ul>
-      <div class="copyright">
+      <div class='copyright'>
         © Copyright 2015 Launch Academy.
-        <a href="#">Terms and Conditions</a>
+        <a>Terms and Conditions</a>
       </div>
     </div>
   </div>
 </footer>
-
-
   </div>
-  <div class="codeBlock">
-    <div class="highlight panel">
-      <pre><span class="nt">&lt;footer&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"address large-3 columns"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h5&gt;</span>About Launch Academy<span class="nt">&lt;/h5&gt;</span>
-      <span class="nt">&lt;p&gt;</span>33 Harrison Ave #501<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;p&gt;</span>Boston, MA 02111<span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;br/&gt;</span>
-      <span class="nt">&lt;p&gt;</span>
-        T:
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"blue-text"</span><span class="nt">&gt;</span>857.600.2250<span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;p&gt;</span>
-        E:
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"blue-text"</span><span class="nt">&gt;</span>hello@launchacademy.com<span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"team large-9 columns"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"columns"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"pbm"</span><span class="nt">&gt;</span>About The Team<span class="nt">&lt;/h5&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"large-4 profile columns"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"photo"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">""</span> <span class="na">alt=</span><span class="s">"dan-photo"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h6</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>Dan Pickett<span class="nt">&lt;/h6&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"role"</span><span class="nt">&gt;</span>Co-Founder<span class="nt">&lt;/p&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bio"</span><span class="nt">&gt;</span>Founder <span class="err">&amp;</span> Principle at LaunchWare Co-Organizer of Boston Ruby Group Formally Dir. of Engineering @ Gazelle Coding professionally since 2002.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"large-4 profile columns"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"photo"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">""</span> <span class="na">alt=</span><span class="s">"evan-photo"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h6</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>Evan Charles<span class="nt">&lt;/h6&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"role"</span><span class="nt">&gt;</span>Co-Founder<span class="nt">&lt;/p&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bio"</span><span class="nt">&gt;</span>Former Private Equite <span class="err">&amp;</span> Two Successfuly Exits edTech Hacker, snowboarder, golfer, decennial marathoner, beach aficionado<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"large-4 profile columns"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"photo"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">""</span> <span class="na">alt=</span><span class="s">"whitney-photo"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;h6</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>Whitney Wilkinson<span class="nt">&lt;/h6&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"role"</span><span class="nt">&gt;</span>Operations Manager<span class="nt">&lt;/p&gt;</span>
-          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"bio"</span><span class="nt">&gt;</span>Former Sr. Assoc. Director @ Northeastern Professional friendrauser and dog enthusiast. Avid recreational dancer<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"columns view-more"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cta"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>View More<span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row sub-footer"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"columns"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;ul&gt;</span>
-        <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Blog<span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Careers<span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Codecabulary<span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Contact Us<span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>FAQ<span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Privacy<span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"social-media"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.facebook.com/TheLaunchAcademy"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-facebook-square"</span><span class="nt">&gt;&lt;/i&gt;</span>
-          <span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"social-media"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://twitter.com/LaunchAcademy_"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-twitter-square"</span><span class="nt">&gt;&lt;/i&gt;</span>
-          <span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;/li&gt;</span>
-      <span class="nt">&lt;/ul&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"copyright"</span><span class="nt">&gt;</span>
-        © Copyright 2015 Launch Academy.
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Terms and Conditions<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/footer&gt;</span></pre>
-    </div>
-  </div>
+  </ul>
 </div>
           </div>
           <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>

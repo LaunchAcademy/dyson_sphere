@@ -16,104 +16,71 @@ as an actual footer in your site.</p>
 add a div with the class of `container` right inside your `body` tag,
 and wrap all the rest of your content EXCEPT the footer inside this div.</p>
 
-```html_example
-<footer>
-  <div class="row">
-    <div class="address large-3 columns">
-      <h5>About Launch Academy</h5>
-      <p>33 Harrison Ave #501</p>
-      <p>Boston, MA 02111</p>
-      <br/>
-      <p>
+```haml_example
+basic footer
+%footer
+  .row
+    .address.large-3.columns
+      %h5 About Launch Academy
+      %p 33 Harrison Ave #501
+      %p Boston, MA 02111
+      %br
+      %p
         T:
-        <span class="blue-text">857.600.2250</span>
-      </p>
-      <p>
+        %a.blue-text 857.600.2250
+      %p
         E:
-        <span class="blue-text">hello@launchacademy.com</span>
-      </p>
-    </div>
-    <div class="team large-9 columns">
-      <div class="columns">
-        <h5 class="pbm">About The Team</h5>
-      </div>
-      <div class="large-4 profile columns">
-        <div class="photo">
-          <img src="" alt="dan-photo">
-        </div>
-        <div class="text">
-          <h6 class="name">Dan Pickett</h6>
-          <p class="role">Co-Founder</p>
-          <p class="bio">Founder & Principle at LaunchWare Co-Organizer of Boston Ruby Group Formally Dir. of Engineering @ Gazelle Coding professionally since 2002.</p>
-        </div>
-      </div>
-      <div class="large-4 profile columns">
-        <div class="photo">
-          <img src="" alt="evan-photo">
-        </div>
-        <div class="text">
-          <h6 class="name">Evan Charles</h6>
-          <p class="role">Co-Founder</p>
-          <p class="bio">Former Private Equite & Two Successfuly Exits edTech Hacker, snowboarder, golfer, decennial marathoner, beach aficionado</p>
-        </div>
-      </div>
-      <div class="large-4 profile columns">
-        <div class="photo">
-          <img src="" alt="whitney-photo">
-        </div>
-        <div class="text">
-          <h6 class="name">Whitney Wilkinson</h6>
-          <p class="role">Operations Manager</p>
-          <p class="bio">Former Sr. Assoc. Director @ Northeastern Professional friendrauser and dog enthusiast. Avid recreational dancer</p>
-        </div>
-      </div>
-      <div class="columns view-more">
-        <div class="cta">
-          <a href="#">View More</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row sub-footer">
-    <div class="columns">
-      <ul>
-        <li>
-          <a href="#">Blog</a>
-        </li>
-        <li>
-          <a href="#">Careers</a>
-        </li>
-        <li>
-          <a href="#">Codecabulary</a>
-        </li>
-        <li>
-          <a href="#">Contact Us</a>
-        </li>
-        <li>
-          <a href="#">FAQ</a>
-        </li>
-        <li>
-          <a href="#">Privacy</a>
-        </li>
-        <li class="social-media">
-          <a href="https://www.facebook.com/TheLaunchAcademy">
-            <i class="fa fa-facebook-square"></i>
-          </a>
-        </li>
-        <li class="social-media">
-          <a href="https://twitter.com/LaunchAcademy_">
-            <i class="fa fa-twitter-square"></i>
-          </a>
-        </li>
-      </ul>
-      <div class="copyright">
-        © Copyright 2015 Launch Academy.
-        <a href="#">Terms and Conditions</a>
-      </div>
-    </div>
-  </div>
-</footer>
+        %a.blue-text hello@launchacademy.com
+    .team.large-9.columns
+      %h5.pbm About The Team
 
+      .large-4.profile.columns
+        .photo
+          %img(src="" alt="dan-photo")
+        .text
+          %h6.name Dan Pickett
+          %p.role Co-Founder
+          %p.bio Founder & Principle at LaunchWare Co-Organizer of Boston Ruby Group Formally Dir. of Engineering @ Gazelle Coding professionally since 2002.
+      .large-4.profile.columns
+        .photo
+          %img(src="" alt="dan-photo")
+        .text
+          %h6.name Dan Pickett
+          %p.role Co-Founder
+          %p.bio Founder & Principle at LaunchWare Co-Organizer of Boston Ruby Group Formally Dir. of Engineering @ Gazelle Coding professionally since 2002.
+      .large-4.profile.columns
+        .photo
+          %img(src="" alt="dan-photo")
+        .text
+          %h6.name Dan Pickett
+          %p.role Co-Founder
+          %p.bio Founder & Principle at LaunchWare Co-Organizer of Boston Ruby Group Formally Dir. of Engineering @ Gazelle Coding professionally since 2002.
+      .columns.view-more
+        %a.cta View More
+
+  .row.sub-footer
+    .columns
+      %ul
+        %li
+          %a Blog
+        %li
+          %a Careers
+        %li
+          %a Codedabulary
+        %li
+          %a Contact Us
+        %li
+          %a Privacy
+        %li.social-media
+          %a
+            %i.fa.fa-facebook-square
+        %li.social-media
+          %a
+            %i.fa.fa-twitter-square
+
+      .copyright
+        © Copyright 2015 Launch Academy.
+        %a Terms and Conditions
 ```
 
 */

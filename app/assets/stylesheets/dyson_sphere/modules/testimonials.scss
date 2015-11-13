@@ -6,6 +6,7 @@ category: Misc
 ---
 
 ```html_example
+single testimonial
 <blockquote class="testimonial columns small-4">
   <p>I had some background knowledge of coding, but I didn't see a future in computer programming.</p>
   <cite>
@@ -19,6 +20,7 @@ category: Misc
 To get several blockquotes to be the same height, use Foundation's data equalizer:
 
 ```html_example
+testimonials with equal height
 <div data-equalizer>
   <div class="columns small-4" data-equalizer-watch>
     <blockquote class="testimonial">

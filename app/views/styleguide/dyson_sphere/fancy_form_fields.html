@@ -21,11 +21,19 @@
       </nav>
     </div>
 
-    <dl class="sub-nav mts">
+    <dl class="sub-nav">
       <div class="row">
+        
+          <dd class="active">
+            <a href="/styleguide/fancy_form_fields.html">Fancy Form Fields</a>
+          </dd>
         
           <dd class="">
             <a href="/styleguide/layout_and_formatting.html">Layout and Formatting</a>
+          </dd>
+        
+          <dd class="">
+            <a href="/styleguide/page_sections.html">Page Sections</a>
           </dd>
         
           <dd class="">
@@ -33,15 +41,7 @@
           </dd>
         
           <dd class="">
-            <a href="/styleguide/markdown_rendering.html">Markdown Rendering</a>
-          </dd>
-        
-          <dd class="">
             <a href="/styleguide/index.html">Colors and Fonts</a>
-          </dd>
-        
-          <dd class="active">
-            <a href="/styleguide/fancy_form_fields.html">Fancy Form Fields</a>
           </dd>
         
           <dd class="">
@@ -70,56 +70,146 @@
             <div class="small-3 columns">
               <ul class="side-nav">
               
+                <li><a href="#1-fancy-forms">Fancy Form Fields</a></li>
+              
                 <li><a href="#fancy-checkboxes">Fancy Checkboxes</a></li>
               
                 <li><a href="#fancy-email-boxes">Fancy Email Boxes</a></li>
-              
-                <li><a href="#fancy-forms">Fancy Form Fields</a></li>
               
               </ul>
             </div>
           
           <div class="columns small-9">
+<h1 id="1-fancy-forms" class="styleguide">Fancy Form Fields</h1>
+
+<p>To make your forms look fancy and awesome, add the class <code>.fancy-form</code> to your form.</p>
+
+<p><em>Note: Eventually it would be great to make these styles totally standard, by putting them in Foundation and Overrides! I'm not doing that yet since it's kind of drastic to change EVERY form on ALL our apps all at once, but it's something to keep in mind for the future.</em></p>
+
+  
+  
+  
+
+
+<div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel948">
+        fancy-form
+        <div class="right">
+          <i class="fa fa-code"></i>
+        </div>
+      </a>
+      <div id="panel948" class="content">
+        <pre><span class="nt">%form</span><span class="nc">.fancy-form</span>
+  <span class="nc">.small-12.columns</span>
+    <span class="nt">%input</span><span class="p">(</span> <span class="na">placeholder=</span><span class="s">"Name"</span> <span class="na">type=</span><span class="s">"text"</span> )
+  <span class="nc">.medium-6.columns</span>
+    <span class="nt">%input</span><span class="p">(</span> <span class="na">placeholder=</span><span class="s">"Email"</span> <span class="na">type=</span><span class="s">"email"</span> )
+  <span class="nc">.medium-6.columns</span>
+    <span class="nt">%input</span><span class="p">(</span> <span class="na">placeholder=</span><span class="s">"Phone"</span> <span class="na">type=</span><span class="s">"tel"</span> )
+  <span class="nc">.small-12.columns</span>
+    <span class="nt">%textarea</span><span class="p">(</span> <span class="na">placeholder=</span><span class="s">"What's on your mind?"</span> )
+  <span class="nc">.small-12.columns</span>
+    <span class="nt">%button</span><span class="nc">.btn-green.cta</span><span class="p">(</span> <span class="na">type=</span><span class="s">"submit"</span> ) Submit</pre>
+      </div>
+    </li>
+  <div class="exampleOutput clearfix">
+    <form class='fancy-form'>
+  <div class='small-12 columns'>
+    <input placeholder='Name' type='text'>
+  </div>
+  <div class='medium-6 columns'>
+    <input placeholder='Email' type='email'>
+  </div>
+  <div class='medium-6 columns'>
+    <input placeholder='Phone' type='tel'>
+  </div>
+  <div class='small-12 columns'>
+    <textarea placeholder="What's on your mind?"></textarea>
+  </div>
+  <div class='small-12 columns'>
+    <button class='btn-green cta' type='submit'>Submit</button>
+  </div>
+</form>
+  </div>
+  </ul>
+</div>
+
+<h2>Customization</h2>
+
+<p>Like so many other things listed on this page, there's a Sass mixin for these forms that you can use instead of the helper class if you'd like to customize things! The mixin allows you to customize text color, and "focus-text-color" (this refers to the color the text becomes when you click on the box.) You can pass the following arguments to the Sass mixin:</p>
+
+<ul>
+  <li><code>$text-color</code> - sets the color of the text. Default is $la-med-dark-grey.</li>
+  <li><code>$focus-text-color</code> - sets the color of the text, when you're typing in that input field. Default is $la-light-green.</li>
+</ul>
+
+<p>Here's an example of how to use the Sass mixin:</p>
+
+<div class="highlight highlight-source-scss"><pre><span class="pl-e">.my-custom-form-class</span> {
+  <span class="pl-k">@include</span> <span class="pl-c1">fancy-form</span>(<span class="pl-v"></span>
+    <span class="pl-smi">$text-color</span><span class="pl-v">:</span> <span class="pl-c1">white</span>,<span class="pl-v"></span>
+    <span class="pl-smi">$focus-text-color</span><span class="pl-v">:</span> <span class="pl-c1">red</span><span class="pl-v"></span>
+  )
+}</pre></div>
+
 <h1 id="fancy-checkboxes" class="styleguide">Fancy Checkboxes</h1>
 
-<p><code>fancy-checkbox</code> refers to an checkbox OR radio button that looks like the example below:
+<p><code>fancy-checkbox</code> refers to an checkbox OR radio button that looks like the example below:</p>
+<p class="styleguide"><hr></p>
+  
+  
+  
 
-<hr>
 
-<div class='row'>
-  <div class='fancy-checkbox'>
-    <input type="radio" value="5" checked="checked" name="student_application[cohort_id]" id="student_application_cohort_id_5" />
-    <div class='box'></div>
-    <label class="inline mlm" for="student_application_Winter 2015">Winter 2015</label>
+<div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel939">
+        fancy-checkbox
+        <div class="right">
+          <i class="fa fa-code"></i>
+        </div>
+      </a>
+      <div id="panel939" class="content">
+        <pre><span class="nc">.columns.medium-6.medium-centered</span>
+  <span class="nc">.row</span>
+    <span class="nc">.fancy-checkbox</span>
+      <span class="nt">%input</span><span class="p">{</span> <span class="ss">type: </span><span class="s2">"radio"</span> <span class="p">}</span>
+      <span class="nc">.box</span>
+      <span class="nt">%label</span><span class="nc">.inline.mlm</span> Winter 2015
+  <span class="nc">.row</span>
+    <span class="nc">.fancy-checkbox</span>
+      <span class="nt">%input</span><span class="p">{</span> <span class="ss">type: </span><span class="s2">"radio"</span> <span class="p">}</span>
+      <span class="nc">.box</span>
+      <span class="nt">%label</span><span class="nc">.inline.mlm</span> Spring 2015</pre>
+      </div>
+    </li>
+  <div class="exampleOutput clearfix">
+    <div class='columns medium-6 medium-centered'>
+  <div class='row'>
+    <div class='fancy-checkbox'>
+      <input type='radio'>
+      <div class='box'></div>
+      <label class='inline mlm'>Winter 2015</label>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='fancy-checkbox'>
+      <input type='radio'>
+      <div class='box'></div>
+      <label class='inline mlm'>Spring 2015</label>
+    </div>
   </div>
 </div>
-<div class='row'>
-  <div class='fancy-checkbox'>
-    <input type="radio" value="6" name="student_application[cohort_id]" id="student_application_cohort_id_6" />
-    <div class='box'></div>
-    <label class="inline mlm" for="student_application_Spring 2016">Spring 2016</label>
   </div>
+  </ul>
 </div>
-
-<hr>
 
 <p>(As you can see, there isn't any special styling applied to the labels - you can do that yourself in your own css!)</p>
 
 <p>To set up fancy checkboxes, you will wrap a set of HTML elements inside a div with the class of <code>.fancy-checkbox</code>. This will allow users to click ANYWHERE in the area wrapped by <code>.fancy-checkbox</code> and have the checkbox become "selected". It's also very important that at a bare minimum, you put an empty div with the class of <code>.box</code> inside your <code>.fancy-checkbox</code> div. This is where the visual appearance of the checkbox will show up.</p>
-
-<p>To create the above example, the following haml was used:</p>
-
-<div class="highlight highlight-text-haml"><pre><span class="pl-ent">.row</span>
-  <span class="pl-ent">.fancy-checkbox</span>
-    =<span class="pl-sre"> f.radio_button :cohort_id, cohort1.id, checked: true</span>
-    <span class="pl-ent">.box</span>
-    =<span class="pl-sre"> f.label cohort1.name, class: ["inline", "mlm"]</span>
-<span class="pl-ent">.row</span>
-  <span class="pl-ent">.fancy-checkbox</span>
-    =<span class="pl-sre"> f.radio_button :cohort_id, cohort2.id</span>
-    <span class="pl-ent">.box</span>
-    =<span class="pl-sre"> f.label cohort2.name, class: ["inline", "mlm"]</span>
-</pre></div>
 
 <p>As an additional note, as mentioned above, you can use radio buttons OR actual checkboxes as your HTML input element! Either one works!</p>
 
@@ -133,12 +223,12 @@
 
 <p>Mixin arguments are passed in as key-value pairs. Here's an example:</p>
 
-<div class="highlight highlight-source-scss"><pre><span class="pl-e">.my-custom-class</span> {
-  <span class="pl-k">@include</span> <span class="pl-c1">fancy-checkbox</span>(<span class="pl-v"></span>
-    <span class="pl-smi">$checkbox-size</span><span class="pl-v">:</span><span class="pl-c1"> 45</span><span class="pl-k">px</span>,<span class="pl-v"></span>
-    <span class="pl-smi">$check-color</span><span class="pl-v">:</span> <span class="pl-c1">#f00</span><span class="pl-v"></span>
-  )
-}</pre></div>
+<pre>.my-custom-class {
+  @include fancy-checkbox(
+    $checkbox-size: 45px,
+    $check-color: #f00
+  );
+}</pre>
 
 <p>You can pass as many or as few as of the permissible arguments as you'd like. (Available arguments are listed below.) Any value you don't specify will just be set to the default (listed below).
 
@@ -163,42 +253,56 @@
 
 <p><em>NOTE: This has only been used with checkboxes that are sized at 40px! I can't promise it'll look right with larger checkboxes - we'll cross that bridge when we get there!</em></p>
 
-<p>Here's some example haml for a set of checkboxes with backgrounds:</p>
+  
+  
+  
 
-<div class="highlight highlight-text-haml"><pre><span class="pl-ent">.medium-6.columns</span>
-  <span class="pl-ent">.fancy-discount-checkbox</span>
-    =<span class="pl-sre"> f.check_box :ambassador, checked: @ambassador</span>
-    <span class="pl-ent">.background</span>
-    <span class="pl-ent">.box</span>
-    =<span class="pl-sre"> f.label :ambassador, "Select"</span>
 
-<span class="pl-ent">.medium-6.columns</span>
-  <span class="pl-ent">.fancy-discount-checkbox</span>
-    =<span class="pl-sre"> f.check_box :diversity_scholarship, checked: @diversity</span>
-    <span class="pl-ent">.background</span>
-    <span class="pl-ent">.box</span>
-    =<span class="pl-sre"> f.label :diversity_scholarship, "Select"</span></pre></div>
-
-<p>And here's what that looks like on the page:</p>
-
-<div class='medium-6 columns'>
+<div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel631">
+        checkboxes with backgrounds
+        <div class="right">
+          <i class="fa fa-code"></i>
+        </div>
+      </a>
+      <div id="panel631" class="content">
+        <pre><span class="nc">.medium-6.columns</span>
+  <span class="nc">.fancy-discount-checkbox</span>
+    <span class="nt">%input</span><span class="p">{</span> <span class="ss">type: </span><span class="s2">"checkbox"</span> <span class="p">}</span>
+    <span class="nc">.background</span>
+    <span class="nc">.box</span>
+    <span class="nt">%label</span> Select
+<span class="nc">.medium-6.columns</span>
+  <span class="nc">.fancy-discount-checkbox</span>
+    <span class="nt">%input</span><span class="p">{</span> <span class="ss">type: </span><span class="s2">"checkbox"</span> <span class="p">}</span>
+    <span class="nc">.background</span>
+    <span class="nc">.box</span>
+    <span class="nt">%label</span> Select</pre>
+      </div>
+    </li>
+  <div class="exampleOutput clearfix">
+    <div class='medium-6 columns'>
   <div class='fancy-discount-checkbox'>
-    <input name="payment[ambassador]" type="hidden" value="0" /><input type="checkbox" value="1" name="payment[ambassador]" id="payment_ambassador" />
+    <input type='checkbox'>
     <div class='background'></div>
     <div class='box'></div>
-    <label for="payment_ambassador">Select</label>
+    <label>Select</label>
   </div>
 </div>
-
 <div class='medium-6 columns'>
   <div class='fancy-discount-checkbox'>
-    <input name="payment[diversity_scholarship]" type="hidden" value="0" /><input type="checkbox" value="1" name="payment[diversity_scholarship]" id="payment_diversity_scholarship" />
+    <input type='checkbox'>
     <div class='background'></div>
     <div class='box'></div>
-    <label for="payment_diversity_scholarship">Select</label>
+    <label>Select</label>
   </div>
 </div>
-<p class="styleguide"><br><br><br><br></p>
+  </div>
+  </ul>
+</div>
+
 <p>Note how in the above example, I use the class name <code>fancy-discount-checkbox</code> instead of <code>fancy-checkbox</code>. This is because I needed to customize several of the colors, so instead of using the default settings, I created my own class that includes the <code>fancy-checkbox</code> mixin with some new arguments passed in. You can see an example of that code below.
 
 <h3>Background Customization</h3>
@@ -212,58 +316,69 @@
 
 <p>Below is an example of the Sass used to style the above checkboxes. I used a custom class that <code>@include</code>s the mixin in order to customize a number of the variables from their defauls.</p>
 
-<div class="highlight highlight-source-scss"><pre><span class="pl-e">.fancy-discount-checkbox</span> {
-  <span class="pl-c1"><span class="pl-c1">text-align</span></span>: <span class="pl-c1">center</span>;
+<pre>.fancy-discount-checkbox {
+  text-align: center;
 
-  <span class="pl-ent">label</span> {
-    <span class="pl-c1"><span class="pl-c1">font-size</span></span>: <span class="pl-c1">32</span><span class="pl-k">px</span>;
+  label {
+    font-size: 32px;
   }
 
-  <span class="pl-k">@include</span> <span class="pl-c1">fancy-checkbox</span>(<span class="pl-v"></span>
-    <span class="pl-smi">$checkbox-size</span><span class="pl-v">:</span><span class="pl-c1"> 40</span><span class="pl-k">px</span>,<span class="pl-v"></span>
-    <span class="pl-smi">$check-color</span><span class="pl-v">:</span> <span class="pl-c1">white</span>,<span class="pl-v"></span>
-    <span class="pl-smi">$box-bg-color</span><span class="pl-v">:</span> <span class="pl-c1">transparentize</span>(<span class="pl-c1">white</span>,<span class="pl-c1"> .3</span>),<span class="pl-v"></span>
-    <span class="pl-smi">$hover-check-color</span><span class="pl-v">:</span> <span class="pl-smi">$la-blue</span>,<span class="pl-v"></span>
-    <span class="pl-smi">$checked-box-border-color</span><span class="pl-v">:</span> <span class="pl-c1">transparent</span>,<span class="pl-v"></span>
-    <span class="pl-smi">$checked-label-color</span><span class="pl-v">:</span> <span class="pl-c1">white</span><span class="pl-v"></span>
-  )
-}</pre></div>
-
-
+  @include fancy-checkbox(
+    $checkbox-size: 40px,
+    $check-color: white,
+    $box-bg-color: transparentize(white, .3),
+    $hover-check-color: $la-blue,
+    $checked-box-border-color: transparent,
+    $checked-label-color: white
+  );
+}</pre>
 
 <h1 id="fancy-email-boxes" class="styleguide">Fancy Email Boxes</h1>
-<p><code>fancy-email-box</code> refers to an email box that looks like the example below:
-<div class="row">
-  <div class='large-8 columns fancy-email-box'>
-    <form>
-      <fieldset>
-        <div class='row collapse'>
-          <div class='medium-7 columns text-center'>
-            <input placeholder='enter your email address...' type='text'>
-          </div>
-          <div class='medium-5 columns button-container'>
-            <div class='btn-green cta'>
-              <input type='submit' value='Send me one'>
-            </div>
-          </div>
+
+<p><code>fancy-email-box</code> refers to an email box that looks like the example below:</p>
+
+  
+  
+  
+
+
+<div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel605">
+        fancy-email-box
+        <div class="right">
+          <i class="fa fa-code"></i>
         </div>
-      </fieldset>
-    </form>
-  </div>
+      </a>
+      <div id="panel605" class="content">
+        <pre><span class="nc">.fancy-email-box.large-8.columns</span>
+  <span class="nt">%form</span>
+    <span class="nt">%fieldset</span>
+      <span class="nc">.row.collapse</span>
+        <span class="nc">.medium-7.columns.text-center</span>
+          <span class="nt">%input</span><span class="p">{</span> <span class="ss">placeholder: </span><span class="s1">'enter your email address...'</span><span class="p">,</span> <span class="ss">type: </span><span class="s1">'text'</span> <span class="p">}</span>
+        <span class="nc">.button-container.medium-5.columns</span>
+          <span class="nt">%button</span><span class="nc">.btn-green.cta</span><span class="p">{</span> <span class="ss">type: </span><span class="s1">'submit'</span> <span class="p">}</span> Send me one</pre>
+      </div>
+    </li>
+  <div class="exampleOutput clearfix">
+    <div class='fancy-email-box large-8 columns'>
+  <form>
+    <fieldset>
+      <div class='row collapse'>
+        <div class='medium-7 columns text-center'>
+          <input placeholder='enter your email address...' type='text'>
+        </div>
+        <div class='button-container medium-5 columns'>
+          <button class='btn-green cta' type='submit'>Send me one</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
 </div>
-
-<div class="row">
-  <p>The following haml was used to create this email box: </p>
-
-  <div class="highlight highlight-text-haml"><pre><span class="pl-ent">.large-8.columns.fancy-email-box</span>
-    %<span class="pl-ent">form</span><span class="pl-ent">.fancy-email-box</span>
-      %<span class="pl-ent">fieldset</span>
-        <span class="pl-ent">.row.collapse</span>
-          <span class="pl-ent">.medium-7.columns.text-center</span>
-            %<span class="pl-ent">input</span>(type="text" placeholder="enter your email address...")
-          <span class="pl-ent">.medium-5.columns.button-container</span>
-            %<span class="pl-ent">button</span>(type="submit" class="tiny btn-pink cta")
-              Subscribe</pre></div>
+  </div>
+  </ul>
 </div>
 
 <h2>Customization</h2>
@@ -277,64 +392,15 @@
   <li><code>$placeholder-color</code></li>
 </ul>
 <p class="styleguide">Each of these values has a default value (as shown in the aboce example of the rendered form), but those default values can be overwritten by passing in new arguments. New arguments are passed in a way that resembles key-value pairs:</p>
-<div class="highlight highlight-source-scss"><pre><span class="pl-e">.my-custom-class</span> {
-  <span class="pl-k">@include</span> <span class="pl-c1">fancy-email-box</span>(<span class="pl-smi">$border-color</span><span class="pl-v">:</span> <span class="pl-c1">red</span>, <span class="pl-smi">$background-color</span><span class="pl-v">:</span> <span class="pl-id">pink</span>, <span class="pl-smi">$text-color</span><span class="pl-v">:</span> <span class="pl-c1">white</span>, <span class="pl-smi">$placeholder-color</span><span class="pl-v">:</span> <span class="pl-c1">white</span>);
-}</pre></div>
-
-Any number of these optional arguments can be included - you can overwrite all of them, just a couple of them, or none at all! If you don't plan on overwriting one of the default values, just leave it out of the arguments list.
-
-
-
-<h1 id="fancy-forms" class="styleguide">Fancy Form Fields</h1>
-
-<p>Sometimes you just want your forms to look awesome! All of the forms we're using in the new designs have a new look - and this is it.<p>
-
-<p>To make your forms look fancy and awesome, add the class <code>.fancy-form</code> to your form.</p>
-
-<p><em>Note: Eventually it would be great to make these styles totally standard, by putting them in Foundation and Overrides! I'm not doing that yet since it's kind of drastic to change EVERY form on ALL our apps all at once, but it's something to keep in mind for the future.</em></p>
-
-<p>Here's an example of our beautiful fancy forms:</p>
-
-<div class='columns'>
-  <form novalidate="novalidate" class="simple_form new_contact fancy-form" id="new_contact" action="/contacts" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="CESVPyXLF+o3Lsb/C4HN8e5J2JDRRC2a5XacoE2vzWl+EMye6FjoH16rGHcTt/d+p4+ZgV1+tuLLuEoWu6qMOw==" />    <div class='small-12 columns'>
-        <div class="input string required contact_name"><input class="string required" placeholder="Name" type="text" name="contact[name]" id="contact_name" /></div>
-      </div>
-      <div class='medium-6 columns'>
-        <div class="input email required contact_email"><input class="string email required" placeholder="Email" type="email" name="contact[email]" id="contact_email" /></div>
-      </div>
-      <div class='medium-6 columns'>
-        <div class="input tel optional contact_phone"><input class="string tel optional" placeholder="Phone" type="tel" name="contact[phone]" id="contact_phone" /></div>
-      </div>
-      <div class='small-12 columns'>
-        <div class="input text required contact_message"><textarea class="text required" placeholder="What&#39;s on your mind?" name="contact[message]" id="contact_message">
-</textarea></div>
-      </div>
-      <div class='small-12 columns'>
-        <div class='btn-green cta'>
-          <input type="submit" name="commit" value="Submit" />
-        </div>
-      </div>
-  </form>
-</div>
-
-<h2>Customization</h2>
-
-<p>Like so many other things listed on this page, there's a Sass mixin for these forms that you can use instead of the helper class if you'd like to customize things! The mixin allows you to customize text color, and "focus-text-color" (this refers to the color the text becomes when you click on the box.) You can pass the following arguments to the Sass mixin:</p>
-
-<ul>
-  <li><code>$text-color</code> - sets the color of the text. Default is $la-med-dark-grey.</li>
-  <li><code>$focus-text-color</code> - sets the color of the text, when you're typing in that input field. Default is $la-light-green.</li>
-</ul>
-
-<p>Here's an example of how to use the Sass mixin:</p>
-
-<div class="highlight highlight-source-scss"><pre><span class="pl-e">.my-custom-form-class</span> {
-  <span class="pl-k">@include</span> <span class="pl-c1">fancy-form</span>(<span class="pl-v"></span>
-    <span class="pl-smi">$text-color</span><span class="pl-v">:</span> <span class="pl-c1">white</span>,<span class="pl-v"></span>
-    <span class="pl-smi">$focus-text-color</span><span class="pl-v">:</span> <span class="pl-c1">red</span><span class="pl-v"></span>
-  )
-}</pre></div>
-          </div>
+<pre>.my-custom-class {
+  @include fancy-email-box(
+    $border-color: red,
+    $background-color: pink,
+    $text-color: white,
+    $placeholder-color: white
+  );
+}</pre>
+<p class="styleguide">Any number of these optional arguments can be included - you can overwrite all of them, just a couple of them, or none at all! If you don&#39;t plan on overwriting one of the default values, just leave it out of the arguments list.</p>          </div>
           <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>
         </section>
       </div>

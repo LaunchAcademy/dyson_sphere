@@ -1,49 +1,45 @@
 /*doc
 ---
-title: Headers
+title: Normal Header with Dropdowns
 name: headers
 category: Headers and Hero Images
 ---
 
-```html_example
-<div class="contain-to-grid full-top-bar">
-  <nav class="top-bar" data-topbar role="navigation">
-    <ul class="title-area">
-      <li class="name">
-        <h1><a href="#">DysonSphere Styleguide</a></h1>
-      </li>
-      <li class="toggle-topbar menu-icon">
-        <a href="#">
-          <span>Menu</span>
-        </a>
-      </li>
+```haml_example
+normal header w/ dropdowns
+.contain-to-grid.full-top-bar
+  %nav.top-bar( data-topbar role="navigation")
+    %ul.title-area
+      %li.name
+        %img.logo(src="dyson_sphere/launch-logo.png")
+        %h1
+          %a
+            Launch
+            %strong Academy
+      %li.toggle-topbar.menu-icon
+        %a(href="#")
+          %span
 
-    </ul>
+    %section.top-bar-section
+      %ul.left
+        %li.has-dropdown
+          %a.menu-item Admin
+          %ul.dropdown
+            %li
+              %a Users
+            %li
+              %a Users
 
-    <section class="top-bar-section">
-      <ul class="left">
-        <li class="has-dropdown">
-          <a href="">Admin</a>
-          <ul class="dropdown">
-            <li><a href="#">Users</a></li>
-            <li><a href="#">Teams</a></li>
-          </ul>
-        </li>
-      </ul>
-
-      <ul class="right">
-        <li><a href="https://github.com/LaunchAcademy/dyson_sphere" target="_blank">Github</a></li>
-        <li class="has-dropdown">
-          <a href="">Account Details</a>
-          <ul class="dropdown">
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Sign Out</a></li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-  </nav>
-</div>
+      %ul.right
+        %li
+          %a Github
+        %li.has-dropdown
+          %a.menu-item Account Details
+          %ul.dropdown
+            %li
+              %a Profile
+            %li
+              %a Sign Out
 ```
 
 */

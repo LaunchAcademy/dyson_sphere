@@ -5,15 +5,15 @@ name: splitColumns
 category: Layout and Formatting
 ---
 
-```html_example
-<div class="split-column">
-  <div class="columns medium-6">
-    <p>You can really have whatever your heart desires here for content.</p>
-  </div>
-  <div class="columns medium-6">
-    <p>Same goes for here! Anything you want!</p>
-  </div>
-</div>
+<p>Split columns allow you to have two pieces of content next to each other, separated by a vertical line. On small screens, the will move to be vertically stacked and have a horizontal separator line.</p>
+
+```haml_example
+split-columns
+.split-column.clearfix
+  .columns.medium-6
+    %p You can really have whatever your heart desires here for content.
+  .columns.medium-6
+    %p You can really have whatever your heart desires here for content.
 
 ```
 */

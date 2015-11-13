@@ -4,38 +4,18 @@ title: Fancy Email Boxes
 name: fancy-email-boxes
 category: Fancy Form Fields
 ---
-<p><code>fancy-email-box</code> refers to an email box that looks like the example below:
-<div class="row">
-  <div class='large-8 columns fancy-email-box'>
-    <form>
-      <fieldset>
-        <div class='row collapse'>
-          <div class='medium-7 columns text-center'>
-            <input placeholder='enter your email address...' type='text'>
-          </div>
-          <div class='medium-5 columns button-container'>
-            <div class='btn-green cta'>
-              <input type='submit' value='Send me one'>
-            </div>
-          </div>
-        </div>
-      </fieldset>
-    </form>
-  </div>
-</div>
-<div class="row">
-  <p>The following haml was used to create this email box: </p>
-
-  <div class="highlight highlight-text-haml"><pre><span class="pl-ent">.large-8.columns.fancy-email-box</span>
-    %<span class="pl-ent">form</span><span class="pl-ent">.fancy-email-box</span>
-      %<span class="pl-ent">fieldset</span>
-        <span class="pl-ent">.row.collapse</span>
-          <span class="pl-ent">.medium-7.columns.text-center</span>
-            %<span class="pl-ent">input</span>(type="text" placeholder="enter your email address...")
-          <span class="pl-ent">.medium-5.columns.button-container</span>
-            %<span class="pl-ent">button</span>(type="submit" class="tiny btn-pink cta")
-              Subscribe</pre></div>
-</div>
+<p><code>fancy-email-box</code> refers to an email box that looks like the example below:</p>
+```haml_example
+fancy-email-box
+.fancy-email-box.large-8.columns
+  %form
+    %fieldset
+      .row.collapse
+        .medium-7.columns.text-center
+          %input{ placeholder: 'enter your email address...', type: 'text' }
+        .button-container.medium-5.columns
+          %button.btn-green.cta{ type: 'submit' } Send me one
+```
 
 <h2>Customization</h2>
 
@@ -56,9 +36,14 @@ The <code>fancy-email-box</code> takes four optional arguments:
 
 Each of these values has a default value (as shown in the aboce example of the rendered form), but those default values can be overwritten by passing in new arguments. New arguments are passed in a way that resembles key-value pairs:
 
-<div class="highlight highlight-source-scss"><pre><span class="pl-e">.my-custom-class</span> {
-  <span class="pl-k">@include</span> <span class="pl-c1">fancy-email-box</span>(<span class="pl-smi">$border-color</span><span class="pl-v">:</span> <span class="pl-c1">red</span>, <span class="pl-smi">$background-color</span><span class="pl-v">:</span> <span class="pl-id">pink</span>, <span class="pl-smi">$text-color</span><span class="pl-v">:</span> <span class="pl-c1">white</span>, <span class="pl-smi">$placeholder-color</span><span class="pl-v">:</span> <span class="pl-c1">white</span>);
-}</pre></div>
+<pre>.my-custom-class {
+  @include fancy-email-box(
+    $border-color: red,
+    $background-color: pink,
+    $text-color: white,
+    $placeholder-color: white
+  );
+}</pre>
 
 Any number of these optional arguments can be included - you can overwrite all of them, just a couple of them, or none at all! If you don't plan on overwriting one of the default values, just leave it out of the arguments list.
 
@@ -100,7 +85,7 @@ Any number of these optional arguments can be included - you can overwrite all o
   }
 
   input,
-  .button {
+  button {
     margin: 0;
   }
 

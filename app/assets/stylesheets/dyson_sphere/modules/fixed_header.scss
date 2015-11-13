@@ -5,43 +5,42 @@ name: fixedHeaders
 category: Headers and Hero Images
 ---
 
-```html_example
-<div class="sticky">
-  <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: [small, medium, large]">
-    <ul class="pll title-area">
-      <li class="name">
-        <h1>
-          <a href="#">Launch <strong>Academy</strong></a>
-        </h1>
-      </li>
-      <li class="toggle-topbar menu-icon">
-        <a href="#">
-          <span></span>
-        </a>
-      </li>
-    </ul>
-    <section class="top-bar-section">
-      <ul class="right">
-        <li>
-          <a href="#">Learn on Campus</a>
-        </li>
-        <li>
-          <a href="#">Learn Online</a>
-        </li>
-        <li>
-          <a href="#" class="btn-pink cta">Apply</a>
-        </li>
-      </ul>
-    </section>
-  </nav>
-</div>
+```haml_example
+header
+.sticky
+  %nav.top-bar(data-topbar role="navigation" data-options="sticky_on: [small, medium, large]")
+    %ul.plm.title-area
+      %li.name
+        %img.logo(src="dyson_sphere/launch-logo.png")
+        %h1
+          %a
+            Launch
+            %strong Academy
+      %li.toggle-topbar.menu-icon
+        %a(href="#")
+          %span
+
+    %section.top-bar-section
+      %ul.left
+        %li
+          %a.menu-item Admin
+        %li.menu-item
+          %a.menu-item Sign Out
+
+      %ul.right
+        %li
+          %a Learn on Campus
+        %li
+          %a Learn Online
+        %li
+          %a.btn-pink.cta Apply
 
 ```
 
 <p>By default, fixed headers will be `$la-blue` no matter where you are on the page.</p>
 
 <p>To make your header transparent when at the top of the page, on a particular page,
-add the class `.has-transparent-header` to some element on the page. (We recommend
+add the class `.has-transparent-header` to some later element on the page. (I recommend
 the first element of the page, such as the hero image or video.)</p>
 
 */

@@ -21,11 +21,19 @@
       </nav>
     </div>
 
-    <dl class="sub-nav mts">
+    <dl class="sub-nav">
       <div class="row">
+        
+          <dd class="">
+            <a href="/styleguide/fancy_form_fields.html">Fancy Form Fields</a>
+          </dd>
         
           <dd class="active">
             <a href="/styleguide/layout_and_formatting.html">Layout and Formatting</a>
+          </dd>
+        
+          <dd class="">
+            <a href="/styleguide/page_sections.html">Page Sections</a>
           </dd>
         
           <dd class="">
@@ -33,15 +41,7 @@
           </dd>
         
           <dd class="">
-            <a href="/styleguide/markdown_rendering.html">Markdown Rendering</a>
-          </dd>
-        
-          <dd class="">
             <a href="/styleguide/index.html">Colors and Fonts</a>
-          </dd>
-        
-          <dd class="">
-            <a href="/styleguide/fancy_form_fields.html">Fancy Form Fields</a>
           </dd>
         
           <dd class="">
@@ -91,46 +91,119 @@
 <h1 id="block_lists" class="styleguide">Block Lists</h1>
 
 <p>Block lists resemble single-column tables.</p>
+
+  
+  
+  
+
+
 <div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel620">
+        block lists
+        <div class="right">
+          <i class="fa fa-code"></i>
+        </div>
+      </a>
+      <div id="panel620" class="content">
+        <pre><span class="nt">%ul</span><span class="nc">.block</span>
+  <span class="nt">%li</span> Item 1
+  <span class="nt">%li</span> Item 2
+  <span class="nt">%li</span> Item 3</pre>
+      </div>
+    </li>
   <div class="exampleOutput clearfix">
-    <ul class="block">
+    <ul class='block'>
   <li>Item 1</li>
   <li>Item 2</li>
   <li>Item 3</li>
 </ul>
-
   </div>
-  <div class="codeBlock">
-    <div class="highlight panel">
-      <pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li&gt;</span>Item 1<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li&gt;</span>Item 2<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;li&gt;</span>Item 3<span class="nt">&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span></pre>
-    </div>
-  </div>
+  </ul>
 </div>
 
 <h1 id="border" class="styleguide">Border Classes</h1>
 
-<p>Add the classes <code>.bottom-border</code> or <code>.top-border</code> to add borders to individual elements.</p>
+  
+  
+  
 
-<div class="la-panel bottom-border columns pvl">
-  <p>Example bottom-border div:</p>
-  <p><code>.bottom-border.la-panel.columns.pvl</code></p>
+
+<div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel640">
+        bottom-border
+        <div class="right">
+          <i class="fa fa-code"></i>
+        </div>
+      </a>
+      <div id="panel640" class="content">
+        <pre><span class="nc">.bottom-border</span>
+  <span class="nt">%p</span> Bottom borders are dotted.</pre>
+      </div>
+    </li>
+  <div class="exampleOutput clearfix">
+    <div class='bottom-border'>
   <p>Bottom borders are dotted.</p>
 </div>
-
-<div class="la-panel top-border columns pvl">
-  <p>Example top-border div:</p>
-  <p><code>.top-border.la-panel.columns.pvl</code></p>
-  <p>Top borders are solid.</p>
+  </div>
+  </ul>
 </div>
 
-<div class="la-panel border columns pvl mbl">
-  <p>Example all-around border div:</p>
-  <p><code>.border.la-panel.columns.pvl</code></p>
-  <p>All-around borders are solid and have a border-radius.</p>
+  
+  
+  
+
+
+<div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel35">
+        top-border
+        <div class="right">
+          <i class="fa fa-code"></i>
+        </div>
+      </a>
+      <div id="panel35" class="content">
+        <pre><span class="nc">.top-border</span>
+  <span class="nt">%p</span> Top borders are solid.</pre>
+      </div>
+    </li>
+  <div class="exampleOutput clearfix">
+    <div class='top-border'>
+  <p>Top borders are solid.</p>
+</div>
+  </div>
+  </ul>
+</div>
+
+  
+  
+  
+
+
+<div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel794">
+        all-around border
+        <div class="right">
+          <i class="fa fa-code"></i>
+        </div>
+      </a>
+      <div id="panel794" class="content">
+        <pre><span class="nc">.border</span>
+  <span class="nt">%p</span> All-around borders are solid.</pre>
+      </div>
+    </li>
+  <div class="exampleOutput clearfix">
+    <div class='border'>
+  <p>All-around borders are solid.</p>
+</div>
+  </div>
+  </ul>
 </div>
 
 <h1 id="extended_grid_system" class="styleguide">Extended Grid System</h1>
@@ -198,31 +271,42 @@
 <p><code>.pas</code> --> "padding all small"</p>
 
 <h1 id="splitColumns" class="styleguide">Split Columns</h1>
+
+<p>Split columns allow you to have two pieces of content next to each other, separated by a vertical line. On small screens, the will move to be vertically stacked and have a horizontal separator line.</p>
+
+  
+  
+  
+
+
 <div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel211">
+        split-columns
+        <div class="right">
+          <i class="fa fa-code"></i>
+        </div>
+      </a>
+      <div id="panel211" class="content">
+        <pre><span class="nc">.split-column.clearfix</span>
+  <span class="nc">.columns.medium-6</span>
+    <span class="nt">%p</span> You can really have whatever your heart desires here for content.
+  <span class="nc">.columns.medium-6</span>
+    <span class="nt">%p</span> You can really have whatever your heart desires here for content.</pre>
+      </div>
+    </li>
   <div class="exampleOutput clearfix">
-    <div class="split-column">
-  <div class="columns medium-6">
+    <div class='split-column clearfix'>
+  <div class='columns medium-6'>
     <p>You can really have whatever your heart desires here for content.</p>
   </div>
-  <div class="columns medium-6">
-    <p>Same goes for here! Anything you want!</p>
+  <div class='columns medium-6'>
+    <p>You can really have whatever your heart desires here for content.</p>
   </div>
 </div>
-
-
   </div>
-  <div class="codeBlock">
-    <div class="highlight panel">
-      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"split-column"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"columns medium-6"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;p&gt;</span>You can really have whatever your heart desires here for content.<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"columns medium-6"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Same goes for here! Anything you want!<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></pre>
-    </div>
-  </div>
+  </ul>
 </div>
           </div>
           <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>

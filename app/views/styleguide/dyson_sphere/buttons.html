@@ -21,11 +21,19 @@
       </nav>
     </div>
 
-    <dl class="sub-nav mts">
+    <dl class="sub-nav">
       <div class="row">
         
           <dd class="">
+            <a href="/styleguide/fancy_form_fields.html">Fancy Form Fields</a>
+          </dd>
+        
+          <dd class="">
             <a href="/styleguide/layout_and_formatting.html">Layout and Formatting</a>
+          </dd>
+        
+          <dd class="">
+            <a href="/styleguide/page_sections.html">Page Sections</a>
           </dd>
         
           <dd class="active">
@@ -33,15 +41,7 @@
           </dd>
         
           <dd class="">
-            <a href="/styleguide/markdown_rendering.html">Markdown Rendering</a>
-          </dd>
-        
-          <dd class="">
             <a href="/styleguide/index.html">Colors and Fonts</a>
-          </dd>
-        
-          <dd class="">
-            <a href="/styleguide/fancy_form_fields.html">Fancy Form Fields</a>
           </dd>
         
           <dd class="">
@@ -73,28 +73,104 @@
 <p>Besides normal Foundation buttons, you can also specify green and pink buttons.</p>
 
 <h3>Primary Buttons:</h3>
-<p class="styleguide"><div class="button">.button</div> <br>
-<div class="btn-green">.btn-green</div> <br>
-<div class="btn-pink">.btn-green</div> <br></p>
+
+  
+  
+  
+
+
+<div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel865">
+        primary buttons
+        <div class="right">
+          <i class="fa fa-code"></i>
+        </div>
+      </a>
+      <div id="panel865" class="content">
+        <pre><span class="nc">.button</span> Normal button
+<span class="nc">.btn-green</span> Green button
+<span class="nc">.btn-pink</span> Pink button</pre>
+      </div>
+    </li>
+  <div class="exampleOutput clearfix">
+    <div class='button'>Normal button</div>
+<div class='btn-green'>Green button</div>
+<div class='btn-pink'>Pink button</div>
+  </div>
+  </ul>
+</div>
+
 <h3>Secondary Buttons:</h3>
-<p class="styleguide"><div class="btn-border button">.btn-border</div> <br>
-<div class="btn-hollow-green">.btn-hollow-green</div> <br>
-<div class="btn-hollow-white-green">.btn-hollow-white-green</div> <br></p>
+
+  
+  
+  
+
+
+<div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel13">
+        secondary buttons
+        <div class="right">
+          <i class="fa fa-code"></i>
+        </div>
+      </a>
+      <div id="panel13" class="content">
+        <pre><span class="nc">.btn-border</span> Button with border
+<span class="nc">.btn-hollow-green</span> Green hollow button
+<span class="nc">.btn-hollow-white-green</span> White/green hollow button</pre>
+      </div>
+    </li>
+  <div class="exampleOutput clearfix">
+    <div class='btn-border'>Button with border</div>
+<div class='btn-hollow-green'>Green hollow button</div>
+<div class='btn-hollow-white-green'>White/green hollow button</div>
+  </div>
+  </ul>
+</div>
+
 <h3>Call to Actions:</h3>
 
 <p>You can add an arrow to your button by adding the class .cta</p>
-<p class="styleguide"><div class="btn-green cta">.btn-green.cta</div> <br></p>
+
+  
+  
+  
+
+
+<div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel61">
+        call to actions
+        <div class="right">
+          <i class="fa fa-code"></i>
+        </div>
+      </a>
+      <div id="panel61" class="content">
+        <pre><span class="nc">.btn-green.cta</span> Call to action</pre>
+      </div>
+    </li>
+  <div class="exampleOutput clearfix">
+    <div class='btn-green cta'>Call to action</div>
+  </div>
+  </ul>
+</div>
+
 <h3>Form Submit Buttons</h3>
 
 <p>For CTAs on form submit buttons, use &lt;button&gt;&lt;/button&gt; elements rather than default &lt;input type="submit"&gt;</p>
 
 <h5>Using Rails form_for</h5>
 
-<p>= f.button "button text", id: "some_id", class: "button cta"</p>
+<pre>= f.button "button text", id: "some_id", class: "button cta"</pre>
 
 <h5>Using Simple_Form</h5>
 
-<p>= f.button :button, "button text", id: "if you want an id", class: "button cta"</p>
+<pre>= f.button :button, "button text", id: "if you want an id", class: "button cta"</pre>
           </div>
           <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>
         </section>
