@@ -1,0 +1,562 @@
+<!doctype html>
+<html>
+  <head>
+    <title>a brand new styleguide: Headers and Footers</title>
+  </head>
+  <body>
+
+    <div class="contain-to-grid full-top-bar">
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="#">DysonSphere Styleguide</a></h1>
+          </li>
+        </ul>
+
+        <section class="top-bar-section">
+          <ul class="right">
+            <li><a href="https://github.com/LaunchAcademy/dyson_sphere" target="_blank">Github</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+
+    <dl class="sub-nav">
+      <div class="row">
+        
+          <dd class="">
+            <a href="/styleguide/fancy_form_fields.html">Fancy Form Fields</a>
+          </dd>
+        
+          <dd class="active">
+            <a href="/styleguide/headers_and_footers.html">Headers and Footers</a>
+          </dd>
+        
+          <dd class="">
+            <a href="/styleguide/layout_and_formatting.html">Layout and Formatting</a>
+          </dd>
+        
+          <dd class="">
+            <a href="/styleguide/page_sections.html">Page Sections</a>
+          </dd>
+        
+          <dd class="">
+            <a href="/styleguide/buttons.html">Buttons</a>
+          </dd>
+        
+          <dd class="">
+            <a href="/styleguide/index.html">Colors and Fonts</a>
+          </dd>
+        
+          <dd class="">
+            <a href="/styleguide/misc.html">Misc</a>
+          </dd>
+        
+          <dd class="">
+            <a href="/styleguide/slick_carousel.html">Slick Carousel</a>
+          </dd>
+        
+      </div>
+    </dl>
+
+    <div class="row">
+      <div class="columns">
+        <section class="content">
+          
+            <div class="small-3 columns">
+              <ul class="side-nav">
+              
+                <li><a href="#1-headers">Normal Header with Dropdowns</a></li>
+              
+                <li><a href="#fixedHeaders">Fixed Headers</a></li>
+              
+                <li><a href="#header_with_search_bar">Header w/ Search Bar</a></li>
+              
+                <li><a href="#z-footer">Footer</a></li>
+              
+              </ul>
+            </div>
+          
+          <div class="columns small-9">
+<h1 id="1-headers" class="styleguide">Normal Header with Dropdowns</h1>
+
+  
+  
+  
+
+
+<div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel4">
+        normal header w/ dropdowns
+        <div class="right">
+          <i class="fa fa-code"></i>
+        </div>
+      </a>
+      <div id="panel4" class="content">
+        <pre><span class="nc">.contain-to-grid.full-top-bar</span>
+  <span class="nt">%nav</span><span class="nc">.top-bar</span><span class="p">(</span> <span class="na">data-topbar</span> <span class="na">role=</span><span class="s">"navigation"</span>)
+    <span class="nt">%ul</span><span class="nc">.title-area</span>
+      <span class="nt">%li</span><span class="nc">.name</span>
+        <span class="nt">%img</span><span class="nc">.logo</span><span class="p">(</span><span class="na">src=</span><span class="s">"dyson_sphere/launch-logo.png"</span>)
+        <span class="nt">%h1</span>
+          <span class="nt">%a</span>
+            Launch
+            <span class="nt">%strong</span> Academy
+      <span class="nt">%li</span><span class="nc">.toggle-topbar.menu-icon</span>
+        <span class="nt">%a</span><span class="p">(</span><span class="na">href=</span><span class="s">"#"</span>)
+          <span class="nt">%span</span>
+
+    <span class="nt">%section</span><span class="nc">.top-bar-section</span>
+      <span class="nt">%ul</span><span class="nc">.left</span>
+        <span class="nt">%li</span><span class="nc">.has-dropdown</span>
+          <span class="nt">%a</span><span class="nc">.menu-item</span> Admin
+          <span class="nt">%ul</span><span class="nc">.dropdown</span>
+            <span class="nt">%li</span>
+              <span class="nt">%a</span> Users
+            <span class="nt">%li</span>
+              <span class="nt">%a</span> Users
+
+      <span class="nt">%ul</span><span class="nc">.right</span>
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Github
+        <span class="nt">%li</span><span class="nc">.has-dropdown</span>
+          <span class="nt">%a</span><span class="nc">.menu-item</span> Account Details
+          <span class="nt">%ul</span><span class="nc">.dropdown</span>
+            <span class="nt">%li</span>
+              <span class="nt">%a</span> Profile
+            <span class="nt">%li</span>
+              <span class="nt">%a</span> Sign Out</pre>
+      </div>
+    </li>
+  <div class="exampleOutput clearfix">
+    <div class='contain-to-grid full-top-bar'>
+  <nav class='top-bar' data-topbar role='navigation'>
+    <ul class='title-area'>
+      <li class='name'>
+        <img class='logo' src='dyson_sphere/launch-logo.png'>
+        <h1>
+          <a>
+            Launch
+            <strong>Academy</strong>
+          </a>
+        </h1>
+      </li>
+      <li class='toggle-topbar menu-icon'>
+        <a href='#'>
+          <span></span>
+        </a>
+      </li>
+    </ul>
+    <section class='top-bar-section'>
+      <ul class='left'>
+        <li class='has-dropdown'>
+          <a class='menu-item'>Admin</a>
+          <ul class='dropdown'>
+            <li>
+              <a>Users</a>
+            </li>
+            <li>
+              <a>Users</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class='right'>
+        <li>
+          <a>Github</a>
+        </li>
+        <li class='has-dropdown'>
+          <a class='menu-item'>Account Details</a>
+          <ul class='dropdown'>
+            <li>
+              <a>Profile</a>
+            </li>
+            <li>
+              <a>Sign Out</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </nav>
+</div>
+  </div>
+  </ul>
+</div>
+
+
+<h1 id="fixedHeaders" class="styleguide">Fixed Headers</h1>
+
+  
+  
+  
+
+
+<div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel5">
+        header
+        <div class="right">
+          <i class="fa fa-code"></i>
+        </div>
+      </a>
+      <div id="panel5" class="content">
+        <pre><span class="nc">.sticky</span>
+  <span class="nt">%nav</span><span class="nc">.top-bar</span><span class="p">(</span><span class="na">data-topbar</span> <span class="na">role=</span><span class="s">"navigation"</span> <span class="na">data-options=</span><span class="s">"sticky_on: [small, medium, large]"</span>)
+    <span class="nt">%ul</span><span class="nc">.plm.title-area</span>
+      <span class="nt">%li</span><span class="nc">.name</span>
+        <span class="nt">%img</span><span class="nc">.logo</span><span class="p">(</span><span class="na">src=</span><span class="s">"dyson_sphere/launch-logo.png"</span>)
+        <span class="nt">%h1</span>
+          <span class="nt">%a</span>
+            Launch
+            <span class="nt">%strong</span> Academy
+      <span class="nt">%li</span><span class="nc">.toggle-topbar.menu-icon</span>
+        <span class="nt">%a</span><span class="p">(</span><span class="na">href=</span><span class="s">"#"</span>)
+          <span class="nt">%span</span>
+
+    <span class="nt">%section</span><span class="nc">.top-bar-section</span>
+      <span class="nt">%ul</span><span class="nc">.left</span>
+        <span class="nt">%li</span>
+          <span class="nt">%a</span><span class="nc">.menu-item</span> Admin
+        <span class="nt">%li</span><span class="nc">.menu-item</span>
+          <span class="nt">%a</span><span class="nc">.menu-item</span> Sign Out
+
+      <span class="nt">%ul</span><span class="nc">.right</span>
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Learn on Campus
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Learn Online
+        <span class="nt">%li</span>
+          <span class="nt">%a</span><span class="nc">.btn-pink.cta</span> Apply</pre>
+      </div>
+    </li>
+  <div class="exampleOutput clearfix">
+    <div class='sticky'>
+  <nav class='top-bar' data-options='sticky_on: [small, medium, large]' data-topbar role='navigation'>
+    <ul class='plm title-area'>
+      <li class='name'>
+        <img class='logo' src='dyson_sphere/launch-logo.png'>
+        <h1>
+          <a>
+            Launch
+            <strong>Academy</strong>
+          </a>
+        </h1>
+      </li>
+      <li class='toggle-topbar menu-icon'>
+        <a href='#'>
+          <span></span>
+        </a>
+      </li>
+    </ul>
+    <section class='top-bar-section'>
+      <ul class='left'>
+        <li>
+          <a class='menu-item'>Admin</a>
+        </li>
+        <li class='menu-item'>
+          <a class='menu-item'>Sign Out</a>
+        </li>
+      </ul>
+      <ul class='right'>
+        <li>
+          <a>Learn on Campus</a>
+        </li>
+        <li>
+          <a>Learn Online</a>
+        </li>
+        <li>
+          <a class='btn-pink cta'>Apply</a>
+        </li>
+      </ul>
+    </section>
+  </nav>
+</div>
+  </div>
+  </ul>
+</div>
+
+
+<p>By default, fixed headers will be `$la-blue` no matter where you are on the page.</p>
+
+<p>To make your header transparent when at the top of the page, on a particular page,
+add the class `.has-transparent-header` to some later element on the page. (I recommend
+the first element of the page, such as the hero image or video.)</p>
+
+<h1 id="header_with_search_bar" class="styleguide">Header w/ Search Bar</h1>
+
+  
+  
+  
+
+
+<div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel6">
+        header w/ search bar
+        <div class="right">
+          <i class="fa fa-code"></i>
+        </div>
+      </a>
+      <div id="panel6" class="content">
+        <pre><span class="nc">.contain-to-grid.full-top-bar</span>
+  <span class="nt">%nav</span><span class="nc">.top-bar</span><span class="p">(</span> <span class="na">data-topbar</span> <span class="na">role=</span><span class="s">"navigation"</span>)
+    <span class="nt">%ul</span><span class="nc">.title-area</span>
+      <span class="nt">%li</span><span class="nc">.name</span>
+        <span class="nt">%img</span><span class="nc">.logo</span><span class="p">(</span><span class="na">src=</span><span class="s">"dyson_sphere/launch-logo.png"</span>)
+        <span class="nt">%h1</span>
+          <span class="nt">%a</span>
+            Launch
+            <span class="nt">%strong</span> Academy
+      <span class="nt">%li</span><span class="nc">.toggle-topbar.menu-icon</span>
+        <span class="nt">%a</span><span class="p">(</span><span class="na">href=</span><span class="s">"#"</span>)
+          <span class="nt">%span</span>
+
+    <span class="nt">%section</span><span class="nc">.top-bar-section</span>
+      <span class="nt">%ul</span><span class="nc">.left</span>
+        <span class="nt">%li</span><span class="nc">.has-form</span>
+          <span class="nc">.row.collapse.search</span>
+            <span class="nt">%form</span>
+              <span class="nt">%input</span><span class="nc">.left</span><span class="p">(</span><span class="na">id=</span><span class="s">"query"</span> <span class="na">name=</span><span class="s">"query"</span> <span class="na">placeholder=</span><span class="s">"Search"</span> <span class="na">type=</span><span class="s">"text"</span>)
+              <span class="nt">%button</span><span class="nc">.search-button</span><span class="p">(</span><span class="na">name=</span><span class="s">"button"</span> <span class="na">type=</span><span class="s">"submit"</span>)
+                <span class="nt">%i</span><span class="nc">.fa.fa-search</span></pre>
+      </div>
+    </li>
+  <div class="exampleOutput clearfix">
+    <div class='contain-to-grid full-top-bar'>
+  <nav class='top-bar' data-topbar role='navigation'>
+    <ul class='title-area'>
+      <li class='name'>
+        <img class='logo' src='dyson_sphere/launch-logo.png'>
+        <h1>
+          <a>
+            Launch
+            <strong>Academy</strong>
+          </a>
+        </h1>
+      </li>
+      <li class='toggle-topbar menu-icon'>
+        <a href='#'>
+          <span></span>
+        </a>
+      </li>
+    </ul>
+    <section class='top-bar-section'>
+      <ul class='left'>
+        <li class='has-form'>
+          <div class='row collapse search'>
+            <form>
+              <input class='left' id='query' name='query' placeholder='Search' type='text'>
+              <button class='search-button' name='button' type='submit'>
+                <i class='fa fa-search'></i>
+              </button>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </nav>
+</div>
+  </div>
+  </ul>
+</div>
+
+
+<h1 id="z-footer" class="styleguide">Footer</h1>
+
+<p>Here's the code for making the classic Launch footer.</p>
+
+<p>Note: The icky-looking visual bugs you see here (the photos
+not existing and looking weird, the content being pressed up right
+against the edges, etc.) won't actually be present when you use this
+as an actual footer in your site.</p>
+
+<p>To keep your footer at the bottom of the page no matter what,
+add a div with the class of `container` right inside your `body` tag,
+and wrap all the rest of your content EXCEPT the footer inside this div.</p>
+
+  
+  
+  
+
+
+<div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel7">
+        basic footer
+        <div class="right">
+          <i class="fa fa-code"></i>
+        </div>
+      </a>
+      <div id="panel7" class="content">
+        <pre><span class="nt">%footer</span>
+  <span class="nc">.row</span>
+    <span class="nc">.address.large-3.columns</span>
+      <span class="nt">%h5</span> About Launch Academy
+      <span class="nt">%p</span> 33 Harrison Ave #501
+      <span class="nt">%p</span> Boston, MA 02111
+      <span class="nt">%br</span>
+      <span class="nt">%p</span>
+        T:
+        <span class="nt">%a</span><span class="nc">.blue-text</span> 857.600.2250
+      <span class="nt">%p</span>
+        E:
+        <span class="nt">%a</span><span class="nc">.blue-text</span> hello@launchacademy.com
+    <span class="nc">.team.large-9.columns</span>
+      <span class="nt">%h5</span><span class="nc">.pbm</span> About The Team
+
+      <span class="nc">.large-4.profile.columns</span>
+        <span class="nc">.photo</span>
+          <span class="nt">%img</span><span class="p">(</span><span class="na">src=</span><span class="s">""</span> <span class="na">alt=</span><span class="s">"dan-photo"</span>)
+        <span class="nc">.text</span>
+          <span class="nt">%h6</span><span class="nc">.name</span> Dan Pickett
+          <span class="nt">%p</span><span class="nc">.role</span> Co-Founder
+          <span class="nt">%p</span><span class="nc">.bio</span> Founder <span class="err">&amp;</span> Principle at LaunchWare Co-Organizer of Boston Ruby Group Formally Dir. of Engineering @ Gazelle Coding professionally since 2002.
+      <span class="nc">.large-4.profile.columns</span>
+        <span class="nc">.photo</span>
+          <span class="nt">%img</span><span class="p">(</span><span class="na">src=</span><span class="s">""</span> <span class="na">alt=</span><span class="s">"dan-photo"</span>)
+        <span class="nc">.text</span>
+          <span class="nt">%h6</span><span class="nc">.name</span> Dan Pickett
+          <span class="nt">%p</span><span class="nc">.role</span> Co-Founder
+          <span class="nt">%p</span><span class="nc">.bio</span> Founder <span class="err">&amp;</span> Principle at LaunchWare Co-Organizer of Boston Ruby Group Formally Dir. of Engineering @ Gazelle Coding professionally since 2002.
+      <span class="nc">.large-4.profile.columns</span>
+        <span class="nc">.photo</span>
+          <span class="nt">%img</span><span class="p">(</span><span class="na">src=</span><span class="s">""</span> <span class="na">alt=</span><span class="s">"dan-photo"</span>)
+        <span class="nc">.text</span>
+          <span class="nt">%h6</span><span class="nc">.name</span> Dan Pickett
+          <span class="nt">%p</span><span class="nc">.role</span> Co-Founder
+          <span class="nt">%p</span><span class="nc">.bio</span> Founder <span class="err">&amp;</span> Principle at LaunchWare Co-Organizer of Boston Ruby Group Formally Dir. of Engineering @ Gazelle Coding professionally since 2002.
+      <span class="nc">.columns.view-more</span>
+        <span class="nt">%a</span><span class="nc">.cta</span> View More
+
+  <span class="nc">.row.sub-footer</span>
+    <span class="nc">.columns</span>
+      <span class="nt">%ul</span>
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Blog
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Careers
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Codedabulary
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Contact Us
+        <span class="nt">%li</span>
+          <span class="nt">%a</span> Privacy
+        <span class="nt">%li</span><span class="nc">.social-media</span>
+          <span class="nt">%a</span>
+            <span class="nt">%i</span><span class="nc">.fa.fa-facebook-square</span>
+        <span class="nt">%li</span><span class="nc">.social-media</span>
+          <span class="nt">%a</span>
+            <span class="nt">%i</span><span class="nc">.fa.fa-twitter-square</span>
+
+      <span class="nc">.copyright</span>
+        © Copyright 2015 Launch Academy.
+        <span class="nt">%a</span> Terms and Conditions</pre>
+      </div>
+    </li>
+  <div class="exampleOutput clearfix">
+    <footer>
+  <div class='row'>
+    <div class='address large-3 columns'>
+      <h5>About Launch Academy</h5>
+      <p>33 Harrison Ave #501</p>
+      <p>Boston, MA 02111</p>
+      <br>
+      <p>
+        T:
+        <a class='blue-text'>857.600.2250</a>
+      </p>
+      <p>
+        E:
+        <a class='blue-text'>hello@launchacademy.com</a>
+      </p>
+    </div>
+    <div class='team large-9 columns'>
+      <h5 class='pbm'>About The Team</h5>
+      <div class='large-4 profile columns'>
+        <div class='photo'>
+          <img alt='dan-photo' src=''>
+        </div>
+        <div class='text'>
+          <h6 class='name'>Dan Pickett</h6>
+          <p class='role'>Co-Founder</p>
+          <p class='bio'>Founder & Principle at LaunchWare Co-Organizer of Boston Ruby Group Formally Dir. of Engineering @ Gazelle Coding professionally since 2002.</p>
+        </div>
+      </div>
+      <div class='large-4 profile columns'>
+        <div class='photo'>
+          <img alt='dan-photo' src=''>
+        </div>
+        <div class='text'>
+          <h6 class='name'>Dan Pickett</h6>
+          <p class='role'>Co-Founder</p>
+          <p class='bio'>Founder & Principle at LaunchWare Co-Organizer of Boston Ruby Group Formally Dir. of Engineering @ Gazelle Coding professionally since 2002.</p>
+        </div>
+      </div>
+      <div class='large-4 profile columns'>
+        <div class='photo'>
+          <img alt='dan-photo' src=''>
+        </div>
+        <div class='text'>
+          <h6 class='name'>Dan Pickett</h6>
+          <p class='role'>Co-Founder</p>
+          <p class='bio'>Founder & Principle at LaunchWare Co-Organizer of Boston Ruby Group Formally Dir. of Engineering @ Gazelle Coding professionally since 2002.</p>
+        </div>
+      </div>
+      <div class='columns view-more'>
+        <a class='cta'>View More</a>
+      </div>
+    </div>
+  </div>
+  <div class='row sub-footer'>
+    <div class='columns'>
+      <ul>
+        <li>
+          <a>Blog</a>
+        </li>
+        <li>
+          <a>Careers</a>
+        </li>
+        <li>
+          <a>Codedabulary</a>
+        </li>
+        <li>
+          <a>Contact Us</a>
+        </li>
+        <li>
+          <a>Privacy</a>
+        </li>
+        <li class='social-media'>
+          <a>
+            <i class='fa fa-facebook-square'></i>
+          </a>
+        </li>
+        <li class='social-media'>
+          <a>
+            <i class='fa fa-twitter-square'></i>
+          </a>
+        </li>
+      </ul>
+      <div class='copyright'>
+        © Copyright 2015 Launch Academy.
+        <a>Terms and Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+  </ul>
+</div>
+
+          </div>
+          <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
