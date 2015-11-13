@@ -4,50 +4,34 @@ title: Typography Helper Classes
 name: typography_helper_classes
 category: Typography
 ---
-<div class="la-panel pal">
-  <p>These helper classes will allow you to apply consistent styling to different types of text you might want to use.</p>
+<p>These helper classes will allow you to apply consistent styling to different types of text you might want to use.</p>
 
-  <h4>For blue text color - <code>.blue-text</code>:</h4>
-  <hr>
-  <h3 class="blue-text">Example Blue Header</h3>
-  <div class="codeBlock mvl">
-    <div class="highlight">
-      <pre><span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"blue-text"</span><span class="nt">&gt;</span>Example Blue Header<span class="nt">&lt;/h3&gt;</span></pre>
-    </div>
-  </div>
-  <hr>
+```haml_example
+.bold helper class
+%p
+  Adding the class .bold to an element
+  %span.bold will make it bold.
+```
 
-  <h4>For green text color - <code>.green-text</code>:</h4>
-  <hr>
-  <h3 class="green-text">Example Green Header</h3>
-  <div class="codeBlock mvl">
-    <div class="highlight">
-      <pre><span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"green-text"</span><span class="nt">&gt;</span>Example Green Header<span class="nt">&lt;/h3&gt;</span></pre>
-    </div>
-  </div>
-  <hr>
+```haml_example
+blue-text
+%h3.blue-text Example Blue Header
+```
 
-  <h4>For white text color - <code>.white-text</code>:</h4>
-  <hr>
-  <h3 class="white-text">Example White Header</h3>
-  <div class="codeBlock mvl">
-    <div class="highlight">
-      <pre><span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"white-text"</span><span class="nt">&gt;</span>Example White Header<span class="nt">&lt;/h3&gt;</span></pre>
-    </div>
-  </div>
-  <hr>
+```haml_example
+green-text
+%h3.green-text Example Green Header
+```
 
-  <h4>For meta information - <code>.meta-info</code>:</h4>
-  <hr>
-  <span class="meta-info">Christina Koller - June 29, 2015 at 3:15pm</span>
-  <div class="codeBlock mvl">
-    <div class="highlight">
-      <pre><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"meta-info"</span><span class="nt">&gt;</span>Christina Koller - June 29, 2015 at 3:15pm<span class="nt">&lt;/span&gt;</span></pre>
-    </div>
-  </div>
-  <hr>
+```haml_example
+white-text
+%h3.white-text Example White Header
+```
 
-</div>
+```haml_example
+meta-info
+%span.meta-info Christina Koller - June 29, 2015 at 3:15pm
+```
 
 */
 
@@ -70,4 +54,8 @@ category: Typography
 
 hr.white-text {
   border-color: $la-white;
+}
+
+.bold {
+  font-weight: bold;
 }
