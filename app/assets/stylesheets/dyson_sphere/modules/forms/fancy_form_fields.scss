@@ -1,39 +1,28 @@
 /*doc
 ---
 title: Fancy Form Fields
-name: fancy-forms
+name: 1-fancy-forms
 category: Fancy Form Fields
 ---
-
-<p>Sometimes you just want your forms to look awesome! All of the forms we're using in the new designs have a new look - and this is it.<p>
 
 <p>To make your forms look fancy and awesome, add the class <code>.fancy-form</code> to your form.</p>
 
 <p><em>Note: Eventually it would be great to make these styles totally standard, by putting them in Foundation and Overrides! I'm not doing that yet since it's kind of drastic to change EVERY form on ALL our apps all at once, but it's something to keep in mind for the future.</em></p>
 
-<p>Here's an example of our beautiful fancy forms:</p>
-
-<div class='columns'>
-  <form novalidate="novalidate" class="simple_form new_contact fancy-form" id="new_contact" action="/contacts" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="CESVPyXLF+o3Lsb/C4HN8e5J2JDRRC2a5XacoE2vzWl+EMye6FjoH16rGHcTt/d+p4+ZgV1+tuLLuEoWu6qMOw==" />    <div class='small-12 columns'>
-        <div class="input string required contact_name"><input class="string required" placeholder="Name" type="text" name="contact[name]" id="contact_name" /></div>
-      </div>
-      <div class='medium-6 columns'>
-        <div class="input email required contact_email"><input class="string email required" placeholder="Email" type="email" name="contact[email]" id="contact_email" /></div>
-      </div>
-      <div class='medium-6 columns'>
-        <div class="input tel optional contact_phone"><input class="string tel optional" placeholder="Phone" type="tel" name="contact[phone]" id="contact_phone" /></div>
-      </div>
-      <div class='small-12 columns'>
-        <div class="input text required contact_message"><textarea class="text required" placeholder="What&#39;s on your mind?" name="contact[message]" id="contact_message">
-</textarea></div>
-      </div>
-      <div class='small-12 columns'>
-        <div class='btn-green cta'>
-          <input type="submit" name="commit" value="Submit" />
-        </div>
-      </div>
-  </form>
-</div>
+```haml_example
+fancy-form
+%form.fancy-form
+  .small-12.columns
+    %input( placeholder="Name" type="text" )
+  .medium-6.columns
+    %input( placeholder="Email" type="email" )
+  .medium-6.columns
+    %input( placeholder="Phone" type="tel" )
+  .small-12.columns
+    %textarea( placeholder="What's on your mind?" )
+  .small-12.columns
+    %button.btn-green.cta( type="submit" ) Submit
+```
 
 <h2>Customization</h2>
 

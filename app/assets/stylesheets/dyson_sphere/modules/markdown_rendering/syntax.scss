@@ -1,11 +1,6 @@
-/*doc
----
-title: Highlighted Code
-name: highlighted_code
-category: Markdown Rendering
----
-<pre><code class="highlight ruby"><span class="nb">puts</span><span class="s2">"==============================================="</span>&#x000A;<span class="nb">puts</span><span class="s2">"Creating Restaurant Categories"</span>&#x000A;<span class="nb">puts</span><span class="s2">"==============================================="</span>&#x000A;&#x000A;<span class="mi">10</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>&#x000A;  <span class="no">RestaurantCategory</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span>&#x000A;    <span class="ss">category_id: </span><span class="no">Category</span><span class="p">.</span><span class="nf">all</span><span class="p">.</span><span class="nf">sample</span><span class="p">.</span><span class="nf">id</span>&#x000A;  <span class="p">)</span>&#x000A;<span class="k">end</span>&#x000A;&#x000A;</code></pre>
-*/
+// Markdown-rendered highlighted code
+// ----------------------
+// Not displayed in pattern guide
 
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */

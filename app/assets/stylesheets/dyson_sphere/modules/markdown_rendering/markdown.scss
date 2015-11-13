@@ -1,26 +1,7 @@
-/*doc
----
-title: Text
-name: text
-category: Markdown Rendering
----
-<h6>IMPORTANT: Wrap your markdown in a <code>div</code> with the id <code>#markdown-body</code> to apply these styles.</h6>
-<div id="markdown-body" class="la-panel pal">
-  <h1>Example h1</h1>
-  <h2>Example h2</h2>
-  <h3>Example h3</h3>
-  <h4>Example h4</h4>
-  <h5>Example h5</h5>
-  <h6>Example h6</h6>
+// Markdown-rendered text
+// ----------------------
+// Not displayed in pattern guide
 
-  <blockquote>Example blockquote. Cupcake ipsum dolor sit. Amet sweet roll lollipop candy wafer ice cream gingerbread biscuit.</blockquote>
-
-  <p>Example <code>hr</code>:</p>
-  <hr>
-
-</div>
-
-*/
 #markdown-body {
   p, blockquote, ul, ol, dl, table, pre {
     margin-bottom: 16px;
