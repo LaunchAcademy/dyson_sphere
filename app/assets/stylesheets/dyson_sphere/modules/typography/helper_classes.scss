@@ -29,6 +29,11 @@ white-text
 ```
 
 ```haml_example
+navy-text
+%h3.navy-text Example Black (aka "la-navy") Header
+```
+
+```haml_example
 meta-info
 %span.meta-info Christina Koller - June 29, 2015 at 3:15pm
 ```
@@ -50,6 +55,10 @@ meta-info
 
 .white-text {
   color: $la-white;
+}
+
+.navy-text {
+  color: $la-navy;
 }
 
 hr.white-text {
