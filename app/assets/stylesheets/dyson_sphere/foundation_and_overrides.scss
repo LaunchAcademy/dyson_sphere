@@ -712,17 +712,17 @@ $legend-bg: none;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to style the icon-bar and items
-// $icon-bar-bg: $oil;
-// $icon-bar-font-color: $white;
-// $icon-bar-font-color-hover: $icon-bar-font-color;
+$icon-bar-bg: $la-white;
+$icon-bar-font-color: $la-blue;
+$icon-bar-font-color-hover: $la-blue;
 // $icon-bar-font-size: 1rem;
-// $icon-bar-hover-color: $primary-color;
+$icon-bar-hover-color: $la-light-grey;
 // $icon-bar-icon-color: $white;
 // $icon-bar-icon-color-hover: $icon-bar-icon-color;
 // $icon-bar-icon-size: 1.875rem;
 // $icon-bar-image-width: 1.875rem;
 // $icon-bar-image-height: 1.875rem;
-// $icon-bar-active-color: $primary-color;
+$icon-bar-active-color: $la-white;
 // $icon-bar-item-padding: 1.25rem;
 
 // We use this to set default opacity and cursor for disabled icons.
@@ -1416,16 +1416,16 @@ $topbar-title-font-size: rem-calc(23);
 // Set the link colors and styles for top-level nav
 $topbar-link-color: $la-white;
 $topbar-link-color-hover: $topbar-link-color;
-$topbar-link-color-active: $topbar-link-color;
-$topbar-link-color-active-hover: $topbar-link-color;
+$topbar-link-color-active: $la-blue;
+$topbar-link-color-active-hover: $la-blue;
 // $topbar-link-weight: $font-weight-normal;
 // $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 $topbar-link-bg: $topbar-bg;
 $topbar-link-bg-hover: lighten($topbar-bg, 25%);
 $topbar-link-bg-color-hover: $topbar-bg;
-// $topbar-link-bg-active: $primary-color;
-// $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
+$topbar-link-bg-active: $la-white;
+$topbar-link-bg-active-hover: $la-white;
 $topbar-link-font-family: $header-font;
 // $topbar-link-text-transform: none;
 $topbar-link-padding: rem-calc(16px);
