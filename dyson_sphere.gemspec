@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rails"
   s.add_dependency "sass-rails"
   s.add_dependency "rouge", "1.9.0"
-  s.add_dependency "foundation-rails"
+  s.add_dependency "foundation-rails", "5.5.3.2"
   s.add_dependency "font-awesome-sass"
   s.add_dependency "haml"
   s.add_dependency "hologram"

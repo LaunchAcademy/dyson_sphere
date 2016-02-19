@@ -47,11 +47,6 @@ normal header w/ dropdowns
   border-bottom: 1px solid $la-border-color;
 }
 
-.top-bar-section .right li .dropdown {
-  left: 0;
-  right: auto;
-}
-
 .top-bar .name {
   .logo {
     height: calc(#{$topbar-height} - 35px);
