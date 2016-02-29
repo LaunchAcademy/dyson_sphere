@@ -71,9 +71,109 @@
       <div class="columns">
         <section class="content">
           
-          <div class="columns ">
-<h1 id="pink-scroll-arrows" class="styleguide">Slick Carousel Fancy Dots</h1>
-<p class="styleguide">For a lot of designs, you may end up wanting fancy dots as your slider dots, like these shown here:</p><p class="styleguide"><img src="http://imgur.com/MhEHt6o" alt=""></p><p class="styleguide">To make this happen, simply add the class of <code>.fancy-slick-dots</code> to your slick slider.</p>          </div>
+            <div class="small-3 columns">
+              <ul class="side-nav">
+              
+                <li><a href="#slick-fancy-dots">Slick Carousel Fancy Dots</a></li>
+              
+                <li><a href="#slick-pink-scroll-arrows">Slick Carousel Pink Scroll Arrows</a></li>
+              
+                <li><a href="#testimonials-slider">Testimonials Slider using Slick</a></li>
+              
+              </ul>
+            </div>
+          
+          <div class="columns small-9">
+<h1 id="slick-fancy-dots" class="styleguide">Slick Carousel Fancy Dots</h1>
+<p class="styleguide">For a lot of designs, you may end up wanting fancy dots as your slider dots, like these shown here:</p><p class="styleguide"><img src="http://i.imgur.com/MhEHt6o.png" alt=""></p><p class="styleguide">To make this happen, simply add the class of <code>.fancy-slick-dots</code> to your slick slider.</p>
+<h1 id="slick-pink-scroll-arrows" class="styleguide">Slick Carousel Pink Scroll Arrows</h1>
+<p class="styleguide">Slick Carousel is a slider we use on a number of pages. Check out their <a href="http://kenwheeler.github.io/slick/">documentation</a> for instructions on how to use!</p><p class="styleguide">For many of our sliders, we use pink arrows for the left/right scroll instead of the Slick default arrows. Example:</p><p class="styleguide"><img src="http://i.imgur.com/tIbUyEQ.png"></p><p class="styleguide">To make this happen, give your slick slider an additional class of <code>.slick-pink-arrows</code> - that&#39;s it!</p><p class="styleguide">Alternatively, if you don&#39;t want to add an additional HTML class, you can add the line <code>@extend .slick-pink-arrows</code> to your existing styles for your slick slider. I&#39;d recommend this approach if you&#39;re already writing some custom CSS for the slider.</p><p class="styleguide">Additionally, adding this class will also style the dots at the bottom of your slider, if you have them. (Whether or not the dots appear is a setting you can control in the Slick js you write to initialize the slider.) Here&#39;s an example of what the styled dots look like:</p><p class="styleguide"><img src="http://i.imgur.com/tzbwD0x.png"></p>
+<h1 id="testimonials-slider" class="styleguide">Testimonials Slider using Slick</h1>
+<p class="styleguide">We have a fancy testimonials slider you can add to your pages! For the most part, you can accomplish this look simply by wrapping your code in the class <code>.testimonials-slick</code> and formatting it as demonstrated below.</p>
+  
+  
+  
+
+
+<div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel38">
+        Testimonials Slick Slider
+        <div class="right">
+          <i class="fa fa-code"></i>
+        </div>
+      </a>
+      <div id="panel38" class="content">
+        <pre><span class="nc">.blue-page-section</span>
+  <span class="nc">.testimonials-slick.slick-fancy-dots</span>
+    <span class="nc">.testimonial</span>
+      <span class="nc">.body</span> Wow launch is super super awesome!!!!
+
+      <span class="nc">.author-details</span>
+        <span class="nc">.photo</span>
+          <span class="nt">%img</span><span class="p">(</span><span class="na">src=</span><span class="s">"/dyson_sphere/dan.jpg"</span>)
+        <span class="nc">.text-info</span>
+          <span class="nt">%p</span><span class="nc">.name</span> Dan Pickett
+          <span class="nt">%p</span><span class="nc">.company</span> Launch Academy
+          <span class="nt">%p</span><span class="nc">.role</span> Co-founder
+
+    <span class="nc">.testimonial</span>
+      <span class="nc">.body</span> Wow launch is super super awesome!!!!
+
+      <span class="nc">.author-details</span>
+        <span class="nc">.photo</span>
+          <span class="nt">%img</span><span class="p">(</span><span class="na">src=</span><span class="s">"/dyson_sphere/dan.jpg"</span>)
+        <span class="nc">.text-info</span>
+          <span class="nt">%p</span><span class="nc">.name</span> Dan Pickett
+          <span class="nt">%p</span><span class="nc">.company</span> Launch Academy
+          <span class="nt">%p</span><span class="nc">.role</span> Co-founder</pre>
+      </div>
+    </li>
+  <div class="exampleOutput clearfix">
+    <div class='blue-page-section'>
+  <div class='testimonials-slick slick-fancy-dots'>
+    <div class='testimonial'>
+      <div class='body'>Wow launch is super super awesome!!!!</div>
+      <div class='author-details'>
+        <div class='photo'>
+          <img src='/dyson_sphere/dan.jpg'>
+        </div>
+        <div class='text-info'>
+          <p class='name'>Dan Pickett</p>
+          <p class='company'>Launch Academy</p>
+          <p class='role'>Co-founder</p>
+        </div>
+      </div>
+    </div>
+    <div class='testimonial'>
+      <div class='body'>Wow launch is super super awesome!!!!</div>
+      <div class='author-details'>
+        <div class='photo'>
+          <img src='/dyson_sphere/dan.jpg'>
+        </div>
+        <div class='text-info'>
+          <p class='name'>Dan Pickett</p>
+          <p class='company'>Launch Academy</p>
+          <p class='role'>Co-founder</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  </ul>
+</div>
+
+
+<h3>Updating the Arrow Color</h3>
+<p class="styleguide">By default, the little arrow under the &quot;body&quot; part of the testimonial will be filled in with white. You can optionally change that - say, to match the background color like so:</p><p class="styleguide"><img src="http://i.imgur.com/TZuXZwu.png" alt=""></p><p class="styleguide">To do this, you must write your own custom styling for the testimonials section that includes the mixin <code>testimonial-colored-arrow</code> like so:</p>
+<pre><span class="pl-e">.testimonial-slick.online-testimonials</span> {
+  <span class="pl-k">@include</span> <span class="pl-c1">testimonial-colored-arrow</span>(<span class="pl-smi">$la-blue</span>);
+}</pre>
+
+<h3>Mobile View</h3>
+<p class="styleguide">As of right now, testimonials are set up to be vertically-centered in a box of an arbitrary height. If you don&#39;t want this to be the case at a certain screen size (say, if your testimonials take up the full width of the page on small screens) you&#39;ll need to write your own CSS that sets the height of the <code>.testimonial-section</code> to auto and gets gets rid of the</p>          </div>
           <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>
         </section>
       </div>
