@@ -1,11 +1,19 @@
+// Import external librarys
 @import "slick";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+// Import constants
 @import "dyson_sphere/constants/colors";
 @import "dyson_sphere/constants/fonts";
 
+// Import mixins
+@import "dyson_sphere/mixins/transform";
+
+// Import Foundation
 @import "dyson_sphere/foundation_and_overrides";
+
+// Import modules
 @import "dyson_sphere/modules/typography/helper_classes";
 @import "dyson_sphere/modules/typography/title_lines";
 
@@ -31,6 +39,10 @@
 @import "dyson_sphere/modules/page_sections/pink";
 @import "dyson_sphere/modules/page_sections/white";
 
+@import "dyson_sphere/modules/slick/slick_fancy_dots";
+@import "dyson_sphere/modules/slick/slick_pink_arrows";
+@import "dyson_sphere/modules/slick/testimonials_slider";
+
 @import "dyson_sphere/modules/block_lists";
 @import "dyson_sphere/modules/borders";
 @import "dyson_sphere/modules/buttons";
@@ -39,7 +51,6 @@
 @import "dyson_sphere/modules/pagination";
 @import "dyson_sphere/modules/panels";
 @import "dyson_sphere/modules/pricing_tables";
-@import "dyson_sphere/modules/slick_pink_arrows";
 @import "dyson_sphere/modules/spacing";
 @import "dyson_sphere/modules/split_column";
 @import "dyson_sphere/modules/testimonials";

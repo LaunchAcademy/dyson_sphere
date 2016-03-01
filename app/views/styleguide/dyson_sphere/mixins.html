@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>a brand new styleguide: </title>
+    <title>a brand new styleguide: Mixins</title>
   </head>
   <body>
 
@@ -60,7 +60,7 @@
             <a href="/styleguide/slick_carousel.html">Slick Carousel</a>
           </dd>
         
-          <dd class="">
+          <dd class="active">
             <a href="/styleguide/mixins.html">Mixins</a>
           </dd>
         
@@ -72,42 +72,11 @@
         <section class="content">
           
           <div class="columns ">
-<h1 id="colors" class="styleguide">Colors</h1>
-
-<h3>Primary Base Colors</h3>
-
-<div class="row">
-  <div class="circle la-white"><strong>$la-white</strong> <br> #f8f8f9</div>
-  <div class="circle la-light-grey"><strong>$la-light-grey</strong> <br> #eeeeee</div>
-  <div class="circle la-navy"><strong>$la-navy</strong> <br> #1c2224</div>
-</div>
-
-<h3>Primary Accent Colors</h3>
-
-<div class="row">
-  <div class="circle la-blue"><strong>$la-blue</strong> <br> #37becc</div>
-  <div class="circle la-pink"><strong>$la-pink</strong> <br> #ed1a7b</div>
-  <div class="circle la-light-green"><strong>$la-light-green</strong> <br> #84ce15</div>
-</div>
-
-<h3>Misc Base Colors</h3>
-
-<div class="row">
-  <div class="circle la-grey"><strong>$la-grey</strong> <br> #CCCCCC</div>
-  <div class="circle la-med-dark-grey"><strong>$la-med-dark-grey</strong> <br> #999999</div>
-  <div class="circle la-dark-grey"><strong>$la-dark-grey</strong> <br> #777777</div>
-  <div class="circle la-border-color"><strong>$la-border-color</strong> <br> #DDDDDD</div>
-</div>
-
-<h3>Mics Accent Colors</h3>
-
-<div class="row">
-  <div class="circle la-light-blue"><strong>$la-light-blue</strong> <br> #E5F3F4</div>
-  <div class="circle la-light-pink"><strong>$la-light-pink</strong> <br> #FF7DD6</div>
-  <div class="circle la-green"><strong>$la-green</strong> <br> #00aa00</div>
-  <div class="circle la-red"><strong>$la-red</strong> <br> #D3080C</div>
-  <div class="circle la-dark-yellow"><strong>$la-dark-yellow</strong> <br> #FFD800</div>
-</div>
+<h1 id="transform" class="styleguide">Transform</h1>
+<p class="styleguide">The <code>transform</code> mixin adds the appropriate vendor prefixes to your <code>transform</code>. Example usage:</p>
+<pre><span class="pl-e">.thing</span> {
+  <span class="pl-k">@include</span> <span class="pl-c1">transform</span>(<span class="pl-c1">translateX</span>(<span class="pl-c1">50</span><span class="pl-k">px</span>));
+}</pre>
           </div>
           <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>
         </section>
