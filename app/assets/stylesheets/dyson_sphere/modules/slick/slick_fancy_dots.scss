@@ -14,6 +14,12 @@ To make this happen, simply add the class of <code>.fancy-slick-dots</code> to y
 */
 
 .slick-fancy-dots {
+  .slick-dots {
+    @include transform(translateX(-50%));
+    width: auto;
+    left: 50%;
+  }
+
   .slick-dots button:hover,
   .slick-dots .button:hover {
     background: transparent;
