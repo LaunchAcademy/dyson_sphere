@@ -48,6 +48,7 @@ Example:
   background-image: image_url($filename);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom center;
   position: relative;
 
   &:before {
