@@ -1,0 +1,94 @@
+/*doc
+---
+title: Circle
+name: circle
+category: Page Sections
+---
+
+For a simple circle page section, use the class name shown here. This will display the default circle shown here.
+
+```scss_import
+#bottom-circle-section {
+  @extend .circle-section;
+}
+```
+
+```haml_example
+%div#bottom-circle-section
+  .hero-section.hero-section--bottom
+    .small-12.small-centered.columns
+      .hero-circle
+      .circle-text
+        %h3.bold.circle-text-1 Let's Get
+        %h1.circle-text-2 Started!
+        %button.btn-border.cta.apply-btn Apply Today
+```
+
+*/
+
+.circle-section {
+  .hero-section {
+    height: 690px;
+    border-bottom: 7px solid $la-green;
+    // Here we override the top and bottom padding for the image mixin
+    @include image-page-section("wo-top-students.jpg", rgba(0,0,0, .3));
+    padding: 8rem 0;
+
+    &--bottom {
+      @include image-page-section("wo-womanlaptop.jpg", rgba(0,0,0, .3));
+      padding: 8rem 0;
+    }
+  }
+
+  .hero-circle {
+    position: relative;
+    height: 445px;
+    width: 445px;
+    background-color: $la-blue;
+    text-align: center;
+    margin: 0 auto;
+    opacity: 0.5;
+    border-radius: 50%;
+
+
+    @media #{$small-only} {
+      height: 275px;
+      width: 275px;
+    }
+  }
+
+  .circle-text {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    width: 445px;
+    padding: 0 30px;
+
+    .btn-border {
+      margin-bottom: 0px;
+      background: none;
+    }
+    @media #{$medium-up} {
+      h1 {
+        line-height: 1.2;
+        font-size: 2.95rem;
+      }
+      h2 {
+        line-height: 1;
+        font-size: .6rem;
+      }
+    }
+    @media #{$small-only} {
+      width: 275px;
+      h1 {
+        line-height: 1.2;
+        font-size: 1.6rem;
+      }
+      h2 {
+        line-height: 1;
+        font-size: .6rem;
+      }
+    }
+  }
+}
