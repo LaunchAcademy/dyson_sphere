@@ -71,6 +71,10 @@ normal header w/ dropdowns
   }
 }
 
+.top-bar .button {
+  height: auto;
+}
+
 // Override dropdown menu line height to always be 4em
 .top-bar-section .dropdown
 li:not(.has-form) a:not(.button):not(.btn-green):not(.btn-pink):not(.btn-border):not(.btn-hollow-green) {
