@@ -76,6 +76,8 @@
               
                 <li><a href="#blue">Blue</a></li>
               
+                <li><a href="#circle">Circle</a></li>
+              
                 <li><a href="#dark">Dark</a></li>
               
                 <li><a href="#image">Image</a></li>
@@ -164,6 +166,68 @@
 </div>
 
 
+<h1 id="circle" class="styleguide">Circle</h1>
+<p class="styleguide">For a circle page section, you can use the class name shown here (though customization using the mixin is recommended). This will display the default image shown here.</p>
+  
+  
+  
+
+
+<div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel15">
+        circle page section
+        <div class="right">
+          <i class="fa fa-code"></i>
+        </div>
+      </a>
+      <div id="panel15" class="content">
+        <pre><span class="nc">.circle-page-section</span>
+  <span class="nc">.hero-section</span>
+    <span class="nc">.small-12.small-centered.columns</span>
+      <span class="nc">.hero-circle</span>
+      <span class="nc">.circle-text</span>
+        <span class="nt">%h3</span><span class="nc">.bold.circle-text-1</span> Let's Get
+        <span class="nt">%h1</span><span class="nc">.circle-text-2</span> Started!
+        <span class="nt">%button</span><span class="nc">.btn-border.cta.apply-btn</span> Apply Today</pre>
+      </div>
+    </li>
+  <div class="exampleOutput clearfix">
+    <div class='circle-page-section'>
+  <div class='hero-section'>
+    <div class='small-12 small-centered columns'>
+      <div class='hero-circle'></div>
+      <div class='circle-text'>
+        <h3 class='bold circle-text-1'>Let's Get</h3>
+        <h1 class='circle-text-2'>Started!</h1>
+        <button class='btn-border cta apply-btn'>Apply Today</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  </ul>
+</div>
+
+
+<h4>Circle Section Customization</h4>
+<p class="styleguide">To customize the circle, image, and overlay, you can include the mixin called <code>circle-page-section</code> in your own custom class.</p><p class="styleguide">The mixin takes the following arguments:</p>
+<ul>
+  <li><code>$filename</code> - the name of the file you want to use as a background image. (This name will the be automatically wrapped in <code>image_url</code>.)</li>
+  <li><code>$overlay</code> [OPTIONAL] - the color you would like to overlay the image with. This is set to <code>transparent</code> by default.</li>
+  <li><code>$circle-color</code> [OPTIONAL] - the color you would like the circle to be. This is set to <code>$la-blue</code> by default.</li>
+  <li><code>$circle-opacity</code> [OPTIONAL] - the opacity you would like your circle to have. This is set to <code>.5</code> by default.</li>
+</ul>
+<p class="styleguide">Example:</p>
+<pre>.my-custom-class {
+  @include circle-page-section(
+    $filename: "launchers.jpg",
+    $overlay: rgba(0,0,0,.5),
+    $circle-color: $la-green,
+    $circle-opacity: .6);
+}</pre>
+
 <h1 id="dark" class="styleguide">Dark</h1>
 
   
@@ -174,13 +238,13 @@
 <div class="codeExample">
   <ul class="accordion" data-accordion>
     <li class="accordion-navigation">
-      <a href="#panel15">
+      <a href="#panel16">
         dark page section
         <div class="right">
           <i class="fa fa-code"></i>
         </div>
       </a>
-      <div id="panel15" class="content">
+      <div id="panel16" class="content">
         <pre><span class="nc">.dark-page-section</span>
   <span class="nc">.small-9.small-centered.columns</span>
     <span class="nt">%h2</span> Example Title
@@ -209,13 +273,13 @@
 <div class="codeExample">
   <ul class="accordion" data-accordion>
     <li class="accordion-navigation">
-      <a href="#panel16">
+      <a href="#panel17">
         dark page section with title lines
         <div class="right">
           <i class="fa fa-code"></i>
         </div>
       </a>
-      <div id="panel16" class="content">
+      <div id="panel17" class="content">
         <pre><span class="nc">.dark-page-section.title-lines</span>
   <span class="nc">.small-9.small-centered.columns</span>
     <span class="nt">%h2</span> Example Title
@@ -235,7 +299,7 @@
 
 
 <h1 id="image" class="styleguide">Image</h1>
-<p class="styleguide">For a simple image page section, use the class name shown here. This will display the default image shown here.</p>
+<p class="styleguide">For a simple image page section, use the class name shown here (though customization using the mixin is recommended). This will display the default image shown here.</p>
   
   
   
@@ -244,13 +308,13 @@
 <div class="codeExample">
   <ul class="accordion" data-accordion>
     <li class="accordion-navigation">
-      <a href="#panel17">
+      <a href="#panel18">
         image page section
         <div class="right">
           <i class="fa fa-code"></i>
         </div>
       </a>
-      <div id="panel17" class="content">
+      <div id="panel18" class="content">
         <pre><span class="nc">.image-page-section</span>
   <span class="nc">.small-9.small-centered.columns</span>
     <span class="nt">%h2</span> Example Title
@@ -272,7 +336,7 @@
 
 
 <h4>Image Customization</h4>
-<p class="styleguide">To customize the image and the overlay, you can include the mixin called <code>image-page-section</code> in your own custom class.</p><p class="styleguide">This mixin takes two arguments:</p><p class="styleguide">The mixin takes the following arguments:</p>
+<p class="styleguide">To customize the image and the overlay, you can include the mixin called <code>image-page-section</code> in your own custom class.</p><p class="styleguide">The mixin takes the following arguments:</p>
 <ul>
   <li><code>$filename</code> - the name of the file you want to use as a background image. (This name will the be automatically wrapped in <code>image_url</code>.)</li>
   <li><code>$overlay</code> - the color you would like to overlay the image with. This is set to <code>transparent</code> by default.</li>
@@ -292,13 +356,13 @@
 <div class="codeExample">
   <ul class="accordion" data-accordion>
     <li class="accordion-navigation">
-      <a href="#panel18">
+      <a href="#panel19">
         light page section
         <div class="right">
           <i class="fa fa-code"></i>
         </div>
       </a>
-      <div id="panel18" class="content">
+      <div id="panel19" class="content">
         <pre><span class="nc">.light-page-section</span>
   <span class="nc">.small-9.small-centered.columns</span>
     <span class="nt">%h2</span> Example Title
@@ -327,13 +391,13 @@
 <div class="codeExample">
   <ul class="accordion" data-accordion>
     <li class="accordion-navigation">
-      <a href="#panel19">
+      <a href="#panel20">
         light page section with title lines
         <div class="right">
           <i class="fa fa-code"></i>
         </div>
       </a>
-      <div id="panel19" class="content">
+      <div id="panel20" class="content">
         <pre><span class="nc">.light-page-section.title-lines</span>
   <span class="nc">.small-9.small-centered.columns</span>
     <span class="nt">%h2</span> Example Title
@@ -362,13 +426,13 @@
 <div class="codeExample">
   <ul class="accordion" data-accordion>
     <li class="accordion-navigation">
-      <a href="#panel20">
+      <a href="#panel21">
         light blue page section
         <div class="right">
           <i class="fa fa-code"></i>
         </div>
       </a>
-      <div id="panel20" class="content">
+      <div id="panel21" class="content">
         <pre><span class="nc">.light-blue-page-section</span>
   <span class="nc">.small-9.small-centered.columns</span>
     <span class="nt">%h2</span> Example Title
@@ -397,13 +461,13 @@
 <div class="codeExample">
   <ul class="accordion" data-accordion>
     <li class="accordion-navigation">
-      <a href="#panel21">
+      <a href="#panel22">
         light blue page section with title lines
         <div class="right">
           <i class="fa fa-code"></i>
         </div>
       </a>
-      <div id="panel21" class="content">
+      <div id="panel22" class="content">
         <pre><span class="nc">.light-blue-page-section.title-lines</span>
   <span class="nc">.small-9.small-centered.columns</span>
     <span class="nt">%h2</span> Example Title
@@ -432,13 +496,13 @@
 <div class="codeExample">
   <ul class="accordion" data-accordion>
     <li class="accordion-navigation">
-      <a href="#panel22">
+      <a href="#panel23">
         pink page section
         <div class="right">
           <i class="fa fa-code"></i>
         </div>
       </a>
-      <div id="panel22" class="content">
+      <div id="panel23" class="content">
         <pre><span class="nc">.pink-page-section</span>
   <span class="nc">.small-9.small-centered.columns</span>
     <span class="nt">%h2</span> Example Title
@@ -467,13 +531,13 @@
 <div class="codeExample">
   <ul class="accordion" data-accordion>
     <li class="accordion-navigation">
-      <a href="#panel23">
+      <a href="#panel24">
         pink page section with title lines
         <div class="right">
           <i class="fa fa-code"></i>
         </div>
       </a>
-      <div id="panel23" class="content">
+      <div id="panel24" class="content">
         <pre><span class="nc">.pink-page-section.title-lines</span>
   <span class="nc">.small-9.small-centered.columns</span>
     <span class="nt">%h2</span> Example Title
@@ -502,13 +566,13 @@
 <div class="codeExample">
   <ul class="accordion" data-accordion>
     <li class="accordion-navigation">
-      <a href="#panel24">
+      <a href="#panel25">
         white page section
         <div class="right">
           <i class="fa fa-code"></i>
         </div>
       </a>
-      <div id="panel24" class="content">
+      <div id="panel25" class="content">
         <pre><span class="nc">.white-page-section</span>
   <span class="nc">.small-9.small-centered.columns</span>
     <span class="nt">%h2</span> Example Title
@@ -537,13 +601,13 @@
 <div class="codeExample">
   <ul class="accordion" data-accordion>
     <li class="accordion-navigation">
-      <a href="#panel25">
+      <a href="#panel26">
         white page section with title lines
         <div class="right">
           <i class="fa fa-code"></i>
         </div>
       </a>
-      <div id="panel25" class="content">
+      <div id="panel26" class="content">
         <pre><span class="nc">.white-page-section.title-lines</span>
   <span class="nc">.small-9.small-centered.columns</span>
     <span class="nt">%h2</span> Example Title

@@ -5,7 +5,7 @@ name: image
 category: Page Sections
 ---
 
-For a simple image page section, use the class name shown here. This will display the default image shown here.
+For a simple image page section, use the class name shown here (though customization using the mixin is recommended). This will display the default image shown here.
 
 ```haml_example
 image page section
@@ -20,8 +20,6 @@ image page section
 <h4>Image Customization</h4>
 
 To customize the image and the overlay, you can include the mixin called <code>image-page-section</code> in your own custom class.
-
-This mixin takes two arguments:
 
 The mixin takes the following arguments:
 
