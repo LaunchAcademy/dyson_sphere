@@ -14,6 +14,13 @@ category: Typography
 ```
 
 ```haml_example
+.medium helper class
+%p
+  Adding the class .medium to an element
+  %span.medium will make it medium font weight (500).
+```
+
+```haml_example
 blue-text
 %h3.blue-text Example Blue Header
 ```
@@ -67,4 +74,8 @@ hr.white-text {
 
 .bold {
   font-weight: bold;
+}
+
+.medium {
+  font-weight: $medium;
 }
