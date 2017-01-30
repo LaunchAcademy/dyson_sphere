@@ -10,7 +10,7 @@ category: Typography
   <p>Used for headlines, sub headlines, short body copy, hyperlinks and CTA buttons</p>
 
   <h3> Header Font Weights</h3>
-  <p>We have 3 different font weights we use: `normal`, `bold`, and `$medium` (which maps to the CSS value of `500`). Use any of these three values when setting font weight for a header font (and preferably not any other values besides these three options.)</p>
+  <p>We have 3 different font weights we use: `normal`, `bold`, and `$medium-weight` (which maps to the CSS value of `500`). Use any of these three values when setting font weight for a header font (and preferably not any other values besides these three options.)</p>
 </div>
 <hr>
 <div class="panel">
@@ -30,7 +30,7 @@ $header-font: "quatro-slab", sans-serif;
 $body-font: 'Helvetica Neue', sans-serif;
 $code-font: Consolas, 'Liberation Mono', Courier, monospace;
 
-$medium: 500;
+$medium-weight: 500;
 
 @font-face {
   font-family: 'quatro-slab';
