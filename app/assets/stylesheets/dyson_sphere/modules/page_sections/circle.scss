@@ -52,7 +52,7 @@ Example:
 ) {
   .hero-section {
     height: 690px;
-    border-bottom: 7px solid $la-green;
+    border-bottom: none;
     // Here we override the top and bottom padding for the image mixin
     @include image-page-section($filename, $overlay);
     padding: 8rem 0;
