@@ -31,6 +31,11 @@ green-text
 ```
 
 ```haml_example
+pink-text
+%h3.pink-text Example Pink Header
+```
+
+```haml_example
 white-text
 %h3.white-text Example White Header
 ```
@@ -59,6 +64,11 @@ meta-info
 .green-text {
   color: $la-light-green;
 }
+
+.pink-text {
+  color: $la-pink;
+}
+
 
 .white-text {
   color: $la-white;
