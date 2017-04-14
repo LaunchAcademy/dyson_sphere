@@ -29,7 +29,7 @@ The mixin takes the following arguments:
   <li><code>$filename</code> - the name of the file you want to use as a background image. (This name will the be automatically wrapped in <code>image_url</code>.)</li>
   <li><code>$overlay</code> [OPTIONAL] - the color you would like to overlay the image with. This is set to <code>transparent</code> by default.</li>
   <li><code>$circle-color</code> [OPTIONAL] - the color you would like the circle to be. This is set to <code>$la-blue</code> by default.</li>
-  <li><code>$circle-opacity</code> [OPTIONAL] - the opacity you would like your circle to have. This is set to <code>.5</code> by default.</li>
+  <li><code>$circle-opacity</code> [OPTIONAL] - the opacity you would like your circle to have. This is set to <code>.6</code> by default.</li>
 </ul>
 
 Example:
@@ -39,7 +39,7 @@ Example:
     $filename: "launchers.jpg",
     $overlay: rgba(0,0,0,.5),
     $circle-color: $la-green,
-    $circle-opacity: .6);
+    $circle-opacity: .9);
 }</pre>
 
 */
@@ -48,7 +48,7 @@ Example:
   $filename,
   $overlay: transparent,
   $circle-color: $la-blue,
-  $circle-opacity: .5
+  $circle-opacity: .6
 ) {
   .hero-section {
     height: 690px;
@@ -67,12 +67,6 @@ Example:
     margin: 0 auto;
     opacity: $circle-opacity;
     border-radius: 50%;
-
-
-    @media #{$small-only} {
-      height: 275px;
-      width: 275px;
-    }
   }
 
   .circle-text {
@@ -82,36 +76,71 @@ Example:
     transform: translate(-50%, -50%);
     width: 445px;
     padding: 0 30px;
+  }
 
-    .btn-border {
-      margin-bottom: 0px;
-      background: none;
+  .btn-border {
+    margin-bottom: 0px;
+    background: none;
+  }
+
+  .circle-text-1 {
+    font-family: $header-font;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  .circle-text-2 {
+    font-family: $body-font;
+    font-weight: 200;
+    margin-top: 0;
+  }
+
+  .circle-text-3 {
+    font-family: $body-font;
+    font-weight: 300;
+  }
+
+  @media #{$medium-up} {
+    .circle-text-1 {
+      line-height: 1;
+      font-size: 1.8rem;
+      font-weight: bold;
     }
 
-    @media #{$medium-up} {
-      h1 {
-        line-height: 1.2;
-        font-size: 2.95rem;
-      }
-
-      h2 {
-        line-height: 1;
-        font-size: .6rem;
-      }
+    .circle-text-2 {
+      line-height: 1;
+      font-size: 4.8rem;
     }
 
-    @media #{$small-only} {
-      width: 275px;
+    .circle-text-3 {
+      line-height: 1.2;
+      font-size: 1.8rem;
+      margin-top: 1rem;
+    }
+  }
 
-      h1 {
-        line-height: 1.2;
-        font-size: 1.6rem;
-      }
+  @media #{$small-only} {
 
-      h2 {
-        line-height: 1;
-        font-size: .6rem;
-      }
+    .circle-text,
+    .hero-circle {
+      width: 300px;
+      height: 300px;
+    }
+
+    .circle-text-1 {
+      line-height: 1;
+      font-size: 1.3rem;
+    }
+
+    .circle-text-2 {
+      line-height: 1.2;
+      font-size: 2.6rem;
+    }
+
+    .circle-text-3 {
+      line-height: 1.2;
+      font-size: 1.3rem;
+      margin-top: 0.5rem;
     }
   }
 }
