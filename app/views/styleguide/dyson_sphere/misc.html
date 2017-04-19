@@ -80,6 +80,8 @@
               
                 <li><a href="#testimonials">Testimonials</a></li>
               
+                <li><a href="#tooltips">Tooltips</a></li>
+              
               </ul>
             </div>
           
@@ -378,6 +380,63 @@
   </ul>
 </div>
 
+
+<h1 id="tooltips" class="styleguide">Tooltips</h1>
+
+<p>Tooltips provide additional information on hover in a compact but noticeable visual style.</p>
+
+  
+  
+  
+
+
+<div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel41">
+        tooltip
+        <div class="right">
+          <i class="fa fa-code"></i>
+        </div>
+      </a>
+      <div id="panel41" class="content">
+        <pre><span class="nc">.tooltip-wrapper</span>
+  <span class="nt">%span</span><span class="nc">.has-tip</span><span class="p">{</span> <span class="ss">aria: </span><span class="p">{</span> <span class="ss">haspopup: </span><span class="s2">"true"</span> <span class="p">}</span>, data: { tooltip: "" }, title: "Tooltips are even more awesome, you should in fact use them!" }
+    ?
+<span class="nt">%span</span><span class="nc">.tooltip</span>
+  content
+  <span class="nt">%span</span><span class="nc">.nub</span></pre>
+      </div>
+    </li>
+  <div class="exampleOutput clearfix">
+    <div class='tooltip-wrapper'>
+  <span aria-haspopup='true' class='has-tip' data-tooltip='' title='Tooltips are even more awesome, you should in fact use them!'>
+    ?
+  </span>
+</div>
+<span class='tooltip'>
+  content
+  <span class='nub'></span>
+</span>
+  </div>
+  </ul>
+</div>
+
+
+<p>For React, you need to structure things a little differently, and use the ReactTooltip node package to get the tooltip to display:</p>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>&lt;div className="tooltip-wrapper"&gt;
+  &lt;span className="has-tip"
+    data-tip="This is a React tooltip.
+    &lt;br&gt;It's even multi-line."
+    data-multiline
+  &gt;?&lt;/span&gt;
+  &lt;ReactTooltip place="top" /&gt;
+&lt;/div&gt;</pre>
+  </div>
+</div>
+<p>(Currently, the React-generated tooltip will display a bit differently due to the different approach it uses to generate the upward or downward arrow on the tooltip box. We have <em>not</em> styled it to have the same pink border that the Haml-generated tooltip has.)</p>
           </div>
           <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>
         </section>
