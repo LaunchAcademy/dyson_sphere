@@ -1,0 +1,92 @@
+/*doc
+---
+title: Tooltips
+name: tooltips
+category: Misc
+---
+
+<p>Tooltips provide additional information on hover in a compact but noticeable visual style.</p>
+
+```haml_example
+tooltip
+.tooltip-wrapper
+  %span.has-tip{ aria: { haspopup: "true" }, data: { tooltip: "" }, title: "Tooltips are even more awesome, you should in fact use them!" }
+    ?
+%span.tooltip
+  content
+  %span.nub
+```
+
+<p>For React, you need to structure things a little differently, and use the ReactTooltip node package to get the tooltip to display:</p>
+
+```html
+<div className="tooltip-wrapper">
+  <span className="has-tip"
+    data-tip="This is a React tooltip.
+    <br>It's even multi-line."
+    data-multiline
+  >?</span>
+  <ReactTooltip place="top" />
+</div>
+```
+
+<p>(Currently, the React-generated tooltip will display a bit differently due to the different approach it uses to generate the upward or downward arrow on the tooltip box. We have <em>not</em> styled it to have the same pink border that the Haml-generated tooltip has.)</p>
+
+*/
+
+.tooltip {
+  border: 3px solid $la-pink;
+
+  & > .nub {
+    border-color: transparent transparent $la-pink transparent;
+    top: -20px;
+    border-width: 10px;
+
+    &:after {
+      content: '';
+      display: block;
+      height: 0;
+      width: 0;
+      pointer-events: none;
+      position: absolute;
+      border: solid 10px;
+      border-color: transparent transparent $oil transparent;
+      top: -6px;
+      left: -10px;
+    }
+  }
+}
+
+
+.tooltip-wrapper {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background-color: $la-pink;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+
+  &:hover {
+    background-color: darken($la-pink, 20%);
+  }
+
+  .has-tip {
+    display: block;
+    border-bottom: none;
+    font-size: 14px;
+    color: white;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+    line-height: 23px;
+    font-family: $body-font;
+
+    &:hover {
+      color: white;
+      border-bottom: none;
+    }
+  }
+}
+
