@@ -14,8 +14,8 @@ circle page section
     .small-12.small-centered.columns
       .hero-circle
       .circle-text
-        %h3.bold.circle-text-1 Let's Get
-        %h1.circle-text-2 Started!
+        %h3.bold.circle-text-header Let's Get
+        %h1.circle-text-title Started!
         %button.btn-border.cta.apply-btn Apply Today
 ```
 
@@ -83,39 +83,51 @@ Example:
     background: none;
   }
 
-  .circle-text-1 {
+  .circle-text-header {
     font-family: $header-font;
     font-weight: bold;
     margin-bottom: 0;
   }
 
-  .circle-text-2 {
+  .circle-text-title {
     font-family: $body-font;
     font-weight: 200;
     margin-top: 0;
   }
 
-  .circle-text-3 {
+  .circle-text-sub-title {
     font-family: $body-font;
     font-weight: 300;
   }
 
   @media #{$medium-up} {
-    .circle-text-1 {
+    .circle-text-header {
       line-height: 1;
       font-size: 1.8rem;
       font-weight: bold;
     }
 
-    .circle-text-2 {
+    .circle-text-title {
       line-height: 1;
       font-size: 4.8rem;
+
+      &.margin-top {
+        margin-top: 20px;
+      }
+
+      &.margin-bottom {
+        margin-bottom: 20px;
+      }
+
+      &.margin-verticle {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
     }
 
-    .circle-text-3 {
+    .circle-text-sub-title {
       line-height: 1.2;
-      font-size: 1.8rem;
-      margin-top: 1rem;
+      font-size: 1.4rem;
     }
   }
 
@@ -127,17 +139,34 @@ Example:
       height: 300px;
     }
 
-    .circle-text-1 {
+    .circle-text {
+      top: 72%;
+    }
+
+    .circle-text-header {
       line-height: 1;
       font-size: 1.3rem;
     }
 
-    .circle-text-2 {
+    .circle-text-title {
       line-height: 1.2;
       font-size: 2.6rem;
+
+      &.margin-top {
+        margin-top: 5px;
+      }
+
+      &.margin-bottom {
+        margin-bottom: 5px;
+      }
+
+      &.margin-verticle {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
     }
 
-    .circle-text-3 {
+    .circle-text-sub-title {
       line-height: 1.2;
       font-size: 1.3rem;
       margin-top: 0.5rem;
