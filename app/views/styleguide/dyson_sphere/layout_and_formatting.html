@@ -23,84 +23,84 @@
 
     <dl class="sub-nav">
       <div class="row">
-
+        
           <dd class="">
             <a href="/styleguide/fancy_form_fields.html">Fancy Form Fields</a>
           </dd>
-
+        
           <dd class="">
             <a href="/styleguide/headers_and_footers.html">Headers and Footers</a>
           </dd>
-
+        
           <dd class="active">
             <a href="/styleguide/layout_and_formatting.html">Layout and Formatting</a>
           </dd>
-
+        
           <dd class="">
             <a href="/styleguide/page_sections.html">Page Sections</a>
           </dd>
-
+        
           <dd class="">
             <a href="/styleguide/buttons.html">Buttons</a>
           </dd>
-
+        
           <dd class="">
             <a href="/styleguide/index.html">Colors</a>
           </dd>
-
+        
           <dd class="">
             <a href="/styleguide/typography.html">Typography</a>
           </dd>
-
+        
           <dd class="">
             <a href="/styleguide/misc.html">Misc</a>
           </dd>
-
+        
           <dd class="">
             <a href="/styleguide/slick_carousel.html">Slick Carousel</a>
           </dd>
-
+        
           <dd class="">
             <a href="/styleguide/mixins.html">Mixins</a>
           </dd>
-
+        
       </div>
     </dl>
 
     <div class="row">
       <div class="columns">
         <section class="content">
-
+          
             <div class="small-3 columns">
               <ul class="side-nav">
-
+              
                 <li><a href="#block_lists">Block Lists</a></li>
-
+              
                 <li><a href="#border">Border Classes</a></li>
-
+              
                 <li><a href="#extended_grid_system">Extended Grid System</a></li>
-
+              
                 <li><a href="#misc_helper_classes">Misc Helper Classes</a></li>
-
+              
                 <li><a href="#panels">Panels</a></li>
-
+              
                 <li><a href="#spacing">Custom Spacing Classes</a></li>
-
+              
                 <li><a href="#splitColumns">Split Columns</a></li>
-
+              
                 <li><a href="#splitColumnsMedium">Split Columns (Medium)</a></li>
-
+              
               </ul>
             </div>
-
+          
           <div class="columns small-9">
 <h1 id="block_lists" class="styleguide">Block Lists</h1>
 
 <p>Block lists resemble single-column tables.</p>
 
-
-
-
+  
+  
+  
 
 
 <div class="codeExample">
@@ -132,9 +132,9 @@
 
 <h1 id="border" class="styleguide">Border Classes</h1>
 
-
-
-
+  
+  
+  
 
 
 <div class="codeExample">
@@ -160,9 +160,9 @@
 </div>
 
 
-
-
-
+  
+  
+  
 
 
 <div class="codeExample">
@@ -188,9 +188,9 @@
 </div>
 
 
-
-
-
+  
+  
+  
 
 
 <div class="codeExample">
@@ -280,11 +280,11 @@
 
 <h1 id="splitColumns" class="styleguide">Split Columns</h1>
 
-<p>Split columns allow you to have two pieces of content next to each other, separated by a vertical line. On small screens, the will move to be vertically stacked and have a horizontal separator line.</p>
+<p>Split columns allow you to have two pieces of content next to each other, separated by a vertical line. On small and medium screens, the will move to be vertically stacked and have a horizontal separator line.</p>
 
-
-
-
+  
+  
+  
 
 
 <div class="codeExample">
@@ -306,6 +306,46 @@
     </li>
   <div class="exampleOutput clearfix">
     <div class='split-column clearfix'>
+  <div class='columns medium-6'>
+    <p>You can really have whatever your heart desires here for content.</p>
+  </div>
+  <div class='columns medium-6'>
+    <p>You can really have whatever your heart desires here for content.</p>
+  </div>
+</div>
+  </div>
+  </ul>
+</div>
+
+
+<h1 id="splitColumnsMedium" class="styleguide">Split Columns (Medium)</h1>
+
+<p>Split columns allow you to have two pieces of content next to each other, separated by a vertical line. On small screens, the will move to be vertically stacked and have a horizontal separator line.</p>
+
+  
+  
+  
+
+
+<div class="codeExample">
+  <ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+      <a href="#panel13">
+        split_column_medium
+        <div class="right">
+          <i class="fa fa-code"></i>
+        </div>
+      </a>
+      <div id="panel13" class="content">
+        <pre><span class="nc">.split_column_medium.clearfix</span>
+  <span class="nc">.columns.medium-6</span>
+    <span class="nt">%p</span> You can really have whatever your heart desires here for content.
+  <span class="nc">.columns.medium-6</span>
+    <span class="nt">%p</span> You can really have whatever your heart desires here for content.</pre>
+      </div>
+    </li>
+  <div class="exampleOutput clearfix">
+    <div class='split_column_medium clearfix'>
   <div class='columns medium-6'>
     <p>You can really have whatever your heart desires here for content.</p>
   </div>
