@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency "sass-rails"
   s.add_dependency "rouge", "1.9.0"
   s.add_dependency "foundation-rails", "5.5.3.2"
-  s.add_dependency "font-awesome-sass"
+  s.add_dependency "font-awesome-sass", "~> 4.7.0"
   s.add_dependency "haml"
   s.add_dependency "hologram"
   s.add_dependency "jquery-rails"
