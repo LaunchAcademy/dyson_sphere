@@ -11,3 +11,5 @@ test/dummy/public/assets/*
 app/.DS_Store
 app/assets/.DS_Store
 app/assets/images/.DS_Store
+node_modules/*
+yarn-error.log

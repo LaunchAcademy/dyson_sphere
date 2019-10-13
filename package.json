@@ -1,0 +1,30 @@
+{
+  "name": "dyson_sphere",
+  "version": "0.1.1",
+  "description": "Assets for Launch Academy",
+  "main": "index.js",
+  "directories": {
+    "app/assets/stylesheets": "sass",
+    "app/assets/fonts": "fonts",
+    "app/assets/images": "images",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaunchAcademy/dyson_sphere.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LaunchAcademy/dyson_sphere/issues"
+  },
+  "homepage": "https://github.com/LaunchAcademy/dyson_sphere#readme",
+  "dependencies": {
+    "font-awesome": "4.7.0",
+    "foundation-sites": "5.5.3",
+    "slick-carousel": "^1.8.1"
+  }
+}
