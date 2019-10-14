@@ -1,5 +1,5 @@
 {
-  "name": "dyson_sphere",
+  "name": "@launchacademy/dyson_sphere",
   "version": "0.1.1",
   "description": "Assets for Launch Academy",
   "main": "index.js",
@@ -12,6 +12,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LaunchAcademy/dyson_sphere.git"
